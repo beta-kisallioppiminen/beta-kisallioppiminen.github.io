@@ -29,10 +29,12 @@ topnav: maa6
 
             <div class="objective">
                 <p> 
-                    Tämän luvun tavoitteena on, että ... Osaat
+                    Tämän luvun tavoitteena on, että hallitset funktion kulun tutkimisen derivaatan avulla. Osaat
                 <ul>
-                    <li> </li>
-
+                    <li> tutkia derivaatan merkkikaavion avulla, millä väleillä funktio on aidosti kasvava ja millä aidosti vähenevä </li>
+                    <li> määrittää funktion ääriarvokohdat ja ääriarvot funktion kulkukaavion avulla </li>
+                    <li> määrittää derivoituvan funktion suurimman ja pienimmän arvon suljetulla välillä </li>
+                    <li> päätellä, onko polynomifunktiolla suurinta tai pienintä arvoa. </li>
                 </ul> 
                 </p>
             </div>
@@ -984,7 +986,7 @@ topnav: maa6
                     </header>
                     <div id="t509" class="collapse">
                         <p>
-                            Festivaalin anniskelualueen rajaamiseen on käytettävissä 100 m pitkän varaston seinä sekä lisäksi 125 metriä mellakka-aitaa. Anniskelualueesta halutaan pinta-alaltaan mahdollisimman suuri suorakulmio. Tehtävänä on selvittää, miten aidat kannattaa asettaa.
+                            Festivaalin anniskelualueen rajaamiseen on käytettävissä 30 m pitkän varaston seinä sekä lisäksi 120 metriä mellakka-aitaa. Anniskelualueesta halutaan pinta-alaltaan mahdollisimman suuri suorakulmio. Tehtävänä on selvittää, miten aidat kannattaa asettaa.
                         </p>
                         <ol class="a">
                             <li> 
@@ -1000,9 +1002,6 @@ topnav: maa6
                                 Miten aidat kannattaa asettaa, jotta anniskelualueen pinta-ala on mahdollisimman suuri? Mikä sen ala silloin on?
                             </li>
                         </ol>
-                        <p>
-
-                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t509_v">
                                 VASTAUS
@@ -1011,16 +1010,18 @@ topnav: maa6
                         <div id="t509_v" class="collapse">
                             <ol class="a">
                                 <li> 
-
+                                    Esimerkiksi
+                                    <br>
+                                    <img src="/kurssit/maa6/kuvat/kuva111.png" max-width: 100%; width: auto; height: auto;/>
                                 </li>
                                 <li> 
-
+                                    Leveys $30 +x$, korkeus $45-x$. (Korkeus saadaan yhtälöstä $2x+30+2y = 120$.)
                                 </li>
                                 <li>
-
+                                    $A(x) = 1350 + 15x - x^2$, suurin arvo $A(7{,}5) = 1406{,}25$.
                                 </li>
                                 <li>
-
+                                    Leveys 37,5 metriä ja korkeus 37,5 metriä eli neliön muotoinen alue, jonka pinta-ala on noin 1406 neliömetriä.
                                 </li>
                             </ol>
                         </div>
@@ -1144,37 +1145,636 @@ topnav: maa6
         <div id="luku5-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="03f97cfc-7ecc-11e7-bb31-be2e44b06b34">
+            <div class="tehtava" id="4b0de9e5-63d4-4556-bd3e-62625469fdd0MAA6s2t503">
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#s2t101">
-                            Suoran yhtälö
+                        <a data-target="#MAA6s2t503">
+                            Ääriarvot
                         </a>
                     </h1>
                 </header>
-                <div id="s2t101">
+                <div id="MAA6s2t503">
                     <p>
-                        Määritä yhtälö suoralle, joka kulkee seuraavien pisteiden kautta:
+                        Määritä funktion $f(x) = -2x^3 + 3x^2 + 12x + 5$ suurin ja pienin arvo välillä $[-2,0]$.
                     </p>
-                    <ol class="a">
-                        <li> $(-1,4)\ $ ja $\ (5,-1)$</li>
-                        <li> $\left(-\frac{5}{3}, \frac{1}{2}\right)\ $ ja $\ \left(\frac{1}{3}, \frac{5}{6}\right)$.</li>
-                    </ol>
                     <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#s2t101_v">
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t503_v">
                             Vastaus
                         </a>
                     </h2>
-                    <div id="s2t101_v" class="collapse">
+                    <div id="MAA6s2t503_v" class="collapse">
                         <p>
-                        <ol class="a">
-                            <li> $y = -\frac{5}{6}x + \frac{19}{6}$ </li>
-                            <li> $y = \frac{1}{6}x + \frac{7}{9}$ </li>
-                        </ol>
+                            Suurin arvo on $f(-2) = 9$ ja pienin arvo on $f(-1) = -2$.
                         </p>
                     </div>
                 </div>
             </div>
+
+            <div class="tehtava" id="ed7b5479-ce32-42e9-b7a9-35fb59da7cfe">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t511">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t511">
+                    <p>
+                        Alla on näkyvissä erilaisten funktioiden kuvaajia. Muodosta niistä niin monta funktio &amp; derivaattafunktio -paria kuin mahdollista.
+                        <br>
+                        <img src="/kurssit/maa6/kuvat/kuva109.png" max-width: 100%; width: auto; height: auto;/>
+                        <br>
+                        <img src="/kurssit/maa6/kuvat/kuva110.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t511_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t511_v" class="collapse">
+                        <p>
+                            Funktio D ja sen derivaattafunktio C
+                            <br>
+                            Funktio E ja sen derivaattafunktio A
+                            <br>
+                            Funktio F ja sen derivaattafunktio B.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="03f97cfc-7ecc-11e7-bb31-be2e44b06b34">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t501">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t501">
+                    <p>
+                        Suorakulmaisen kolmion toisen kateetin päätepisteet ovat origo ja piste $(x,0)$. Hypotenuusan toinen päätepiste on origossa ja toinen päätepiste on pisteiden $(0,6)$ ja $(6,0)$ välisellä janalla. 
+                    </p>
+                    <ol class="a">
+                        <li> Piirrä tilanteesta mallikuva ja määritä hypotenuusan päätepisteiden koordinaatit. </li>
+                        <li> Määritä kolmion pinta-ala muuttujan $x$ funktiona. </li>
+                        <li> Millä muuttujan $x$ arvoilla pinta-alafunktio on aidosti kasvava ja millä aidosti vähenevä?</li>
+                        <li> Onko pinta-alalla suurin tai pienin arvo? Jos on, niin mikä? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t501_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t501_v" class="collapse">
+                        <ol class="a">
+                            <li> Hypotenuusan päätepisteiden koordinaatit ovat $(0,0)$ ja $(x, 6-x)$. </li>
+                            <li> $A(x) = 3x - \frac{1}{2}x^2$, missä $0 \leq x \leq 6$. </li>
+                            <li> Aidosti kasvava välillä $[0,3]$ ja aidosti vähenevä välillä $[3,6]$.</li>
+                            <li> Pinta-alan suurin arvo on $A(3) = 4{,}5$ ja pienin arvo on $A(0) = 0$ (myös $A(6) = 0$).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="f036f5af-658c-4dc2-afb7-2289cfe89d1c">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t504">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t504">
+                    <p>
+                        Pahvilevy, joka on mitoiltaan 5 cm $\times$ 12 cm, taivutetaan 5 cm pitkän tulitikkurasian koteloksi niin, että toinen raapaisupinta tulee kaksinkertaiseksi. Tehtävänä on laskea rasian suurin mahdollinen tilavuus. 
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Piirrä tilanteesta mallikuva. Valitse, mitä kotelon mitoista merkitset kirjaimella $x$, ja ilmaise muut mitat sen avulla. 
+                            <br>
+                            Vinkki: kannattaa piirtää kuva myös auki levitetystä pahvilevystä ja merkitä siihen näkyviin taitoskohdat.
+                        </li>
+                        <li> 
+                            Muodosta funktio, joka ilmaisee rasian tilavuuden. Millä välillä valitsemasi muuttujan $x$ arvot vaihtelevat? 
+                        </li>
+                        <li>
+                            Mikä on rasian suurin mahdollinen tilavuus? 
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t504_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t504_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Yksi mahdollinen valinta:
+                                <br>
+                                <img src="/kurssit/maa6/kuvat/kuva105.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li> $V(x) = 5x\left(\frac{12-3x}{2}\right)$, missä $0 \leq x \leq 4$.</li>
+                            <li> Suurin mahdollinen tilavuus on $V(2) = 30 \text{ cm}^3$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="e9533141-558f-43a3-b9f9-c61375253fd3">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t502">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t502">
+                    <p>
+                        Tarkastellaan yhtälöä $x^3 + x + a = 0$.
+                    </p>
+                    <ol class="a">
+                        <li> Osoita, että tällä yhtälöllä on täsmälleen yksi ratkaisu riippumatta vakion $a$ arvosta. </li>
+                        <li> Millä vakion $a$ arvoilla ratkaisu on välillä $\pa 1, 2\pe$? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t502_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t502_v" class="collapse">
+                        <ol class="a">
+                            <li> Polynomifunktion $f(x) = x^3 + x + a$ derivaattafunktio $f'(x) = 3x^2 + 1$ on aina positiivinen, joten funktio $f$ on aidosti kasvava koko lukusuoralla. Sillä on siis enintään yksi nollakohta. 
+                            <br>
+                            Toisaalta
+                            <ul>
+                                <li> jos $a > 0$, niin $f(0) = a > 0$ ja $f(-a) = -a^3 < 0$ </li>
+                                <li> jos $a = 0$, niin $f(0) = 0$ </li>
+                                <li> jos $a < 0$, niin $f(0) = a < 0$ ja $f(-a) = -a^3 > 0$</li>
+                            </ul>  
+                            joten funktiolla $f$ on ainakin yksi nollakohta. 
+                            <br>
+                            Näistä tiedoista voidaan päätellä, että yhtälöllä $x^3 + x + a = 0$ on täsmälleen yksi ratkaisu riippumatta vakion $a$ arvosta.
+                            </li>
+                            <li> $-10 < a < -2$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="dcf174da-36da-4133-af85-5bbf089cda91">
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t505">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t505">
+                    <p>
+                        Urheiluhallissa, johon mahtuu 2050 katsojaa, järjestetään koripallo-ottelu. Yleisömäärä riippuu lipun hinnasta $x$ likimain funktion 
+                        $$
+                        f(x) = 1980 + 21x - 2x^2
+                        $$
+                        mukaisesti. 
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Millä lipun hinnalla otteluun saadaan suurin yleisömäärä? Kuinka paljon yleisöä tällöin on?
+                        </li>
+                        <li> 
+                            Mikä lipun hinta tuottaa järjestäjille suurimman pääsylipputulot? Kuinka paljon yleisöä tällöin on?
+                        </li>
+                        <li>
+                            Kuinka paljon vähemmän tuloja järjestäjät saavat a-kohdassa kuin b-kohdassa?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t505_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t505_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                5,25 euroa, jolloin yleisöä on noin 2035.
+                            </li>
+                            <li> 22 euroa, jolloin yleisöä on noin 1474. </li>
+                            <li> Noin 21 744 euroa vähemmän. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="7e410a8d-2a01-44b8-ba39-8e3ddc002a72">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t506">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t506">
+                    <p>
+                        Paraabelin $y = 4-x^2$ ja $x$-akselin rajoittamaan alueeseen piirretään puolisuunnikas, jonka yhtenä sivuna on paraabelin $x$-akselista erottama jana. Tehtävänä on selvittää, mikä on tällaisen puolisuunnikkaan korkeus, kun sen pinta-ala on suurin mahdollinen.
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Piirrä tilanteesta mallikuva. 
+                        </li>
+                        <li> 
+                            Muodosta funktio, joka ilmaisee puolisuunnikkaan pinta-alan.
+                            <br>
+                            Vinkki: jaa puolisuunnikas osiin ja laske pinta-ala niiden summana tai kertaa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku2/">MAA3-kurssin</a> teoreema 10.
+                        </li>
+                        <li>
+                            Mikä on puolisuunnikkaan korkeus, kun sen pinta-ala on suurin mahdollinen?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t506_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t506_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                <img src="/kurssit/maa6/kuvat/kuva106.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li> $A(x) = 8 + 4x - 2x^2 - x^3$ </li>
+                            <li> 
+                                Puolisuunnikkaan korkeus on $\dfrac{32}{9}$. 
+                                <br>
+                                (Tällöin $x = \frac{2}{3}$.)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="16c48784-1691-4667-bf3b-66d7666273d0">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t514">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t514">
+                    <p>
+                        Monet lentoyhtiöt noudattavat käsimatkatavaran suhteen niin sanottua 115 senttimetrin sääntöä: Käsimatkatavaralaukun on mahduttava suorakulmaiseen särmiöön, jonka pituuden, leveyden ja korkeuden summa ei ylitä 115 senttimetriä. Määritä millimetrin tarkkuudella mitat mahdollisimman tilavalle käsimatkatavaraksi kelpaavalle laukulle, jonka pituus on 1,5 kertaa niin suuri kuin korkeus.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t514_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t514_v" class="collapse">
+                        <p>
+                            Korkeus 307 mm, pituus 460 mm ja leveys 383 mm.
+                            <br>
+                            Laukun tilavuuden ilmaisee funktio $v(x) = 172{,}5x^2 - 3{,}75x^3$, missä $x$ on laukun korkeus. Laukun pituus on $1{,}5x$ ja leveys $115 - 2{,}5x$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tehtava" id="90a19914-1795-4f60-84d6-960dfeaeb77dMAA6s2t507">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t507">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t507">
+                    <p>
+                        Määritä vakio $a$ siten, että funktion 
+                        $$f(x) = x^3 + 4x^2 + 5x + a$$
+                        pienin arvo välillä $[-2,0]$ on $1$. Mikä tällöin on funktion suurin arvo kyseisellä välillä? 
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t507_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t507_v" class="collapse">
+                        <p>
+                            Vakio $a = 3$, jolloin funktion suurin arvo on $f\left(0\right) = 3$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="051091fd-e310-4932-9db1-82e494e56172">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t508">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t508">
+                    <p>
+                        Suorakulmion muotoisen pahvilevyn kulmiin leikataan viillot ja siitä taitellaan toisesta päädystään avoin, kanneton laatikko. (Kuvan punaiset yhtenevät neliöt taitetaan laatikon sisäpuolelle ja laatikon sivuseinät kiinnitetään niiden avulla takaseinään.) Määritä kuvan punaisten neliöiden sivun pituus niin, että laatikon tilavuus on mahdollisimman suuri. Pahvilevyn pituus on 60 cm ja leveys 45 cm. Mikä on laatikon suurin mahdollinen tilavuus?
+                        <br>
+                        <img src="/kurssit/maa6/kuvat/kuva107.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t508_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t508_v" class="collapse">
+                        <p>
+                            Punaisen neliön sivun pituus on 10 cm. Suurin mahdollinen tilavuus on $12\,500 \text{ cm}^3$ eli 12,5 litraa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="ba80a039-ca40-44c9-8bf6-de142d7103dc">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t509">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t509">
+                    <p>
+                        Neliön $ABCD$ sivuilta $BC$ ja $CD$ valitaan pisteet $P$ ja $Q$, jotka ovat yhtä kaukana kärjestä $C$. Tehtävänä on selvittää, mikä on kolmion $APQ$ pinta-alan suurin arvo. Neliön sivun pituus on $a$. 
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Piirrä tilanteesta mallikuva. Merkitse pisteiden $P$ ja $C$ etäisyyttä jollakin kirjaimella. Mitkä muut etäisyydet saat ilmaistua helposti sen avulla? 
+                        </li>
+                        <li>
+                            Muodosta funktio, joka ilmaisee kolmion $APQ$ pinta-alan. Millä välillä muuttujan arvot voivat vaihdella?
+                            <br>
+                            Vinkki: saatko muodostettua kolmion pinta-alan joidenkin pinta-alojen erotuksena?
+                        </li>
+                        <li>
+                            Mikä on kolmion $APQ$ pinta-alan suurin arvo? Hahmottele kuva suurimmasta mahdollisesta kolmiosta $APQ$.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t509_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t509_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            Esimerkiksi
+                            <br>
+                            <img src="/kurssit/maa6/kuvat/kuva108.png" max-width: 100%; width: auto; height: auto;/>
+                        </li>
+                        <li>
+                            $A(x) = ax - \frac{1}{2}x^2$, missä $0 \leq x \leq a$.
+                        </li>
+                        <li>
+                            Kolmion pinta-alan suurin arvo on $\frac{1}{2}a^2$.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="28da9812-6eb4-4583-93cb-5a14d640722e">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t510">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t510">
+                    <p>
+                        Kumpi funktion 
+                        $$
+                        f(x) = 15x^3 - 198x^2 - 123\,456\,789
+                        $$
+                        arvoista on suurempi?
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            $f(7{,}99999)$ vai $f(8)$
+                        </li>
+                        <li>
+                            $f(10)$ vai $f(10{,}00001)$?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t510_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t510_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            Funktio on aidosti vähenevä välillä $[0;\,8{,}8]$, joten $f(7{,}99999)$ on suurempi.
+                        </li>
+                        <li>
+                            Funktio on aidosti kasvava välillä $[8{,}8; \infty\pe$, joten $f(10{,}00001)$ on suurempi.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="b0ec2c57-a90c-4b1b-9463-2598548d91a9">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t515">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t515">
+                    <p>
+                        Suorakulmio, jonka piiri on 18, pyörähtää yhden sivunsa ympäri. Mikä on muodostuvat ympyrälieriön suurin mahdollinen tilavuus?
+                    </p>
+                    <p>
+                        Vinkki: piirrä tilanteesta mallikuva.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t515_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t515_v" class="collapse">
+                        <p>
+                            Suurin tilavuus on $108\pi$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="5ca6eab2-a8f6-4f91-8be8-cdd357dd064a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t512">
+                            Funktion kulku
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t512">
+                    <p>
+                        Tarkastellaan funktiota
+                        $$
+                        g(x) = 4x^3 - 3x^2 + 6x + 2.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Osoita, että funktio $g$ on kaikkialla aidosti kasvava.
+                        </li>
+                        <li>
+                            Missä kohdassa funktion $g$ arvot kasvavat hitaimmin? Toisin sanottuna, missä kohdassa funktion $g$ kuvaaja nousee loivimmin?
+                            <br>
+                            Vinkki: etsi kasvunopeuden eli derivaatan $g'(x)$ minimikohta tutkimalla derivaattafunktion derivaattaa eli funktion $g$ <em>toista derivaattaa</em> $g''(x)$.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t512_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t512_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            Derivaattafunktio $g'(x) = 12x^2 - 6x + 6$ on kaikkialla positiivinen. Tämä voidaan perustella ainakin kahdella tavalla:
+                            <br>
+                            Toisen asteen ratkaisukaavalla nähdään, että yhtälöllä $g'(x) = 0$ ei ole ratkaisuja ja lisäksi esimerkiksi $g'(0) = 6 > 0$. 
+                            <br>
+                            Derivaattafunktion lauseke on myös mahdollista täydentää neliöksi:
+                            \begin{align*}
+                            g'(x) &= 12\left(x^2 - \frac{1}{2}x + \frac{1}{2}\right) \\[2mm]
+                            &=12\left(x^2 - 2\cdot \frac{1}{4}x + \frac{1}{4^2} - \frac{1}{4^2} + \frac{1}{2}\right) \\[2mm]
+                            &=12\left(\left(x - \frac{1}{4}\right)^2 - \frac{1}{4^2} + \frac{1}{2}\right) \\[2mm]
+                            &=12\left(\left(x - \frac{1}{4}\right)^2 + \frac{7}{16}\right) \\[2mm]
+                            &=12\left(x - \frac{1}{4}\right)^2 + \frac{21}{4} > 0.
+                            \end{align*}
+                        </li>
+                        <li>
+                            Toisella derivaatalla $g''(x) = 24x - 6$ on nollakohta $x = \frac{1}{4}$. Kun laaditaan toiselle derivaatalle $g''$ merkkikaavio ja täydennetään sen funktion $g'$ kulkukaavioksi, havaitaan, että  funktio $g'$ saa pienimmäin arvonsa kohdassa $x = \frac{1}{4}$. Funktion $g$ arvot kasvavat siis hitaimmin kohdassa $x = \frac{1}{4}$.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="4cc12fc1-404c-4fbe-98fc-f74db97a5a8a">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t516">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t516">
+                    <p>
+                        Tukki on suoran ympyräkartion muotoinen. Tukin pituus on 18 metriä ja tyven läpimitta 0,96 metriä. Tukista halutaan veistää suoran ympyrälieriön muotoinen pölkky, jonka tilavuus on mahdollisimman suuri. Kuinka pitkä ja kuinka paksu tilavuudeltaan suurin pölkky on?
+                    </p>
+                    <p>
+                        Vinkki: Piirrä tukin poikkileikkauksesta mallikuva. Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa3/luku1/">MAA3-kurssista</a> suorakulmaisen kolmion geometriaa ja avaruusgeometriaa.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t516_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t516_v" class="collapse">
+                        <p>
+                            Pölkyn pituus on 6 m ja läpimitta 64 cm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="0136e94f-1f3e-4c6c-8a41-cf63d59a88cb">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t513">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t513">
+                    <p>
+                        Tehtävänä on osoittaa, että luvun neliön ja neljännen potenssin keskiarvo on aina vähintään yhtä suuri kuin saman luvun kuutio.
+                    </p>
+                    <ol class="a">
+                        <li> 
+                            Muotoile väite jonkin kirjainsymbolin avulla.
+                        </li>
+                        <li>
+                            Muodosta funktio, jonka kulkua tutkimalla saat osoitettua a-kohdan epäyhtälön todeksi.
+                        </li>
+                        <li>
+                            Perustele, että tehtävän väite on tosi. 
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t513_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t513_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            $
+                            \dfrac{x^2 + x^4}{2} \geq x^3
+                            $
+                        </li>
+                        <li>
+                            Esimerkiksi $f(x) = x^2 + x^4 - 2x^3$.
+                        </li>
+                        <li>
+                            Riittää osoittaa, että funktion $f$ pienin arvo on nolla.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+             <div class="tehtava" id="8a0f3471-da5c-458b-b0f6-28e6d683deec">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA6s2t517">
+                            Ääriarvot
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA6s2t517">
+                    <p>
+                        Tehtävänä on määrittää lausekkeen $11x^2 + 4xy^2$ suurin ja pienin arvo, kun piste $(x,y)$ on ympyrällä $x^2 + y^2 = 1$.
+                    </p>
+                    <ol class ="a">
+                        <li> Ratkaise ympyrän yhtälöstä muuttujan $y$ toinen potenssi. Millä välillä $y$:n arvot voivat vaihdella? </li>
+                        <li> Sijoita a-kohdan tulos lausekkeeseen $11x^2 + 4xy^2$, jolloin saat yhden muuttujan polynomin. </li>
+                        <li> Määritä b-kohdan polynomia vastaavan polynomifunktion suurin ja pienin arvo suljetulla välillä, jonka päätepisteet päättelit a-kohdassa. </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA6s2t517_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA6s2t517_v" class="collapse">
+                        <ol class ="a">
+                        <li> 
+                            $y^2 = 1 - x^2$ 
+                            <br>
+                            Koska $x^2 \geq 0$, niin $y^2 \leq 1$. Siten $-1 \leq y \leq 1$. 
+                        </li>
+                        <li> $11x^2 + 4x(1-x^2)$ </li>
+                        <li> Funktio on $f(x) = 11x^2 + 4x - 4x^3$. Sen suurin arvo välillä $[-1, 1]$ on $f(-1) = 11 = f(1)$ ja pienin  $f\left(-\frac{1}{6}\right) = -\frac{37}{108}.$ </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#luku5-tehtavasarja2">
                     Sulje kappale
