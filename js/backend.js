@@ -51,6 +51,31 @@ class Backend {
       request.send(JSON.stringify(data));
     });
   }
+  
+  /**
+   * Performs a PUT request to a specified URL
+   * @param  {String} url  RESTful URL (without the base URL)
+   * @param  {Object} data Data to be sent
+   * @return {Promise} Promise
+   */
+  put(url, data) {
+    return new Promise((resolve, reject) => {
+      const request = new XMLHttpRequest();
+      request.open('PUT', BACKEND_BASE_URL + url, true);
+      request.withCredentials = true;
+
+      request.onload = () => {
+        if (request.status >= 200 && request.status < 400) {
+          Session.renew();
+          resolve(JSON.parse(request.responseText));
+        } else {
+          reject(JSON.parse(request.responseText));
+        }
+      };
+      request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+      request.send(JSON.stringify(data));
+    });
+  }
 
   /**
    * Performs a DELETE request to a specified URL
