@@ -1,0 +1,1704 @@
+---
+title: MAA8 - Juuri- ja logaritmifunktiot
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: maa8
+---
+
+<input type="hidden" id="chapterNumber" name="theoremStart" value="1"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+{% include bottomnav.html %}
+
+
+<article>
+    <section>
+        <header>
+            <h1>Juurifunktiot</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luvun1-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="MAA8luvun1-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että .... Osaat
+                <ul>
+                    <li> 
+                        
+                    </li>
+                </ul> 
+                </p>
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luvun1-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                    Juurifunktiot
+                </a>
+            </h1>
+        </header>
+        <div id="juuri1" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa2/">MAA2</a> tutustuttiin neliöjuureen, kuutiojuureen ja korkeampiin juuriin sekä ilmaistiin potenssiyhtälöiden ratkaisuja niiden avulla. Tässä kappaleessa erilaisia juuria tutkitaan funktioiden näkökulmasta. 
+                </p>
+                    <!-- Esimerkiksi neliöjuurta voidaan ajatella funktiona, jonka määrittelyjoukko on epänegatiivisten reaalilukujen joukko:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br> -->
+                <p>
+                    Aloitetaan palauttamalla mieleen neliöjuuren ja korkeampien juurten määritelmät.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="FirstEx">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101">
+                                Juurten määritelmät
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t101" class="collapse">
+                        <p>
+                            Kertaa tarvittaessa <a href="http://kisallioppiminen.fi/kurssit/maa2/luku2/">neliöjuuren</a> sekä <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">korkeampien juurten</a> määritelmät kurssilta MAA2. Päättele sen jälkeen seuraavien juurten arvot ja perustele vastauksesi.
+                        </p>
+                        <ol class="a">
+                            <li> $\sqrt{81}$ </li>
+                            <li> 
+                                $\sqrt[3]{125}$ 
+                            </li>
+                            <li> 
+                                $\sqrt[4]{81}$
+                            </li>
+                            <li>
+                                $\sqrt[5]{-32}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t101_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t101_v" class="collapse">
+                           <ol class="a">
+                                <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$ </li>
+                                <li> 
+                                    $\sqrt[3]{125} = 5$, sillä $5^3 = 125$ 
+                                </li>
+                                <li> 
+                                    $\sqrt[4]{81} = 3$, sillä $3 \geq 0$ ja $3^4 = 81$
+                                </li>
+                                <li>
+                                    $\sqrt[5]{-32} = -2$, sillä $(-2)^5 = -32$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Juuret määriteltiin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">kurssilla MAA2</a> potenssiyhtälöiden ratkaisuina. Koska potenssifunktion $f(x) = x^n$ ominaisuudet riippuvat siitä, onko eksponentti $n$ parillinen vai pariton, ovat myös parilliset ja parittomat juuret keskenään erilaisia. Pariton juuri voidaan ottaa myös negatiivisesta luvusta kuten esimerkiksi edellisen tehtävän d-kohdassa tehtiin. Parillinen juuri on määritelty vain silloin, kun juurrettava on epänegatiivinen.
+                </p>
+                <p>
+                    Seuraavassa tehtävässä tutkitaan neliöjuurifunktion ominaisuuksia neliöjuuren määritelmän pohjalta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t102-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t102">
+                                Neliöjuurifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t102" class="collapse">
+                        <p>
+                            Neliöjuuren määritelmän mukaan luvun $a \geq 0$ neliöjuuri $\sqrt{a}$ on se epänegatiivinen luku $b$, jolla pätee
+                            $$
+                                b^2 = a.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele neliöjuuren määritelmästä, mikä on neliöjuurifunktion $f(x) = \sqrt{x}$ määrittelyjoukko. Selitä omin sanoin, miten päättelit. 
+                            </li>
+                            <li> 
+                                Päättele neliöjuuren määritelmästä, millaisia arvoja neliöjuurifunktio $f(x) = \sqrt{x}\,$ saa. Selitä omin sanoin, miten päättelit. 
+                            </li>
+                            <li> 
+                                Täydennä alla oleva taulukko ja hahmottele sen avulla neliöjuurifunktion kuvaaja.
+                                <div align="center">
+                                    <table style="width:75%"> 
+                                        <tr>
+                                            <th>Muuttujan arvo</th>
+                                            <th>Funktion arvo</th>       
+                                        </tr>
+                                        <tr>
+                                            <td>$x$</td>
+                                            <td>$f(x) = \sqrt{x}$</td>      
+                                        </tr>
+                                        <tr>
+                                            <td>$0$</td>
+                                            <td>$f(0) = \phantom{\sqrt{x}}$</td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$1$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$4$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$9$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$16$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$25$</td>
+                                            <td></td>        
+                                        </tr>
+                                    </table> 
+                                </div>
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t102_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t102_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Neliöjuurifunktio on määritelty, jos juurrettava on epänegatiivinen eli $x \geq 0$. Neliöjuurifunktion määrittelyjoukko on siis $[0, \infty\pe$.
+                                    Syynä on se, että neliöjuuri määritellään vain epänegatiivisille luvuille: "luvun $a \geq 0$ neliöjuuri on $\ldots$". 
+                                </li>
+                                <li> 
+                                    Neliöjuurifunktio saa vain epänegatiivisia arvoja eli $\sqrt{x} \geq 0$ aina, kun neliöjuuri on määritelty. Syynä on se, että määritelmän mukaan neliöjuuri on aina epänegatiivinen: "$\sqrt{a}$ on se epänegatiivinen luku $b$, jolla pätee $\ldots$".
+                                </li>
+                                <li> 
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width: 75%"> 
+                                            <tr>
+                                                <th>Muuttujan arvo</th>
+                                                <th>Funktion arvo</th>       
+                                            </tr>
+                                            <tr>
+                                                <td>$x$</td>
+                                                <td>$f(x) = \sqrt{x}$</td>      
+                                            </tr>
+                                            <tr>
+                                                <td>$0$</td>
+                                                <td>$f(0) = 0$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$1$</td>
+                                                <td>$f(1) = 1$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$4$</td>
+                                                <td>$f(4) = 2$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$9$</td>
+                                                <td>$f(9) = 3$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$16$</td>
+                                                <td>$f(16) = 4$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$25$</td>
+                                                <td>$f(25) = 5$</td>        
+                                            </tr>
+                                        </table> 
+                                    </div>
+                                    Kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tehtävän 1.2 tuloksena saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="NELIÖJUURIFUNKTIO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Neliöjuurifunktion
+                        $$
+                        f(x) = \sqrt{x}
+                        $$  
+                        määrittelyjoukko on $[0, \infty\pe$. Neliöjuurifunktion arvo on aina epänegatiivinen. 
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.2.
+                        </p>      
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t103-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t103">
+                                Neliöjuurifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t103" class="collapse">
+                        <p>
+                            Päättele, millä muuttujan arvoilla funktio $f$ on määritelty, jos 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $f(x) = \sqrt{x-2}$
+                            </li>
+                            <li> 
+                                $f(x) = \sqrt{x+9}$
+                            </li>
+                            <li> 
+                                $f(x) = \sqrt{25-x^2}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t103_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t103_v" class="collapse">
+                            <p> Funktio $f$ on määritelty, jos ja vain jos juurrettava on epänegatiivinen eli</p>
+                            <ol class="a">
+                                <li> 
+                                    $x \geq 2$
+                                </li>
+                                <li> 
+                                    $x \geq -9$
+                                </li>
+                                <li> 
+                                    $-5 \leq x \leq 5$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä tutkitaan erilaisia neliöjuurifunktion muunnelmia.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t104-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t104">
+                                Neliöjuurifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t104" class="collapse">
+                        <p>
+                            Yhdistä funktio ja sen kuvaaja. Vastaa sen jälkeen tehtävän lopussa oleviin kysymyksiin.
+                        </p>
+                        <ul>
+                            <li> 
+                                $f(x) = \sqrt{x-1}$
+                            </li>
+                            <li> 
+                                $g(x) = \sqrt{x+2}$
+                            </li>
+                            <li> 
+                                $h(x) = \sqrt{x} + 1$
+                            </li>
+                        </ul>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva004.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva005.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva003.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <ol class="a">
+                            <li> 
+                                Miten vakio $a$ vaikuttaa funktion $v(x) = \sqrt{x+a}$ kuvaajan sijaintiin koordinaatistossa?
+                            </li>
+                            <li> 
+                                Miten vakio $b$ vaikuttaa funktion $w(x) = \sqrt{x} + b$ kuvaajan sijaintiin koordinaatistossa?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t104_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t104_v" class="collapse">
+                            <p> 
+                                Funktion $f$ kuvaaja on C. 
+                                <br>
+                                Funktion $g$ kuvaaja on A.
+                                <br>
+                                Funktion $h$ kuvaaja on B.
+                            </p>
+                            <ol class="a">
+                                <li> 
+                                    Vakio $a$ siirtää funktion $v(x) = \sqrt{x+a}$ kuvaajaa $x$-akselin suunnassa verrattuna tavallisen neliöjuurifunktion kuvaajaan. Jos $a > 0$, kuvaaja siirtyy vasemmalle. Jos $a < 0$, kuvaaja siirtyy oikealle.
+                                </li>
+                                <li> 
+                                    Vakio $b$ siirtää funktion $w(x) = \sqrt{x} + b$ kuvaajaa $y$-akselin suunnassa verrattuna tavallisen neliöjuurifunktion kuvaajaan. Jos $b > 0$, kuvaaja siirtyy ylöspäin. Jos $b < 0$, kuvaaja siirtyy alaspäin.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t105-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t105">
+                                Neliöjuurifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t105" class="collapse">
+                        <p>
+                            Alla on näkyvissä erilaisten neliöjuurifunktioiden kuvaajia. Muodosta funktioille lausekkeet.
+                        </p>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva006.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva007.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva008.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <p>
+                            Vinkki: hyödynnä tehtävän 1.4 havaintoja.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t105_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t105_v" class="collapse">
+                            <ul>
+                                <li> $f(x) = \sqrt{x + 3}$ </li>
+                                <li> $g(x) = \sqrt{x-2} - 1$ </li>
+                                <li> $h(x) = -\sqrt{x}$ </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "teoria">
+                <p>
+                    Siirrytään seuraavaksi tutkimaan kuutiojuurta ja korkeampia juuria.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t106-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t106">
+                                Kuutiojuurifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t106" class="collapse">
+                        <p>
+                            Kuutiojuuren määritelmän mukaan luvun $a$ kuutiojuuri $\sqrt[3]{a}$ on se luku $b$, jolla pätee
+                            $$
+                                b^3 = a.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele kuutiojuuren määritelmästä, mikä on kuutiojuurifunktion $f(x) = \sqrt[3]{x}\,$ määrittelyjoukko. Selitä omin sanoin, miten päättelit. 
+                            </li>
+                            <li> 
+                                Päättele kuutiojuuren määritelmästä, millaisia arvoja kuutiojuurifunktio $f(x) = \sqrt[3]{x}\,$ saa. Selitä omin sanoin, miten päättelit. 
+                            </li>
+                            <li> 
+                                Täydennä alla oleva taulukko ja hahmottele sen avulla kuutiojuurifunktion kuvaaja.
+                                <div align="center">
+                                    <table style="width:75%"> 
+                                        <tr>
+                                            <th>Muuttujan arvo</th>
+                                            <th>Funktion arvo</th>       
+                                        </tr>
+                                        <tr>
+                                            <td>$x$</td>
+                                            <td>$f(x) = \sqrt[3]{x}$</td>      
+                                        </tr>
+                                        <tr>
+                                            <td>$0$</td>
+                                            <td>$f(0) = \phantom{\sqrt[3]{x}}$</td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$1$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$8$</td>
+                                            <td></td>        
+                                        </tr>
+                                        <tr>
+                                            <td>$27$</td>
+                                            <td></td>        
+                                        </tr>
+                                    </table> 
+                                </div>
+                                Vinkki: Vaikka taulukko on suppea, saatat pystyä päättelemään sen avulla monia kuutiojuurifunktion arvoja, jotka eivät ole taulukossa. Mitä on esimerkiksi $f(-8)$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t106_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t106_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Kuutiojuurifunktio on määritelty kaikilla reaaliluvuilla eli sen määrittelyjoukko on koko lukusuora $\R$. Syynä on se, ettei määritelmässä aseteta mitään ehtoja juurrettavalle: "luvun $a$ kuutiojuuri on $\ldots$". 
+                                </li>
+                                <li> 
+                                    Kuutiojuurifunktio saa sekä positiivisia että negatiivisia arvoja. Jos $a$ on negatiivinen, myös sen kuutiojuuri on negatiivinen, sillä kolmanteen potenssiin korotuksessa luvun etumerkki säilyy: "$\sqrt[3]{a}$ on se luku $b$, jolla pätee $b^3 = a$". 
+                                </li>
+                                <li> 
+                                    Taulukko:
+                                    <div align="center">
+                                        <table style="width: 75%"> 
+                                            <tr>
+                                                <th>Muuttujan arvo</th>
+                                                <th>Funktion arvo</th>       
+                                            </tr>
+                                            <tr>
+                                                <td>$x$</td>
+                                                <td>$f(x) = \sqrt[3]{x}$</td>      
+                                            </tr>
+                                            <tr>
+                                                <td>$0$</td>
+                                                <td>$f(0) = 0$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$1$</td>
+                                                <td>$f(1) = 1$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$8$</td>
+                                                <td>$f(8) = 2$</td>        
+                                            </tr>
+                                            <tr>
+                                                <td>$27$</td>
+                                                <td>$f(27) = 3$</td>        
+                                            </tr>
+                                        </table> 
+                                    </div>
+                                    Kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva009.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Huomaa, että kuvaaja on symmetrinen origon suhteen, koska esimerkiksi $f(-1) = \sqrt[3]{-1} = -1$ ja $f(-8) = \sqrt[3]{-8} = -2$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="teoria">
+                <p>
+                    Tehtävän 1.6 tuloksena saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="NELIÖJUURIFUNKTIO">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Kuutiojuurifunktion
+                        $$
+                        f(x) = \sqrt[3]{x}
+                        $$  
+                        määrittelyjoukko on koko lukusuora $\R$. Kuutiojuurifunktio saa sekä positiivisia että negatiivisia arvoja. 
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva010.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.6.
+                        </p>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t109-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t109">
+                                Kuutiojuurifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t109" class="collapse">
+                        <p>
+                            Päättele, millä muuttujan arvoilla funktio $f$ on määritelty, jos 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $f(x) = \sqrt[3]{x-7}$
+                            </li>
+                            <li> 
+                                $f(x) = \dfrac{1}{2+\sqrt[3]{x}}$
+                            </li>
+                            <li> 
+                                $f(x) = \dfrac{1}{\sqrt[3]{x + 5}}$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t109_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t109_v" class="collapse">
+                            <p> Funktio $f$ on määritelty</p>
+                            <ol class="a">
+                                <li> 
+                                    kaikilla reaaliluvuilla
+                                </li>
+                                <li> 
+                                    jos ja vain jos nimittäjä on nollasta poikkeava eli $x \neq -8$
+                                </li>
+                                <li> 
+                                    jos ja vain jos nimittäjä on nollasta poikkeava eli $x \neq -5$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t107-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t107">
+                                Korkeammat juurifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t107" class="collapse">
+                        <p>
+                            Kertaa tarvittaessa $n$:nnen juuren määritelmä <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">MAA2-kurssilta</a>. Päättele määritelmän avulla, mikä on funktion $f(x) = \sqrt[n]{x}\,$ määrittelyjoukko ja millaisia arvoja se saa, jos 
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $n \geq 2$ on parillinen kokonaisluku
+                            </li>
+                            <li> 
+                                $n \geq 3$ on pariton kokonaisluku.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t107_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t107_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Jos $n \geq 2$ on parillinen kokonaisluku, funktion $f(x) = \sqrt[n]{x}\,$ määrittelyjoukko on $[0, \infty\pe$ ja sen arvot ovat epänegatiivisia.
+                                </li>
+                                <li> 
+                                    Jos $n \geq 3$ on pariton kokonaisluku, funktion $f(x) = \sqrt[n]{x}\,$ määrittelyjoukko on $\R$ ja se saa sekä positiivisia että negatiivisia arvoja.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="teoria">
+                <p>
+                    Muotoillaan tehtävän 1.8 päätelmät teoreemaksi:
+                </p>
+
+                <div class="theorem" id="JUURIFUNKTIOT">
+                    <h3>TEOREEMA</h3>
+                        <ul>
+                            <li> 
+                                Jos $n \geq 2$ on parillinen kokonaisluku, juurifunktion
+                                $$
+                                f(x) = \sqrt[n]{x}
+                                $$  
+                                määrittelyjoukko on väli $[0, \infty\pe$. Funktion arvot ovat epänegatiivisia.
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva015.png" style="max-width: 90%; width: auto; height: auto;"/>
+                            </li>
+                            <li> 
+                                Jos $n \geq 3$ on pariton kokonaisluku, juurifunktion
+                                $$
+                                f(x) = \sqrt[n]{x}
+                                $$  
+                                määrittelyjoukko on reaalilukujen joukko $\R$. Funktio saa sekä positiivisia että negatiivisia arvoja.
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva014.png" style="max-width: 90%; width: auto; height: auto;"/>
+                            </li>
+                        </ul>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.8.
+                        </p> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t108-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t108">
+                                Korkeammat juurifunktiot
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t108" class="collapse">
+                        <p>
+                            Yhdistä funktio ja sen kuvaaja:
+                        </p>
+                        <ul>
+                            <li> 
+                                $f(x) = 2-\sqrt[4]{x}$
+                            </li>
+                            <li> 
+                                $g(x) = \sqrt[3]{-x}$
+                            </li>
+                            <li> 
+                                $h(x) = \sqrt[5]{x+1}$
+                            </li>
+                        </ul>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva011.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva012.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        <img src="/kurssit/maa8/kuvat/MAA8kuva013.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t108_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t108_v" class="collapse">
+                           <p>
+                                Funktion $f$ kuvaaja on B.
+                                <br>
+                                Funktion $g$ kuvaaja on C.
+                                <br>
+                                Funktion $h$ kuvaaja on A.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri1">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri2">
+                    Juuriyhtälöt
+                </a>
+            </h1>
+        </header>
+        <div id="juuri2" class="collapse">
+            <div class="teoria">
+                <p>
+                    Kun tutkitaan, missä kohdassa jokin juurifunktio saa tietyn arvon, päädytään niin sanottuun juuriyhtälöön. Esimerkiksi jos halutaan tietää, missä kohdassa funktio 
+                    $$f(x) = \sqrt{4x+3}$$ 
+                    saa arvon $4$, joudutaan tutkimaan yhtälöä
+                    $$f(x) = 4$$
+                    eli yhtälöä
+                    $$\sqrt{4x+3} = 4.$$
+                    Tätä yhtälöä voidaan havainnollistaa piirtämällä juurifunktion $f(x) = \sqrt{4x+3}$ kuvaaja ja vakiofunktion $g(x) = 4$ kuvaaja samaan koordinaatistoon:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva016.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Piirroksesta nähdään, että kuvaajat leikkaavat yhdessä kohdassa eli yhtälöllä on täsmälleen yksi ratkaisu $x \approx 3$. (Tähän päätelmään tarvitaan toki myös tieto siitä, että neliöjuurifunktio saa aina vain suurempia arvoja juurrettavan kasvaessa. Muuten kuvan ulkopuolella voisi olla lisää leikkauskohtia.)
+                </p>
+                <p>
+                    Ratkaisun tarkan arvon selvittäminen ei onnistu pelkän piirroksen avulla vaan tarvitaan muita keinoja. Määritelmän mukaan neliöjuuri on luku, jonka toinen potenssi on sama kuin juurrettava:
+                    $$
+                    \left(\sqrt{a}\right)^2 = a
+                    $$
+                    kaikilla $a \geq 0$. Neliöjuuresta päästään siis eroon, kun yhtälön kumpikin puoli korotetaan toiseen potenssiin:
+                    \begin{align*}
+                    \sqrt{4x + 3} &= 4 \quad \mid (\phantom{1})^2 \\
+                    \left(\sqrt{4x + 3}\right)^2 &= 4^2 \\
+                    4x + 3 &= 16 \\
+                    4x &= 13 \\
+                    x &= \frac{13}{4} = 3{,}25
+                    \end{align*}
+                    Yhtälön ratkaisu on siis $x = 3{,}25$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t110-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t110">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t110" class="collapse">
+                        <p>
+                            Ratkaise yhtälö
+                            $$
+                            \sqrt{5x + 2} = 3
+                            $$
+                            samaan tapaan kuin edellä tehtiin. Tarkista vastauksen järkevyys piirtämällä samaan koordinaatistoon funktioiden $f(x) = \sqrt{5x + 2}$ ja $g(x) = 3$ kuvaajat esimerkiksi Geogebralla.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t110_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t110_v" class="collapse">
+                           <p>
+                                Yhtälö toteutuu, jos ja vain jos 
+                                $$x = \dfrac{7}{5} = 1{,}4.$$ 
+                                Kuvasta nähdään, että tulos on järkevä:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva020.png" max-width: 100%; width: auto; height: auto;/>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Toiseen potenssiin korotuksen käyttö yhtälöiden ratkaisussa poikkeaa aikaisemmin käytetyistä peruslaskutoimituksista. Yhteenlaskun voi aina kumota vähennyslaskulla ja kääntäen. Nollasta poikkeavalla luvulla kertomisen voi aina kumota jakolaskulla, ja jakolaskun voi kumota kertolaskulla. Toiseen potenssiin korotusta ei kuitenkaan voi kumota niin, että varmasti päästäisiin takaisin samaan yhtälöön, josta lähdettiin.
+                </p>
+                <p> 
+                    Jos esimerkiksi yhtälön $x = 2$ molemmat puolet korotetaan toiseen potenssiin, saadaan yhtälö $x^2 = 4$. Symbolien avulla ilmaistuna
+                    $$
+                    x = 2 \Rightarrow x^2 = 4.
+                    $$
+                    Yhtälöstä $x^2 = 4$ ei kuitenkaan voida varmasti päätellä, että $x = 2$, sillä myös $(-2)^2 = 4$. Toisin sanottuna
+                    $$
+                    x^2 = 4 \not\Rightarrow x = 2.
+                    $$
+                    Oikea päätelmä tässä tapauksessa on
+                    $$
+                    x^2 = 4 \Rightarrow x = 2 \ \text{ tai } \ x = -2.
+                    $$
+                </p>
+                <p>
+                    Toiseen potenssiin korotus auttaa pääsemään neliöjuurista eroon, mutta saattaa yllä mainitun ilmiön vuoksi tuottaa "ratkaisuja", jotka eivät todellisuudessa ole yhtälön ratkaisuja. Esimerkiksi jos ratkaistaan yhtälö
+                    $$
+                    \sqrt{4x + 3} = -1
+                    $$
+                    samaan tapaan kuin edellä, saadaan seuraava päättelyketju:
+                    \begin{align*}
+                    \sqrt{4x + 3} &= -1 \quad \mid (\phantom{1})^2 \\
+                    \left(\sqrt{4x + 3}\right)^2 &= (-1)^2 \\
+                    4x + 3 &= 1 \\
+                    4x &= -2 \\
+                    x &= -\frac{1}{2} = -0{,}5
+                    \end{align*}
+                    Jos ratkaisun olemassaoloa tutkitaan graafisesti, paljastuu kuitenkin, että yhtälöllä ei ole yhtään ratkaisua:
+                    <br>
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva017.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Päättelyssä ei sinänsä ole mitään vikaa: se osoittaa, että <em>jos yhtälöllä $\sqrt{4x + 3} = -1$ olisi ratkaisu</em>, se olisi $x = -0{,}5$; mikään muu luku ei voisi tulla kysymykseen. Toiseen potenssiin korotusta voi siis huoletta käyttää neliöjuuriyhtälöiden ratkaisemiseen, kunhan muistaa lopuksi tarkistaa, ovatko löytyneet ratkaisuehdokkaat oikeasti ratkaisuja. Tässäkin tapauksessa sijoittamalla huomataan, että $x = -0{,}5$ ei ole yhtälön ratkaisu. Nimittäin jos $x = -0{,}5$, niin yhtälön vasemmaksi puoleksi saadaan 
+                    \begin{align*}
+                    \sqrt{4\cdot (-0{,}5) + 3} &= \sqrt{-2 + 3} \\
+                    &= \sqrt{1} \\
+                    &= 1.
+                    \end{align*}
+                    Yhtälön vasen ja oikea puoli eivät siis ole yhtä suuria.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t111-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t111">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t111" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                            \sqrt{x} = 2x-3.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Hahmottele samaan koordinaatistoon funktioiden $f(x) = \sqrt{x}\,$ ja $g(x) = 2x - 3$ kuvaajat. Kuinka monta ratkaisua tutkittavalla yhtälöllä näyttää olevan? 
+                            </li>
+                            <li>
+                                Ratkaise yhtälö korottamalla molemmat puolet toiseen potenssiin. Muista tutkia sijoittamalla, ovatko kaikki ratkaisuehdokkaat todella yhtälön ratkaisuja.
+                                <br>
+                                Vinkki: kertaa tarvittaessa summan ja erotuksen neliön kaavat <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">MAA2-kurssin</a> teoreemasta 3.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t111_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t111_v" class="collapse">
+                           <ol class="a">
+                            <li> 
+                                Yhtälöllä näyttää olevan täsmälleen yksi ratkaisu:
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva018.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Yhtälöstä
+                                $$
+                                x = (2x-3)^2
+                                $$
+                                saadaan ratkaisuehdokkaat $x_1 = 1$ ja $x_2 = \frac{9}{4}$.
+                                <br>
+                                Sijoittamalla huomataan, että ehdokas $x_1$ ei toteuta alkuperäistä yhtälöä: jos $x = 1$, niin yhtälön vasen puoli on $\sqrt{1} = 1$ mutta oikea puoli on $2\cdot 1 - 3 = 2-3 = -1$.
+                                <br>
+                                Ehdokas $x_2$ puolestaan toteuttaa alkuperäisen yhtälön: jos $x = \frac{9}{4}$, niin yhtälön vasen puoli on
+                                $$
+                                \sqrt{\frac{9}{4}} = \frac{3}{2}
+                                $$ 
+                                ja oikea puoli on
+                                $$
+                                2\cdot \frac{9}{4} - 3 = \frac{9}{2} - \frac{6}{2} = \frac{3}{2}.
+                                $$
+                                Yhtälö
+                                $$
+                                \sqrt{x} = 2x-3
+                                $$
+                                siis toteutuu, jos ja vain jos $x = \dfrac{9}{4}$.
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Se, että kaikki ratkaisuehdokkaat eivät kelpaa neliöjuuriyhtälön ratkaisuksi, juontaa juurensa neliöjuuren määritelmään. Neliöjuuren määritelmän mukaan luvun neliöjuuri on aina epänegatiivinen:
+                    $$
+                    \sqrt{a} \geq 0
+                    $$
+                    kaikilla $a \geq 0$. Tämän tiedon avulla voidaan jo etukäteen päätellä, mitkä luvut eivät ainakaan kelpaa neliöjuuriyhtälön ratkaisuiksi. Esimerkiksi aiemmin tutkitun yhtälön
+                    $$
+                    \sqrt{4x+3} = -1
+                    $$
+                    tapauksessa voidaan päätellä, että sen vasen ja oikea puoli ovat erimerkkiset muuttujan $x$ arvosta riippumatta: vasen puoli on aina epänegatiivinen ja oikea puoli on aina negatiivinen. Yhtälöllä ei siten ole yhtään ratkaisua.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t112-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t112">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t112" class="collapse">
+                        <p>
+                            Onko seuraavilla yhtälöillä ratkaisuja? Päättele ensin ja tarkista päättelysi piirtämällä funktioiden kuvaajat samaan koordinaatistoon esimerkiksi Geogebralla.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\sqrt{7-x} = -4$
+                            </li>
+                            <li>
+                                $\sqrt{3x-5} = -x^2-1$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t112_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t112_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Yhtälöllä ei ole yhtään ratkaisua, koska sen vasen puoli on aina epänegatiivinen ja oikea puoli on aina negatiivinen. Vasen ja oikea puoli ovat siis erimerkkiset riippumatta muuttujan $x$ arvosta.
+                                </li>
+                                <li>
+                                    Yhtälöllä ei ole yhtään ratkaisua, koska sen vasen ja oikea puoli ovat erimerkkiset riippumatta muuttujan $x$ arvosta. Yhtälön vasen puoli on neliöjuurena aina epänegatiivinen. Yhtälön oikea puoli on aina negatiivinen. Tämä seuraa siitä, että $x^2 \geq 0$ kaikilla reaaliluvuilla $x$:
+                                    \begin{align*}
+                                    x^2 &\geq 0 \\
+                                    -x^2 &\leq 0 \\
+                                    -x^2 - 1 &\leq -1.
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tehtävän 1.11 yhtälön 
+                    $$
+                        \sqrt{x} = 2x-3.
+                    $$
+                    tapauksessa tilanne on mutkikkaampi. Sen vasen puoli on neliöjuuren määritelmän nojalla aina epänegatiivinen, mutta oikean puolen merkki riippuu muuttujasta $x$. Yhtälö voi toteutua vain, jos myös oikea puoli on epänegatiivinen eli $2x - 3 \geq 0$. Kun tämä epäyhtälö ratkaistaan, saadaan ehto mahdollisille ratkaisuille:
+                    \begin{align*}
+                    2x - 3 &\geq 0\\[1.5mm]
+                    2x &\geq 3 \\[1.5mm]
+                    x &\geq \frac{3}{2}
+                    \end{align*}
+                    Tätä ehtoa kutsutaan <em>neliöönkorotusehdoksi</em> ja sen avulla voidaan tehtävässä 1.11 löydetyistä ratkaisuehdokkaista poimia todelliset ratkaisut: ehdokas $x_1 = 1$ ei toteuta neliöönkorotusehtoa $x \geq 1{,}5$ mutta ehdokas $x_2 = 2{,}25$ toteuttaa sen. Yhtälöllä on siis täsmälleen yksi ratkaisu, joka on $x = 2{,}25$.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t113-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t113">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t113" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                                \sqrt{2x-1} = 4x-5.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Mikä ehto yhtälön oikean puolen pitää toteuttaa, että yhtälö voi toteutua? Muodosta ja kirjaa ylös tämä neliöönkorotusehto.
+                                <br>
+                                Vinkki: mitä voit sanoa yhtälön vasemman puolen merkistä?
+                            </li>
+                            <li>
+                                Ratkaise yhtälö normaaliin tapaan korottamalla kumpikin puoli toiseen potenssiin. Karsi valeratkaisut todellisista ratkaisuista a-kohdan neliöönkorotusehdon avulla.
+                            </li>
+                            <li>
+                                Piirrä samaan koordinaatistoon funktioiden $f(x) = \sqrt{2x-1}$ ja $g(x) = 4x-5$ kuvaajat esimerkiksi Geogebralla. Varmista kuvasta, että kaikki valeratkaisut saatiin todella karsittua pois.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t113_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t113_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Neliöönkorotusehto on $4x - 5 \geq 0$ eli 
+                                    $$
+                                    x \geq \frac{5}{4}.
+                                    $$
+                                    Koska yhtälön 
+                                    $$
+                                    \sqrt{2x-1} = 4x-5.
+                                    $$
+                                    vasen puoli on neliöjuurena aina epänegatiivinen, täytyy yhtälön oikeankin puolen olla epänegatiivinen, jotta yhtälö voi toteutua. 
+                                </li>
+                                <li>
+                                    Yhtälöstä
+                                    $$
+                                    2x - 1 = (4x-5)^2
+                                    $$
+                                    saadaan ratkaisuehdokkaat $x_1 = \frac{13}{8} = 1{,}625$ ja $x_2 = 1$. Näistä neliöönkorotusehdon $x \geq 1{,}25$ toteuttaa vain ehdokas $x_1$. Yhtälö 
+                                    $$\sqrt{2x-1} = 4x-5$$ 
+                                    siis toteutuu, jos ja vain jos 
+                                    $$x = \frac{13}{8}.$$
+                                </li>
+                                <li>
+                                    Kuvaajilla on yksi leikkauskohta, joten yhtälöllä on yksi ratkaisu:
+                                    <br>
+                                    <img src="/kurssit/maa8/kuvat/MAA8kuva021.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Kaikki valeratkaisut saatiin siis karsittua pois.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Neliöönkorotusehto muodostetaan tutkimalla, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkisiä. Aina sekään ei riitä sulkemaan kaikkia valeratkaisuja pois. Esimerkiksi yhtälön
+                    $$
+                    \sqrt{x^2 - 1} = \sqrt{2x - 1\phantom{ {}^2 }}
+                    $$
+                    kumpikin puoli on aina epänegatiivinen, joten mitään neliönkorotusehtoa ei ole. Päätellään samaan tapaan kuin edellä:
+                    \begin{align*}
+                    \sqrt{x^2 - 1} &= \sqrt{2x - 1\phantom{ {}^2 }} \quad \mid (\phantom{1})^2 \\
+                    x^2 - 1 &= 2x - 1 \\[1mm]
+                    x^2 - 2x &= 0 \\[1mm]
+                    x(x-2) &= 0 \\[1mm]
+                    x = 0 \ &\text{ tai } \ x = 2
+                    \end{align*}
+                    Jos ratkaisut tarkistaa sijoittamalla alkuperäiseen yhtälöön, huomaa, että joukkoon on kuitenkin jälleen soluttautunut valeratkaisu. Nimittäin jos $x = 0$, niin alkuperäisen yhtälön vasen puoli on
+                    $$
+                    \sqrt{x^2 - 1} = \sqrt{0^2-1} = \sqrt{-1},
+                    $$
+                    joka ei ole määritelty. Ehdokas $x = 0$ ei siis kelpaa ratkaisuksi. Jos $x = 2$, alkuperäisen yhtälön vasen puoli on 
+                    $$
+                    \sqrt{x^2 - 1} = \sqrt{2^2-1} = \sqrt{3}
+                    $$
+                    ja
+                    oikea puoli on 
+                    $$
+                    \sqrt{2x - 1} = \sqrt{2\cdot 2 - 1} = \sqrt{3}.
+                    $$
+                    Alkuperäisellä yhtälöllä on siis täsmälleen yksi ratkaisu $x = 2$.
+                </p>
+
+                <p>
+                    Neliöönkorotuksen avulla muodostettu uusi yhtälö voi siis tuottaa myös sellaisia valeratkaisuja, joilla alkuperäinen neliöjuuriyhtälö ei ole määritelty. Kaikkien valeratkaisujen tunnistamiseksi pitää neliöönkorotusehdon lisäksi tutkia, millä ehdoilla yhtälö on määritelty. Aikaisemmissa tehtävissä on kuvaajien avulla varmistettu, että valeratkaisut on saatu karsittua pois. Joissakin tilanteissa kuvaajan piirtäminen voi kuitenkin olla hyvin hankalaa. Tarvitaan siis menetelmä, jolla ratkaisut saadaan selvitettyä myös silloin, kun kuvaajia ei voi käyttää päättelyn tukena.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t114-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t114">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t114" class="collapse">
+                        <p>
+                            Tehtävänä on ratkaista yhtälö
+                            $$
+                                \sqrt{x^2 + 2x - 15} = \sqrt{3x-13}.
+                            $$
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Millä ehdolla yhtälön vasen puoli on määritelty?
+                                <br>
+                                Vinkki: kertaa tarvittaessa toisen asteen epäyhtälön ratkaiseminen MAA2-kurssin <a href="http://kisallioppiminen.fi/kurssit/maa2/luku3/">luvusta 3</a>.
+                            </li>
+                            <li>
+                                Millä ehdolla yhtälön oikea puoli on määritelty?
+                            </li>
+                            <li>
+                                Liittykö yhtälöön neliöönkorotusehtoa?
+                            </li>
+                            <li>
+                                Yhdistä edellisten kohtien ehdot yhdeksi ehdoksi, joka yhtälön ratkaisujen pitää toteuttaa. 
+                            </li>
+                            <li>
+                                Ratkaise yhtälö normaaliin tapaan korottamalla kumpikin puoli toiseen potenssiin. Karsi valeratkaisut pois d-kohdan ehdon avulla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t114_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t114_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Yhtälön vasen puoli on määritelty, jos ja vain jos $x \leq -5$ tai $x \geq 3$.
+                                </li>
+                                <li>
+                                    Yhtälön oikea puoli on määritelty, jos ja vain jos $x \geq \frac{13}{3} \approx 4{,}33$.
+                                </li>
+                                <li>
+                                    Yhtälön kumpikin puoli on epänegatiivinen kaikilla muuttujan arvoilla, joten yhtälöön ei liity neliöönkorotusehtoa.
+                                </li>
+                                <li>
+                                    Yhtälön ratkaisujen pitää toteuttaa ehto $x \leq -5$ tai $x \geq \frac{13}{3}$.
+                                </li>
+                                <li>
+                                    Yhtälöstä 
+                                    $$
+                                        x^2 + 2x - 15 = 3x - 13
+                                    $$
+                                    saadaan ratkaisuehdokkaat $x_1 = -1$ ja $x_2 = 2$. Kumpikaan niistä ei toteuta d-kohdassa muodostettua ehtoa, joten yhtälöllä ei ole yhtään ratkaisua.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="teoria">
+                <p>
+                    Jos kaikkien neliöönkorotus- ja määrittelyehtojen tutkiminen tuntuu liian työläältä, toinen vaihtoehto on seuloa todelliset ratkaisut valeratkaisuista sijoittamalla kaikki ratkaisuehdokkaat alkuperäiseen yhtälöön. Sijoittamalla tarkistaminen toimii aina. Neliöjuuriyhtälön ratkaisemiseksi on siis kaksi tapaa:
+                </p>
+                <ol>
+                    <li> 
+                        Neliöönkorotus ja tarkistus sjoittamalla: 
+                        <ul>
+                            <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
+                            <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
+                            <li> Tutki alkuperäiseen yhtälöön sijoittamalla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        Määrittely- ja neliöönkorotusehtojen avulla: 
+                        <ul>
+                            <li> Kirjaa ylös ehdot, joilla yhtälö on määritelty. </li>
+                            <li> Muodosta neliöönkorotusehto päättelemällä, millä ehdolla yhtälön vasen ja oikea puoli ovat saman merkkiset. </li>
+                            <li> Hankkiudu eroon neliöjuurista korottamalla yhtälön kumpikin puoli toiseen potenssiin. </li>
+                            <li> Ratkaise näin saamasi yhtälö normaalisti. </li>
+                            <li> Päättele määrittely- ja neliöönkorotusehtojen avulla, mitkä ratkaisuehdokkaista ovat todellisia ratkaisuja. </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t115-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t115">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t115" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Valitse jompi kumpi edellä mainituista ratkaisutavoista ja ratkaise yhtälö
+                                $$
+                                2\sqrt{x} = 3-x.
+                                $$ 
+                            </li>
+                            <li>
+                                Kumpi ratkaisutavoista miellyttää sinua enemmän? Miksi? Kerro omin sanoin.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t115_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t115_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Ratkaisuehdokkaiksi saadaan $x_1 = 1$ ja $x_2 = 9$. Alkuperäinen yhtälö toteutuu, jos ja vain jos $x = 1$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t116-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t116">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t116" class="collapse">
+                        <p>
+                            Ratkaise seuraavat neliöjuuriyhtälöt. Ennen kuin korotat yhtälön molemmat puolet toiseen potenssiin, muokkaa yhtälöä niin, että neliöjuuren sisältävä termi on yksinään yhtälön toisella puolella.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $x - \sqrt{x + 2} = 0$
+                            </li>
+                            <li>
+                                $1 + \sqrt{x-1} = x$
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t116_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t116_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $x = 2$
+                                </li>
+                                <li>
+                                    $x = 1$ tai $x = 2$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tarkastellaan tämän kappaleen lopuksi vielä korkeampien juuriyhtälöiden ratkaisemista. Jos yhtälössä esiintyy $n$:s juuri, voi ratkaisussa käyttää potenssiin $n$ korotusta. Muut huomioitavat asiat riippuvat siitä, onko kysymyksessä pariton vai parillinen juuri.
+                </p>
+                <p>
+                    Jos yhtälössä esiintyy pariton juuri, esimerkiksi kuutiojuuri tai viides juuri, valeratkaisuista ei tarvitse huolehtia. Tämä johtuu siitä, että parittomat potenssifunktiot saavat jokaisen arvonsa vain kerran. Esimerkiksi alla olevasta kolmannen asteen potenssifunktion kuvaajasta nähdään, että 
+                    $$
+                        x = \sqrt[3]{2} \Rightarrow x^3 = 2
+                    $$
+                    ja
+                    $$
+                        x^3 = 2 \Rightarrow x = \sqrt[3]{2}.
+                    $$
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva023.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Jos yhtälön molemmat puolet korotetaan parittomaan potenssiin, on uusi yhtälö siis yhtäpitävä alkuperäisen yhtälön kanssa, sillä parittomaan potenssiin korotus voidaan kumota ottamalla yhtälön molemmista puolista vastaava $n$:s juuri.
+                </p>
+                <p>
+                    Jos yhtälössä esiintyy mikä tahansa parillinen juuri, valeratkaisut täytyy tunnistaa ja karsia pois samalla tavalla kuin neliöjuuren tapauksessa tehtiin. Tämä johtuu siitä, että parilliset potenssifunktiot saavat kaikki positiiviset arvonsa kahdessa eri kohdassa. Esimerkiksi alla olevasta neljännen asteen potenssifunktion kuvaajasta nähdään, että 
+                    $$
+                        x = \sqrt[4]{2} \Rightarrow x^4 = 2
+                    $$
+                    mutta
+                    $$
+                        x^4 = 2 \Rightarrow x = \sqrt[4]{2} \ \text{ tai } \ x = -\sqrt[4]{2}.
+                    $$
+                    <img src="/kurssit/maa8/kuvat/MAA8kuva022.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Parilliseen potenssiin korotusta ei siis voi kumota niin, että tuloksena olisi varmasti sama yhtälö mistä lähdettiin. 
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t117-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t117">
+                                Juuriyhtälö
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t117" class="collapse">
+                        <p>
+                            Ratkaise seuraava yhtälöt:
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                $\sqrt[3]{x + 6} + 2 = 0$
+                            </li>
+                            <li>
+                                $\sqrt[3]{2x^3 + x} = 3x$
+                            </li>
+                            <li>
+                                $\sqrt{2-x} = \sqrt[4]{x}$
+                            </li>
+                        </ol>
+                        <p>
+                            Vinkki: a-kohdassa muokkaa yhtälöä ennen potenssiin korotusta niin, että kuutiojuuren sisältävä termi on yksinään yhtälön toisella puolella.
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t117_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t117_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $x = -14$
+                                </li>
+                                <li>
+                                    $x = 0$ tai $x = -\dfrac{1}{5}$ tai $x = \dfrac{1}{5}$
+                                </li>
+                                <li>  
+                                    $x = 1$
+                                    <br>
+                                    (Toinen ratkaisuehdokas $x = 4$ ei toteuta alkuperäisen yhtälön määrittelyehtoa.)
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri3">
+                    Juurifunktion derivaatta
+                </a>
+            </h1>
+        </header>
+        <div id="juuri3" class="collapse">
+            <div class="teoria">
+                <p>
+                   Tässä kappaleessa tutkitaan juurifunktioiden derivaattoja ja ratkaistaan niiden avulla erilaisia ääriarvosovelluksia. Kurssissa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku1/">MAA6</a> opittiin, että derivaatan arvo on funktion kuvaajalle asetetun tangentin kulmakerroin. 
+                   <br>
+                   <img src="/kurssit/maa7/kuvat/MAA7kuva077.png" style="max-width: 100%; width: auto; height: auto;"/>
+                   <br>
+                   Kun määritetään tällaisen tangentin kulmakerroin $k$ mahdollisimman monessa kohdassa $a$ ja pisteet $(a,k)$ merkitään koordinaatistoon, piirtyy näkyviin derivaattafunktion kuvaaja. Seuraavassa tehtävässä hahmotellaan neliöjuurifunktioiden derivaattafunktion kuvaajaa tällä menetelmällä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA8t118-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t118">
+                                Neliöjuurifunktion derivaattafunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA8t118" class="collapse">
+                        <p>
+                            Tutki neliöjuurifunktion derivaattaa tämän <a href="https://ggbm.at/HmDB3WQ8">Geogebra-havainnollistuksen</a> avulla. Päättele vastaukset seuraaviin kysymyksiin:
+                        </p>
+                        <ol class="a">
+                            <li> Miten oranssin pisteen $y$-koordinaatti ja tangentin kulmakerroin liittyvät toisiinsa? </li>
+                            <li> 
+                                Mitä tangentin kulmakertoimelle tapahtuu, kun muuttujan $x$ arvoa kasvatetaan? Miten tämä näkyy derivaattafunktion kuvaajassa?
+                            </li>
+                            <li> 
+                                Mitä tangentin kulmakertoimelle tapahtuu, kun muuttujan $x$ arvo lähestyy nollaa? Miten tämä näkyy derivaattafunktion kuvaajassa?
+                            </li>
+                            <li>
+                                Miten selittäisit sen, että neliöjuurifunktio ei ole derivoituva kohdassa $x = 0$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA8t118_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA8t118_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Oranssin pisteen $y$-koordinaatti on samaan kohtaan piirretyn tangentin kulmakerroin. Oranssi piste on siis derivaattafunktion kuvaajan piste.
+                                </li>
+                                <li>
+                                    Tangentin kulmakerroin pienenee, mutta säilyy positiivisena. Derivaattafunktion kuvaaja lähestyy $x$-akselia.
+                                </li>
+                                <li>  
+                                    Tangentin kulmakerroin kasvaa nopeasti hyvin suureksi. Derivaattafunktion kuvaaja nousee hyvin korkealle ja lähestyy $y$-akselia.
+                                </li>
+                                <li>
+                                    Kun lähestytään kohtaa $x = 0$, tangenttisuora nousee aina vain jyrkemmin ja on lopulta pystysuora. Koska $y$-akselin suuntaisella suoralla ei ole kulmakerrointa, ei myöskään derivaatta ole olemassa kohdassa $x = 0$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Geogebra-havainnollistuksesta huomaa, että neliöjuurifunktion derivaattafunktion tarkempi tutkiminen kohdan $x = 0$ lähellä vaatii muita keinoja. Kurssilla <a href="http://kisallioppiminen.fi/kurssit/maa2/luku4/">MAA2</a> määriteltiin murtopotenssit seuraavasti:
+                </p>    
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POTENSSI</h3>
+                    <p>
+                        Oletetaan, että $a > 0$. Oletetaan lisäksi, että $m$ ja $n$ ovat positiivisia kokonaislukuja. Potenssit $a^\frac{m}{n}$ ja $a^{-\frac{m}{n}}$ määritellään seuraavasti:
+                        \begin{align*}
+                        a^\frac{m}{n} &= \sqrt[n]{a^m} \\[1mm]
+                        a^{-\frac{m}{n}} &= \frac{1}{\sqrt[n]{a^m}}
+                        \end{align*}
+                    </p>
+                </div>
+
+                <p>
+                    Neliöjuurifunktio $f(x) = \sqrt{x}\,$ voidaan siis ilmaista avoimella välillä $\pa 0, \infty\pe$ murtopotenssin avulla:
+                    $$
+                        f(x) = x^{\frac{1}{2}}
+                    $$
+                    <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreemassa 17 osoitettiin, että potenssifunktion $g(x) =x^n$ derivaattafunktio on 
+                    $$
+                        g'(x) = nx^{n-1}
+                    $$
+                    kaikilla kokonaisluvuilla $n$. Voisiko samanlainen sääntö päteä myös tapauksessa, jossa eksponenttina on murtoluku? 
+                </p>
+
+                <p>
+                    On mahdollista osoittaa, että jos $r$ on mikä tahansa rationaaliluku, niin funktio 
+                    $$
+                        h(x) = x^{r}
+                    $$
+                    on derivoituva välillä $\pa 0, \infty \pe$. Perustelu vaatii kuitenkin taustalleen niin paljon teoriaa, että sitä ei tässä kurssissa käsitellä. Sen sijaan seuraavassa teoreemassa yleistetään potenssifunktion derivointisääntö koskemaan myös murtopotensseja tähän tietoon nojautuen.
+                </p>
+
+                <div class="theorem" id="POTENSSIFUNKTION DERIVOINTISÄÄNNÖN YLEISTYS">
+                    <h3>TEOREEMA</h3>
+                        <p>
+                            Oletetaan, että $r$ on rationaaliluku. Funktion $h(x) = x^r$ derivaattafunktio on 
+                            $$
+                                h'(x) = rx^{r-1}.
+                            $$
+                        </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu: Jokainen rationaaliluku voidaan esittää murtolukumuodossa, joten funktio $h$ voidaan ilmaista muodossa
+                            $$
+                                h(x) = x^{\frac{m}{n}},
+                            $$
+                            missä $m$ ja $n$ ovat kokonaislukuja ja $n \neq 0$. Korotetaan funktio $h$ potenssiin $n$ ja sovelletaan potenssien laskusääntöjä:
+                            $$
+                            \left(h(x)\right)^n = \left(x^{\frac{m}{n}}\right)^n = x^{\frac{m}{n} \cdot n} = x^m
+                            $$
+                            Funktio $\left(h(x)\right)^n$ on siis potenssifunktio $x \mapsto x^m$, joten se derivaatta voidaan muodostaa <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreeman 17 avulla:
+                            $$
+                            \mathop{\mathrm{D}} \left(h(x)\right)^n = mx^{m-1}.
+                            $$
+                            Toisaalta, koska funktio $h$ on derivoituva (kuten aiemmin todettiin, tämä on mahdollista perustella), voidaan sen derivaatta muodostaa myös <a href="http://kisallioppiminen.fi/kurssit/maa6/luku6/">MAA6-kurssin</a> teoreeman 16 avulla:
+                            $$
+                            \mathop{\mathrm{D}} \left(h(x)\right)^n = n\left(h(x)\right)^{n-1}h'(x).
+                            $$
+                            Näistä kahdesta eri esitysmuodosta saadaan yhtälö, josta voidaan ratkaista $h'(x)$:
+                            \begin{align*}
+                            n\left(h(x)\right)^{n-1}h'(x) &= mx^{m-1} \\[2mm]
+                            h'(x) &= \frac{m}{n} \frac{x^{m-1}}{h(x)^{n-1}}\\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{h(x)^{n-1}\textcolor{blue}{h(x)} } \\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{\textcolor{red}{h(x)^{n-1}h(x)} } \\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{h(x)}}{\textcolor{red}{h(x)^n} } \\[2mm]
+                            &= \frac{m}{n} \frac{x^{m-1} \textcolor{blue}{x^{\frac{m}{n}}}}{\textcolor{red}{x^m} } \\[2mm]
+                            &= \frac{m}{n} \frac{\textcolor{purple}{x^{m-1}} \textcolor{blue}{x^{\frac{m}{n}}}}{\textcolor{purple}{x^m} } \\[2mm]
+                            &= \frac{m}{n} \frac{\textcolor{blue}{x^{\frac{m}{n}} }}{\textcolor{purple}{x} } \\[2mm]
+                            &= \frac{m}{n} x^{\frac{m}{n}-1}.
+                            \end{align*}
+                        </p> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#juuri3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAA8luku1-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="MAA8s2t101">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s2t101">
+                            Sini ja kosini
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s2t101">
+                   
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s2t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s2t101_v" class="collapse">
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                    
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAA8luku1-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="MAA8s3t101">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s3t101">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s3t101">
+                    <ol class="a">
+                        <li> 
+                            Sievennä lauseke 
+                            $$\sqrt{a\sqrt{a\sqrt{a^2}}},$$ 
+                            kun $a \geq 0$. 
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2016/2a &amp; ]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s3t101_v" class="collapse">
+                        <ol class="a">
+                        <li> 
+                            \begin{align*}
+                            \sqrt{a\sqrt{a\sqrt{a^2}}} &= \sqrt{a\sqrt{a^2}} \\
+                            &= \sqrt{a^2} \\
+                            &= a
+                            \end{align*}
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA8s3t102">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA8s3t102">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA8s3t102">
+                    <ol class="a">
+                        <li> 
+                            Piirrä kuva epäyhtälöiden 
+                            $$0 \leq y \leq \sqrt{\left| x \right|}$$ 
+                            määräämästä tasoalueesta, kun $-1 \leq x \leq 1$. 
+                        </li>
+                        <li> 
+                            Ratkaise yhtälö $$x\sqrt{1+x} = \sqrt{2x}$$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä K2015/2]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA8s3t102_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA8s3t102_v" class="collapse">
+                        <ol class="a">
+                            <li> 
+                                Kuva tasoalueesta: 
+                                <br>
+                                <img src="/kurssit/maa8/kuvat/MAA8kuva019.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li> Yhtälö toteutuu, jos ja vain jos $x = 0$ tai $x = 1$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8luku1-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8L1itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="MAA8L1itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA8L1itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>
