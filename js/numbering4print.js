@@ -6,15 +6,12 @@ var SITE = {
         
         var exReset = 0;
         var chapterNumber = 0;
-        $(".tehtava").each(function(index, value) {
+        $("article").each(function(article_index, article_value) {
+        
+               chapterNumber = article_index;
             
-            // reset excercise counter
-            if (this.id === 'firstEx') {
-               exReset = index;
-               chapterNumber++;
-            };
-            
-            var exCount = (index + 1 - exReset);
+            $(".tehtava").each(function(index, value) {
+            var exCount = (index + 1);
             var exName = "Tehtävä " + chapterNumber + "." + exCount + ": " + $(value).find("h1 a").text();
 
              // add assignments to toc 
@@ -30,6 +27,7 @@ var SITE = {
             $(value).find("div h1").each(function(subIndex, value) {
                 $(value).text(exCount + "." + (subIndex + 1) + ": " + $(value).text());
             });
+        });
         });
         
         if ($('#theoremStart').val() == null) {
