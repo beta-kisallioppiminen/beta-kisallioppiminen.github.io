@@ -6,7 +6,7 @@ var SITE = {
         
         var exReset = 0;
         var chapterNumber = 0;
-        $("article").each(function(article_index, article_value) {
+        $("article").each(function(article_index) {
             var $this = $(this);
         
                chapterNumber = article_index;
