@@ -6,16 +6,20 @@ var SITE = {
         
         var exReset = 0;
         var chapterNumber = 0;
-        $(".tehtava").each(function(index, value) {
+        $("article").each(function(article_index) {
+            var $this = $(this);
+        
+               chapterNumber = article_index;
             
-            // reset excercise counter
-            if ($(this).hasClass( "first-exercise" )) {
-               exReset = index;
-               chapterNumber++;
-            };
-            
-            var exCount = (index + 1 - exReset);
+            $this.children(".tehtava").each(function(index, value) {
+            var exCount = (index + 1);
             var exName = "Tehtävä " + chapterNumber + "." + exCount + ": " + $(value).find("h1 a").text();
+
+             // add assignments to toc 
+//            $("#tehtavat-toc").append("<li><a data-toggle='collapse' href='" + $(value).find("h1 a").attr("href") + "'>" + exName + "</a></li>");
+
+            // add links to assignment names
+//            $(value).attr("id", $(value).find("h1 a").attr("href").substring(1) + "-ex");
 
             // relabel assignments
             $(value).find("header h1 a").text(exName);
@@ -25,25 +29,6 @@ var SITE = {
                 $(value).text(exCount + "." + (subIndex + 1) + ": " + $(value).text());
             });
         });
-        
-        $(".panel").each(function(index, value) {
-            let firstExercise;
-            let lastExercise;
-
-            $(this).find('.tehtava').each(function(index, value) {
-                if (index === 0) {
-                    firstExercise = $(this).find('header h1').text();
-                };
-
-                lastExercise = $(this).find('header h1').text();
-            });
-
-            $(this).find('.otsikko').each(function(index, value) {
-                var exHeader = $(value).find("h1 a").text();
-                var newHeader = exHeader + " ("+ /[0-9].[0-9]+/.exec(firstExercise)[0] + " - " + /[0-9].[0-9]+/.exec(lastExercise)[0] + ")";
-                $(value).find("h1 a").text(newHeader);
-            });
-
         });
         
         if ($('#theoremStart').val() == null) {
