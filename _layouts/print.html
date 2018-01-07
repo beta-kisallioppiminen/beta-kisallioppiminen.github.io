@@ -2,19 +2,20 @@
 layout: compress
 ---
 
-<!-- numbering4print.js need JQuery so it need to be loaded here also-->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-<style>
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<!-- numbering4print.js need JQuery so it need to be loaded here also-->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+	<style>
         
         div.print-link {
         	display: none;
         }
-</style>
-<!DOCTYPE html>
-<html>
-	{% include head.html %}
+	</style>
 	<script src="/js/numbering4print.js"></script>
 	<body>
 
