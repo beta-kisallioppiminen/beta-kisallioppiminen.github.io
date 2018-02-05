@@ -7,7 +7,7 @@ class Exercises {
    */
   static extractExercises(pageData) {
     // Matches chapter number OR exercise ID
-    const regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
+    const regex = /(?:id="chapterNumber" value="([0-9])")|(?:<div\s+class="tehtava"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)|(?:<div\s+class="tehtava\s+first-exercise"\s+id="([a-zA-Z0-9ÅåÄäÖö.;:_-]+)">)/g;
     let regex_array = regex.exec(pageData);
 
     // Initialize variables
