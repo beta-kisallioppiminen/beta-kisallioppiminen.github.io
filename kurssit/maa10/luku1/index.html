@@ -1,0 +1,1284 @@
+---
+title: MAA10 - Todennäköisyys ja tilastot
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: maa10
+---
+
+<input type="hidden" id="chapterNumber" name="theoremStart" value="1"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+{% include bottomnav.html %}
+
+
+<article>
+    <section>
+        <header>
+            <h1>Kombinatoriikkaa</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luvun1-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="MAA10luvun1-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p> 
+                    Tämän luvun tavoitteena on, että ... Osaat
+                </p>
+                <ul>
+                    <li> 
+                        
+                    </li>
+                </ul> 
+            </div>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luvun1-tavoitteet">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka1">
+                    Tuloperiaate &ndash; peräkkäiset valinnat
+                </a>
+            </h1>
+        </header>
+        <div id="kombinatoriikka1" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                   Tässä luvussa opitaan erilaisia tapoja lukumäärien laskemiseen. Näistä tavoista monet pohjautuvat niin sanottuun tuloperiaatteeseen. Sitä voidaan soveltaa tilanteissa, joissa kokonaisuus muodostetaan tekemällä peräkkäisiä valintoja. Seuraavat tehtävät havainnollistavat asiaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="MAA10t101-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t101">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t101" class="collapse">
+                        <p>
+                            Tilausravintolan ruokalistalla on neljä alkuruokaa, kolme pääruokaa ja kaksi jälkiruokaa. Kuinka monta erilaista ateriakokonaisuutta on mahdollista muodostaa, jos asiakas valitsee
+                        </p>
+                        <ol class="a">
+                            <li> alkuruoan ja pääruoan </li>
+                            <li> pääruoan ja jälkiruoan </li>
+                            <li> kaikki kolme ruokalajia? </li>
+                        </ol>
+                        <p>
+                            Mihin kohtaan alla oleva kuva sopii havainnollistukseksi?
+                            <br>
+                            <img src="/kurssit/maa10/kuvat/MAA10kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t101_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t101_v" class="collapse">
+                           <ol class="a">
+                                <li> Vaihtoehtoja on $4 \cdot 3 = 12$. Alkuruoka voidaan valita neljällä erilaisella tavalla. Valittiinpa se miten tahansa, voidaan pääruoka valita sen jälkeen kolmella erilaisella tavalla. Jokaiseen alkuruokaan liittyy siis kolme erilaista pääruokamahdollisuutta. </li>
+                                <li> Vaihtoehtoja on $3 \cdot 2 = 6$. </li>
+                                <li> Vaihtoehtoja on $4 \cdot 3 \cdot 2 = 24$. </li>
+                            </ol>
+                            <p>
+                                Kuva sopii havainnollistukseksi b-kohtaan, jossa ensin valitaan pääruoka kolmesta vaihtoehdosta ja sen jälkeen kaikissa tapauksissa jälkiruoka voidaan vielä valita kahdesta vaihtoehdosta. Erilaisia yhdistelmiä on yhtä monta kuin kuvassa alimmalla rivillä on mustia pisteitä eli $3 \cdot 2 = 6$ kappaletta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t105-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t105">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t105" class="collapse">
+                        <p>
+                            Olohuoneessa on kattolamppu, jalkalamppu ja ikkunalaudalla pöytälamppu. Tehtävänä on selvittää, kuinka monella erilaisella tavalla olohuoneen voi näiden avulla valaista.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Miten alla oleva kaavio liittyy asiaan? 
+                                <br>
+                                <img src="/kurssit/maa10/kuvat/MAA10kuva002.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            </li>
+                            <li> Kuinka monella tavalla olohuoneen voi valaista näiden kolmen lampun avulla? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t105_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t105_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Jokainen kolmesta lampusta voi olla toisistaan riippumatta päällä (valkoinen pompula) tai pois päältä (musta pompula). Kaavion ylin rivi kuvaa sitä, onko ensimmäinen lamppu päällä vai pois päältä. Vastaavasti keskimmäinen ja alin rivi kuvaavat sitä, ovatko toinen ja kolmas lamppu päällä vai pois päältä. Erilaiset yhdistelmät vastaavat kaavion haaroja. Esimerkiksi oikeanpuoleisin haara (kolme valkoista pompulaa) kuvaa tilannetta, jossa kaikki olohuoneen lamput ovat päällä. </li>
+                                <li> 
+                                    Kaavion avulla voidaan päätellä, että olohuoneen voi kolmen lampun avulla valaista $2 \cdot 2 \cdot 2 - 1 = 8 - 1 = 7$ eri tavalla. Huomaa, että kaavion vasen haara kuvaa tilannetta, jossa kaikki lamput ovat pois päältä, joten sitä ei voi laskea mukaan, koska kysytään, miten monella tavalla olohuoneen voi valaista. 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos kokonaisuus voidaan muodostaa tekemällä peräkkäisiä valintoja, onnistuu eri vaihtoehtojen havainnollistaminen puukaavion avulla samaan tapaan kuin edellisissä tehtävissä. Esimerkiksi alla oleva kaavio kuvaa tilannetta, jossa ensimmäisessä vaiheessa on neljä vaihtoehtoa ja seuraavassa vaiheessa kolme vaihtoehtoa. Kaaviosta nähdään, että erilaisia kokonaisuuksia voidaan muodostaa kaikkiaan $4 \cdot 3 = 12$.
+                    <br>
+                    <img src="/kurssit/maa10/kuvat/MAA10kuva003.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Päättelytapa voidaan yleistää kaikkiin samantyyppisiin tilanteisiin:
+                </p>
+
+                <div class="theorem" id="TULOPERIAATE">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Oletetaan, että kokonaisuuden muodostaminen voidaan jakaa peräkkäisiin vaiheisiin, jotka eivät riipu toisistaan. Jos vaiheita on $k$ kappaletta, ja <br>
+                            $\phantom{AA}$ 1. vaiheessa on $n_1$ vaihtoehtoa <br>
+                            $\phantom{AA}$ 2. vaiheessa on $n_2$ vaihtoehtoa <br>
+                            $\phantom{AA}$ $\vdots$ <br>
+                            $\phantom{AA}$ $k$. vaiheessa on $n_k$ vaihtoehtoa <br>
+                        niin kokonaisuus voidaan muodostaa $n_1 \cdot n_2 \cdot \dots \cdot n_k$ eri tavalla.
+                    </p>
+                </div>
+
+                <p>
+                    Seuraavissa tehtävissä harjoitellaan tuloperiaatteen soveltamista:
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t106-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t106">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t106" class="collapse">
+                        <p>
+                            Jokaiseen pankkikorttiin liittyy nelinumeroinen tunnusluku.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kuinka monta erilaista tunnuslukua on olemassa?
+                            </li>
+                            <li> 
+                                Kuinka monessa tunnusluvussa mikään numero ei esiinny useammin kuin kerran?
+                            </li>
+                            <li>
+                                Kuinka monessa tunnusluvussa kaikki numerot ovat samoja?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t106_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t106_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Tunnusluku voidaan muodostaa valitsemalla sen numerot peräkkäin. Ensimmäiselle numerolle on 10 vaihtoehtoa (0-9), samoin seuraaville. Erilaisia tunnuslukuja on siis olemassa tuloperiaatteen nojalla $10 \cdot 10 \cdot 10 \cdot 10 = 10\,000$ kappaletta.
+                                </li>
+                                <li> 
+                                    Tunnusluvun ensimmäinen numero voi olla mikä tahansa numeroista 0-9, joten vaihtoehtoja on 10 kpl. Toinen numero ei voi olla sama kuin ensimmäinen, joten vaihtoehtoja on 9 kpl. Vastaavasti kolmas numero voidaan valita 8 eri tavalla ja neljäs 7 eri tavalla. Tunnuslukuja, joissa mikään numero ei esiinny useammin kuin kerran, on siis $10 \cdot 9 \cdot 8 \cdot 7 = 5\,040$ kappaletta.
+                                </li>
+                                <li>
+                                    Tällaisia tunnuslukuja ovat 0000, 1111, 2222, $\ldots$, 9999. Niitä on 10 kappaletta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t107-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t107">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t107" class="collapse">
+                        <p>
+                            Suomen kielen aakkosissa on 29 kirjainta. Tarkastellaan kahden kirjaimen (etunimen ja sukunimen alkukirjain) yhdistelmiä.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kuinka monta erilaista nimikirjainten yhdistelmää suomen kielen aakkosista voidaan muodostaa? 
+                            </li>
+                            <li> 
+                                Kuinka monta osallistujaa tapahtumassa on oltava, jotta voidaan olla täysin varmoja, että ainakin kahdella osallistujalla on samat nimikirjaimet? 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t107_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t107_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Etunimen alkukirjain voidaan valita 29 eri tavalla, samoin sukunimen alkukirjain. Erilaisia nimikirjainten yhdistelmiä on tuloperiaatteen nojalla $29 \cdot 29 = 841$ kappaletta.
+                                </li>
+                                <li> 
+                                    Osallistujia on oltava 842. Pahimmassa tapauksessa 841 osallistujalla on kaikilla eri nimikirjaimet. Jos osallistujia tulee yksi lisää, ei hänelle riitä enää eri nimikirjaimia a-kohdan nojalla, vaan hänellä on välttämättä samat nimikirjaimet kuin jollakin toisella osallistujalla.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t108-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t108">
+                                Tuloperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t108" class="collapse">
+                        <p>
+                            Tietojärjestelmän salasanalle asetetaan seuraavat vaatimukset:
+                        </p>
+                        <ol>
+                            <li> salasanassa on oltava kuusi merkkiä </li>
+                            <li> sallitut merkit ovat numerot 0-9 sekä erikoismerkit !, #, %, =, +, ? </li>
+                            <li> salasanan pitää sisältää ainakin yksi edellä mainituista kuudesta erikoismerkistä. </li>
+                        </ol>
+                        <p>
+                            Tehtävänä on selvittää, kuinka monta erilaista salasanaa tällä tavalla on mahdollista muodostaa.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Kuinka monta ehdot 1-2 täyttävää salasanaa on mahdollista muodostaa?
+                            </li>
+                            <li> 
+                                Kuinka monta kuuden merkin mittaista salasanaa on mahdollista muodostaa pelkistä numeroista?
+                            </li>
+                            <li>
+                                Kuinka monta ehdot 1-3 täyttävää salasanaa on mahdollista muodostaa?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t108_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t108_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Salasanan jokainen merkki voidaan valita 16 eri tavalla, joten erilaisia salasanoja on $16^6 = 16\,777\,216$.
+                                </li>
+                                <li> 
+                                    Salasanan jokainen merkki voidaan valita 10 eri tavalla, joten erilaisia salasanoja on $10^6 = 1\,000\,000$.
+                                </li>
+                                <li>
+                                    Ehdot 1-2 täyttäviä salasanoja on $16^6 = 16\,777\,216$. Pelkistä numeroista muodostettuja salasanoja on $10^6 = 1\,000\,000$. Salasanoja, joissa on ainakin yksi erikoismerkki, on $16^6 - 10^6 = 15\,777\,216$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka1">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka2">
+                    Järjestysten ja jonojen lukumäärät
+                </a>
+            </h1>
+        </header>
+        <div id="kombinatoriikka2" class="collapse">
+            
+            <div class="teoria">
+                <p>
+                    Tuloperiaatteen avulla voidaan laskea erilaisten järjestysten lukumääriä. Esimerkiksi jos henkilöt A, B ja C järjestetään jonoksi, voidaan jonon ensimmäinen jäsen valita kolmella tavalla, seuraava kahdella tavalla ja jäljelle jääneestä henkilöstä tulee jonon viimeinen jäsen. Erilaisia järjestyksiä on siten $3 \cdot 2 \cdot 1 = 6$ kappaletta. Tässä esiintyvää peräkkäisten positiivisten kokonaislukujen tuloa sanotaan kertomaksi, kuten alla olevasta määritelmästä käy ilmi.
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KERTOMA</h3>
+                    <p>
+                        Olkoon $n$ positiivinen kokonaisluku. Luvun $n$ <em>kertoma</em> on kokonaislukujen $1, \ldots, n$ tulo:
+                        $$
+                        n! = n \cdot (n-1) \cdots 2 \cdot 1
+                        $$
+                        Erikseen sovitaan, että luvun $0$ kertoma on yksi: 
+                        $$0! = 1.$$
+                    </p>
+                </div>
+
+                <p>
+                    Luvun $n$ kertoma ilmaisee, miten monella tavalla $n$-alkioinen joukko voidaan järjestää jonoon. Tämä osoitetaan seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t102-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t102">
+                                Järjestysten lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t102" class="collapse">
+                        <p>
+                            Tarkastellaan joukkoa, jossa on $n$ alkiota. Tehtävänä on laskea, kuinka monella tavalla tämän joukon alkiot voidaan järjestää jonoon.
+                        </p>
+                        <ol class="a">
+                            <li> Kuinka monella tavalla jonon ensimmäinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon toinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon kolmas jäsen voidaan valita? </li>
+                            <li> Miten vaihtoehtojen määrä muuttuu, kun jonon muodostaminen etenee? </li>
+                            <li> Kuinka monella tavalla jonon toiseksi viimeinen jäsen voidaan valita? </li>
+                            <li> Kuinka monella tavalla jonon viimeinen jäsen voidaan valita? </li>
+                            <li> Kuinka monta erilaista jonoa on mahdollista muodostaa? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t102_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t102_v" class="collapse">
+                           <ol class="a">
+                                <li> Ensimmäinen jäsen voidaan valita $n$ eri tavalla. </li>
+                                <li> Toinen jäsen voidaan valita $n-1$ eri tavalla. </li>
+                                <li> Kolmas jäsen voidaan valita $n - 2$ eri tavalla. </li>
+                                <li> Tapoja valita jonon seuraava jäsen on aina yksi vähemmän. </li>
+                                <li> Toiseksi viimeinen jäsen voidaan valita $2$ eri tavalla. </li>
+                                <li> Viimeinen jäsen voidaan valita $1$ tavalla, koska vain yksi on enää jäljellä. </li>
+                                <li> Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa $n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1 = n!$ kappaletta. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisen tehtävän tuloksesta saadaan seuraava teoreema:
+                </p>
+
+                <div class="theorem" id="JÄRJESTYSTEN LUKUMÄÄRÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Jos joukossa on $n$ alkiota, joukon alkiot voidaan järjestää jonoon $n!$ eri tavalla.
+                    </p>
+                    <div class="proof">
+                        <p>
+                            Perustelu tehtävässä 1.6.
+                        </p>      
+                    </div>
+                </div>
+
+                <p>
+                    Kertoma ilmaisee siis $n$-alkioisen joukon järjestysten eli niin sanottujen <em>permutaatioiden</em> lukumäärän. Esimerkiksi neljän alkion joukon $\{ a, b, c \}$ permutaatioita on kuusi erilaista, sillä $3! = 3\cdot 2 \cdot 1 = 6$. Ne voidaan luetella:
+                    \begin{align*}
+                    &abc, bca, cab \\
+                    &acb, bac, cba
+                    \end{align*}
+                </p>
+
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t110-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t110">
+                                Järjestykset ja niiden lukumäärät
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t110" class="collapse">
+                        <ol class="a">
+                            <li> Kuinka monta permutaatiota on joukolla $\{ a, b, c, d\}$? </li>
+                            <li> 
+                                Luettele kaikki joukon $\{ a, b, c, d\}$ permutaatiot. Käytä jotain johdonmukaista menetelmää, jotta mikään ei jää huomaamatta eikä mikään tule useammin kuin kerran. 
+                            </li>
+                            <li>
+                                Oletetaan, että yhden permutaation kirjoittaminen paperille kestää 2 sekuntia. Tutki kokeilemalla, mikä on suurin joukko, jonka kaikki permutaatiot on vielä jotenkin mielekästä kirjoittaa käsin näkyviin.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t110_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t110_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Permutaatioita on $4! = 4\cdot 3 \cdot 2 \cdot 1 = 24$.
+                                </li>
+                                <li> 
+                                    Permutaatiot:
+                                    \begin{align*}
+                                    &abcd, bcda, cdab, dabc \\
+                                    &abdc, bdca, dcab, cabd \\
+                                    &acbd, cbda, bdac, dacb \\
+                                    &acdb, cdba, dbac, acdb \\
+                                    &adbc, dbca, bcad, cadb \\
+                                    &adcb, dcba, cbad, badc \\
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    Jos joukossa on 6 alkiota, sillä on $6! = 720$ permutaatiota. Niiden kirjoittaminen paperille kestää 1440 sekuntia eli 24 minuuttia. Tämä on mahdollista tehdä. <br>
+                                    Jos joukossa on 7 alkiota, sillä on $7! = 5040$ permutaatiota. Niiden kirjoittaminen paperille kestää 10 080 sekuntia eli 168 minuuttia eli 2 tuntia 48 minuuttia. Tämä alkaa olla rajatapaus. <br>
+                                    Jos joukossa on 8 alkiota, sillä on $8! = 40320$ permutaatiota. Niiden kirjoittaminen paperille kestää 22,4 tuntia eli 22 tuntia 24 minuuttia. Tässä ei ole enää järkeä.
+                                    <br>
+                                    Jos joukossa on 9 alkiota, sillä on $9! = 362\,880$ permutaatiota. Niiden kirjoittaminen paperille kestää 8,4 vuorokautta eli 8 vuorokautta 9 tuntia 36 minuuttia. Melko mahdotonta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jonoja voidaan muodostaa paitsi järjestämällä jonkin joukon kaikki alkiot jonoon, myös poimimalla jonon alkiot jostain laajemmasta joukosta. Joissain tilanteissa sama alkio voi esiintyä jonossa useammakin kerran. Näitä ilmiöitä tutkitaan seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t109-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t109">
+                                Järjestysten ja jonojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t109" class="collapse">
+                        <p>
+                            Kuinka monta erilaista neljän merkin mittaista jonoa voidaan muodostaa kirjaimista
+                        </p>
+                        <ol class="a">
+                            <li> A, B, C ja D, jos jokainen kirjain saa esiintyä jonossa enintään kerran </li>
+                            <li> A, B, C ja D, jos sama kirjain saa esiintyä jonossa useasti </li>
+                            <li> A, B, C, D, E ja F, jos jokainen kirjain saa esiintyä jonossa enintään kerran </li>
+                            <li> A, B, C, D, E ja F, jos sama kirjain saa esiintyä jonossa useasti? </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t109_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t109_v" class="collapse">
+                            <p>
+                                Erilaisia neljän merkin mittaisia jonoja voidaan muodostaa 
+                            </p>
+                            <ol class="a">
+                                <li> 
+                                    $4 \cdot 3 \cdot 2 \cdot 1 = 4! = 24$ kappaletta.
+                                </li>
+                                <li> 
+                                    $4 \cdot 4 \cdot 4 \cdot 4 = 4^4 = 256$ kappaletta.
+                                </li>
+                                <li> 
+                                    $6 \cdot 5 \cdot 4 \cdot 3 = 360$ kappaletta.
+                                </li>
+                                <li> 
+                                    $6 \cdot 6 \cdot 6 \cdot 6 = 6^4 = 1296$ kappaletta.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Seuraavissa tehtävissä tutkitaan jonon muodostamista tilanteessa, jossa jokainen alkio voi tulla valituksi jonoon vain enintään yhden kerran. Tämä ilmaistaan usein sanomalla, että jonon jäsenet poimitaan <em>ilman takaisinpanoa</em>.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t111-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111">
+                                Jonojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t111" class="collapse">
+                        <p>
+                            Muodostetaan 10 alkion joukosta kuuden alkion jono, jossa mikään alkio ei esiinny useammin kuin yhden kerran.
+                        </p>
+                        <ol class="a">
+                            <li> 
+                                Päättele tuloperiaatteen avulla, kuinka monella erilaisella tavalla jono on mahdollista muodostaa. 
+                            </li>
+                            <li> 
+                                Ilmaise a-kohdan tulos muodossa 
+                                $$
+                                \frac{10!}{x!}
+                                $$
+                                valitsemalla kirjaimen $x$ paikalle sopiva luku. 
+                            </li>
+                            <li>
+                                Miten luvun $x$ voi ilmaista alkioiden määrän (tässä 10) ja jonon pituuden (tässä 6) avulla?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t111_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t111_v" class="collapse">
+                           <ol class="a">
+                                <li> 
+                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa 
+                                    $$10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 = 151\,200$$ 
+                                    kappaletta. 
+                                </li>
+                                <li>
+                                    Huomataan, että sopiva valinta on $x = 4$:
+                                    \begin{align*}
+                                    \frac{10!}{4!} &= \frac{10 \cdots 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{4 \cdot 3 \cdot 2 \cdot 1} \\[2mm] 
+                                    &= 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5
+                                    \end{align*}
+                                </li>
+                                <li>
+                                    Kysymyksessä on alkioiden määrän ja jonon pituuden erotus: $4 = 10-6$. Kymmenen alkion joukosta voidaan muodostaa kuuden alkion jono
+                                    $$
+                                    \frac{10!}{(10-6)!}
+                                    $$
+                                    eri tavalla.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t112-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t112">
+                                Jonojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t112" class="collapse">
+                        <p>
+                            Muodostetaan $n$ alkion joukosta $k$ alkion jono, jossa mikään alkio ei esiinny useammin kuin yhden kerran.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Täydennä seuraava taulukko:
+                                <div align="center">
+                                    <table style="width = 75%">
+                                        <tr>
+                                            <th> Jonon jäsen </th>
+                                            <th> Vaihtoehtojen määrä </th>
+                                        </tr>
+                                        <tr>
+                                            <td> 1. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 3. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $\vdots$ </td>
+                                            <td> $\vdots$ </td>
+                                        </tr>
+                                        <tr>
+                                            <td> $k$. jäsen </td>
+                                            <td>  </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li> 
+                                Päättele tuloperiaatteen avulla, kuinka monella erilaisella tavalla jono on mahdollista muodostaa. 
+                            </li>
+                            <li> 
+                                Ilmaise b-kohdan tulos kahden kertoman osamääränä samaan tapaan kuin edellisessä tehtävässä.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t112_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t112_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Täydennä seuraava taulukko:
+                                    <div align="center">
+                                        <table style="width = 75%">
+                                            <tr>
+                                                <th> Jonon jäsen </th>
+                                                <th> Vaihtoehtojen määrä </th>
+                                            </tr>
+                                            <tr>
+                                                <td> 1. jäsen </td>
+                                                <td> $n$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 2. jäsen </td>
+                                                <td> $n-1$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 3. jäsen </td>
+                                                <td> $n-2$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> $\vdots$ </td>
+                                                <td> $\vdots$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td> $k$. jäsen </td>
+                                                <td> $n - k + 1$ </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li> 
+                                    Tuloperiaatteen nojalla erilaisia jonoja voidaan muodostaa 
+                                    $$n \cdot (n-1) \cdot (n-2) \cdots (n - k + 1)$$ 
+                                    kappaletta. 
+                                </li>
+                                <li> 
+                                    Huomataan, että
+                                    \begin{align*}
+                                    &\phantom{ = {} }\frac{n!}{(n-k)!} \\[2mm]
+                                    &= \frac{n \cdots (n-k+1) \cdot (n-k) \cdots 1}{(n-k) \cdots  2 \cdot 1} \\[2mm] 
+                                    &= n \cdot (n-1) \cdots (n - k + 1)
+                                    \end{align*}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tehtävän 1.10 tulos on osa seuraavaa teoreemaa:
+                </p>
+
+                <div class="theorem" id="JONOJEN LUKUMÄÄRÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Joukosta, jossa on $n$ alkiota, muodostetaan $k$ alkion jono. 
+                    </p>
+                    <ul>
+                        <li>
+                        Jos jokainen alkio voi esiintyä jonossa enintään yhden kerran, jono voidaan muodostaa 
+                        $$
+                        \dfrac{n!}{(n-k)!}
+                        $$    
+                        eri tavalla. 
+                        </li>
+                        <li>
+                        Jos jokainen alkio voi esiintyä jonossa miten monta kertaa tahansa, jonon voidaan muodostaa
+                        $n^k$ eri tavalla.
+                        </li>
+                    </ul>
+                    <div class="proof">
+                        <p>
+                            Ensimmäinen kohta on perusteltu tehtävässä 1.10. Toinen kohta seuraa tuloperiaatteesta.
+                        </p>      
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka3">
+                    Summaperiaate &ndash; vaihtoehtoiset valinnat
+                </a>
+            </h1>
+        </header>
+        <div id="kombinatoriikka3" class="collapse">
+            
+
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t103-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t103">
+                                Summaperiaate
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t103" class="collapse">
+                        <p>
+                            
+                        </p>
+                        <ol class="a">
+                            <li>  </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t103_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t103_v" class="collapse">
+                           <ol class="a">
+                                <li>  </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka4">
+                    Osajoukkojen lukumäärä
+                </a>
+            </h1>
+        </header>
+        <div id="kombinatoriikka4" class="collapse">
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="MAA10t104-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t104">
+                                Osajoukkojen lukumäärä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA10t104" class="collapse">
+                        <p>
+                            
+                        </p>
+                        <ol class="a">
+                            <li>  </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA10t104_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA10t104_v" class="collapse">
+                           <ol class="a">
+                                <li>  </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#kombinatoriikka4">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku1-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAA10luku1-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="MAA10s2t101-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s2t101">
+                            Tuloperiaate
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s2t101">
+                    
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s2t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s2t101_v" class="collapse">
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku1-tehtavasarja2">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>                    
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku1-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="MAA10luku1-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="MAA10s3t101-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t101">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t101">
+                    <p>
+                        Hajamielinen professori muistaa ystäviensä ovikoodista vain, että se koostuu neljästä erisuuresta parittomasta numerosta.
+                    </p>
+                        <ol class="a">
+                            <li>
+                                Kuinka monta koodia hän joutuu huonoimmassa tapauksessa (enintään) kokeilemaan, jos hän käy systemaattisesti läpi kaikki vaihtoehdot?
+                            </li>
+                            <li>
+                                Parin vuoden käyntien jälkeen professori huomaa koodissa seuraavan ominaisuuden: siinä ei ole numeroa 9 eikä peräkkäin "vierekkäisiä" parittomien numeroiden (1 ja 3, 3 ja 1, 3 ja 5, 5 ja 3, 5 ja 7, 7 ja 5, 7 ja 9 tai 9 ja 7) yhdistelmiä. Kuinka monta koodia pitää huonoimmassa tapauksessa kokeilla, kun otetaan huomioon myös nämä lisätiedot?
+                            </li>
+                        </ol>
+                    <p>
+                        [Lyhyt K2016/7]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t101_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $5 \cdot 4 \cdot 3 \cdot 2 = 120$ koodia.
+                            </li>
+                            <li>
+                                Koodi on joko 3715 tai 5173. Mitkään muut yhdistelmät eivät toteuta kaikkia ehtoja.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t102-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t102">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t102">
+                    <p>
+                        Veetun lounaspaikassa on kolmenlaisia pitsoja: 7,50 euron peruspitsa, 8,50 euron ruispitsa ja 10,50 euron pannupitsa. Pitsoihin valitaan 15 täytteestä kaksi erilaista. Maksamalla euron lisää voi valita vielä kolmannen täytteen. Veetu yrittää syödä aina erilaisen pitsan, joka eroaa kaikista aikaisemmista joko pohjaltaan tai täytteiltään.
+                    </p>
+                        <ol class="a">
+                            <li>
+                                Kuinka monta viikkoa hän voi tehdä näin, jos hän syö ravintolassa viisi kertaa viikossa?
+                            </li>
+                            <li>
+                                Mikä on erilaisten pitsojen keskimääräinen hinta?
+                            </li>
+                        </ol>
+                    <p>
+                        [Lyhyt S2012/8]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t102_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t102_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Veetu voi toimia näin 336 viikon ajan.
+                                <br>
+                                Erilaisia täytteitä
+                                $$
+                                \binom{15}{2} + \binom{15}{3} = 560,
+                                $$
+                                joten erilaisia pitsoja $3 \cdot 560 = 1680$.
+                            </li>
+                            <li> Peruspitsoja
+                                <ul>
+                                    <li>
+                                        kahdella täytteellä 105 kpl, hinta 7,50 euroa
+                                    </li>
+                                    <li>
+                                        kolmella täytteellä 455 kpl, hinta 8,50 euroa
+                                    </li>
+                                </ul>
+                                Ruispitsoja
+                                <ul>
+                                    <li>
+                                        kahdella täytteellä 105 kpl, hinta 8,50 euroa
+                                    </li>
+                                    <li>
+                                        kolmella täytteellä 455 kpl, hinta 9,50 euroa
+                                    </li>
+                                </ul>
+                                Pannupitsoja
+                                <ul>
+                                    <li>
+                                        kahdella täytteellä 105 kpl, hinta 10,50 euroa
+                                    </li>
+                                    <li>
+                                        kolmella täytteellä 455 kpl, hinta 11,50 euroa.
+                                    </li>
+                                </ul>
+                                Keskimääräinen hinta
+                                $$
+                                \frac{16\,205 \euro}{1680} \approx 9,65 \euro.
+                                $$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t103-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t103">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t103">
+                    <p>
+                        Värisävy esimerkiksi www-sivulla ilmoitetaan kuusimerkkisellä RGB-koodilla, joka sisältää tiedon sävyn muodostavien perusvärien punainen (Red), vihreä (Green) ja sininen (Blue) määristä. Kunkin perusvärin määrä ilmoitetaan kahdella peräkkäin kirjoitetulla merkillä, jotka valitaan joukosta
+                        <br>
+                        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f.
+                        <br>
+                        Laske, kuinka monta erilaista värisävyä RGB-koodilla voidaan ilmaista.
+                        <br>
+                        [Lyhyt S2011/9]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t103_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t103_v" class="collapse">
+                        <p>
+                            Erilaisia sävyjä on $16^6 = 16\,777\,216$ kappaletta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t104-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t104">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t104">
+                    <p>
+                        Kokouksen alussa osanottajat kättelivät toisensa kertaalleen. Kädenpuristuksia tuli tällöin kaikkiaan 66. Kuinka monta osanottajaa kokouksessa oli?
+                        <br>
+                        [Lyhyt S2005/6]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t104_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t104_v" class="collapse">
+                        <p>
+                            Kädenpuristuksia tulee yhtä monta kuin kätteleviä pareja. Jos osanottajia on $n$ kpl, on erilaisia pareja
+                            $$
+                            \binom{n}{2} = \frac{n!}{(n-2)!2!} = \frac{n(n-1)}{2}.
+                            $$
+                            Saadaan yhtälö 
+                            $$
+                            \frac{n(n-1)}{2} = 66
+                            $$
+                            eli 
+                            $$
+                            n^2 - n - 132 = 0.
+                            $$
+                            Ratkaisuksi saadaan $n = 12$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t105-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t105">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t105">
+                    <p>
+                        Lottoarvonnassa arvotaan 39 numerosta 7 numeroa. Kuinka monta erilaista 7 rastin lottoruudukkoa on olemassa? Kun on arvottu seitsemän numeroa (eikä ns. lisänumeroita oteta huomioon), erilaisia 4 oikein -ruudukkoja on erään lehtiartikkelin mukaan olemassa 173 600. Tarkista, onko luku oikea. Jos ei, niin mikä on oikea lukumäärä? Laske, kuinka monta erilaista 5 oikein -ruudukkoa ja kuinka monta erilaista 6 oikein -ruudukkoa on olemassa.
+                        <br>
+                        [Lyhyt S2003/9]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t105_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t105_v" class="collapse">
+                        <p>
+                            Erilaisia 7 rastin lottoruudukoita on
+                            $$
+                            \binom{39}{7} = \frac{39!}{7!32!} = 15\,380\,937.
+                            $$
+                            Erilaisia 4 oikein -ruudukkoja on
+                            $$
+                            \binom{7}{4} \cdot \binom{32}{3} = 173\,600.
+                            $$
+                            Erilaisia 5 oikein -ruudukkoja on
+                            $$
+                            \binom{7}{5} \cdot \binom{32}{2} = 10\,416
+                            $$
+                            ja erilaisia 6 oikein -ruudukkoja on
+                            $$
+                            \binom{7}{6} \cdot \binom{32}{1} = 7 \cdot 32 = 224.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t106-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t106">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t106">
+                    <p>
+                        Ranskalaisen Louis Braillen vuonna 1825 kehittämä pistekirjoitus on kohokirjoitusta, jota luetaan sormin. Pistekirjoitusjärjestelmässä kutakin merkkiä kohti on käytettävissä kuusi kiinteää paikkaa, joihin voidaan asettaa yhdestä kuuteen pistettä. (Esimerkkinä kuviossa on kirjain W.) Kuinka monta erilaista merkkiä järjestelmässä voidaan esittää?
+                        <br>
+                        <img src="/kurssit/maa10/kuvat/kuvaYO03.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        <br>
+                        [Lyhyt K2007/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t106_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t106_v" class="collapse">
+                        <p>
+                            Jokaisessa paikassa voi olla merkki tai tyhjä kohta, joten erilaisia merkkejä voidaan esittää periaatteessa $2^6 = 64$. Vaihtoehto, jossa kaikki paikat ovat tyhjiä, ei kuitenkaan varsinaisesti ole mikään merkki, joten erilaisia merkkejä on $2^6 - 1 = 64 - 1 = 63$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t107-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t107">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t107">
+                    <ol class="a">
+                        <li>
+                            Kuinka monta erilaista istumajärjestystä voidaan muodostaa luokassa, jossa on 30 oppilasta ja 30 pulpettia?
+                        </li>   
+                        <li>
+                            Kuinka monella tavalla kolme tyhjää pulpettia voidaan valita luokassa, jossa on 27 oppilasta ja 30 pulpettia? Kuinka monta erilaista istumajärjestystä on tässä luokassa?
+                        </li>
+                        <li>
+                            Kuinka monta vuotta tietokoneelta kuluisi, jos se kävisi läpi a-kohdan erilaiset istumajärjestykset käsitellen biljoona ($10^{12}$) istumajärjestystä sekunnissa? Yksi vuosi on keskimäärin 365,25 vuorokautta.
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2006/11]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t107_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t107_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $30!$
+                            </li>   
+                            <li>
+                                Tyhjät pulpetit voidaan valita
+                                \begin{align*}
+                                \binom{30}{3} &= \frac{30!}{3!27!}  \\[2mm]
+                                &= \frac{30 \cdot 29 \cdot 28}{3 \cdot 2}  \\[2mm]
+                                &= 5 \cdot 29 \cdot 28 = 4060
+                                \end{align*}
+                                eri tavalla. Erilaisia istumajärjestyksiä on 
+                                $$
+                                30 \cdot 29 \cdots 5 \cdot 4 = \frac{30!}{3!} = \frac{30!}{6}.
+                                $$
+                            </li>
+                            <li>
+                                Noin $8{,}405 \cdot 10^12$ vuotta eli noin 8,4 biljoonaa vuotta.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAA10s3t108-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAA10s3t108">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA10s3t108">
+                    <p>
+                        Ylioppilastutkinnon matematiikan koe muodostuu 10 tehtävästä. Vanhanmuotoisessa matematiikan kokeessa oli 10 tehtävää ja osassa tehtävistä oli kaksi vaihtoehtoa, joista sai laskea vain toisen; uudemmassa kokeessa saa 15 tehtävästä vapaasti valita suoritettavakseen 10 tehtävää. Kuinka monta erilaista 10 tehtävän kokonaisuutta on 
+                    </p>
+                    <ol class="a">
+                        <li>
+                            vanhanmuotoisessa kokeessa, jossa viidessä tehtävässä on kaksi vaihtoehtoa
+                        </li>   
+                        <li>
+                            uudenmuotoisessa kokeessa?
+                        </li>
+                    </ol>
+                    <p>
+                        [Lyhyt S2000/8]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA10s3t108_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA10s3t108_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Erilaisia tehtäväkokonaisuuksia on $2^5 = 32$.
+                            </li>   
+                            <li>
+                                Erilaisia tehtäväkokonaisuuksia on
+                                \begin{align*}
+                                \binom{15}{10} &= \frac{15!}{10!5!} \\[2mm]
+                                &= \frac{15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{5 \cdot 4 \cdot 3 \cdot 2} \\[2mm]
+                                &= 7 \cdot 13 \cdot 3 \cdot 11 \\[1mm]
+                                &= 3003.
+                                \end{align*}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10luku1-tehtavasarja3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>                        
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10L1itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="MAA10L1itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href=" ">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla. 
+            </p>
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA10L1itsearviointi">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
+
+</article>
