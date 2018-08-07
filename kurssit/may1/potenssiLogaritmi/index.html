@@ -16,6 +16,7 @@ topnav: may1
     }
 </style>
 
+<input type="hidden" id="theoremStart" value="3"/>
 <input type="hidden" id="chapterNumber" value="2"/>
 
 {% include bottomnav.html %}
@@ -66,14 +67,14 @@ topnav: may1
         <div id="potenssi1luku" class="collapse">
             <div class="teoria">
             <p>
-                Summa, jossa kaikki yhteenlaskettavat ovat samoja, voidaan kirjoittaa tulona. Esimerkiksi
+                Summa, jossa kaikki yhteenlaskettavat ovat samoja, voidaan kirjoittaa tulona. Esimerkkejä:
                 \begin{align*}
-                7 + 7 + 7 + 7 &= 4 \cdot 7 \\[1mm]
+                7 + 7 + 7 + 7 &= 4 \cdot 7 \\[2mm]
                 -2 + (-2) + (-2) &= 3\cdot (-2).
                 \end{align*}
-                Vastaavasti tulo, jossa kaikki tulon tekijät ovat samoja, voidaan kirjoittaa potenssina. Esimerkiksi
+                Vastaavasti tulo, jossa kaikki tulon tekijät ovat samoja, voidaan kirjoittaa potenssina. Esimerkkejä:
                 \begin{align*}
-                7 \cdot 7 \cdot 7 \cdot 7 &= 7^4 \\[1mm]
+                7 \cdot 7 \cdot 7 \cdot 7 &= 7^4 \\[2mm]
                 -2 \cdot (-2) \cdot (-2) &= (-2)^3.
                 \end{align*}
             </p>
@@ -103,16 +104,12 @@ topnav: may1
                     <div id="potenssi1" class="collapse">
 
                         <p>
-                            Laske seuraavat tulot ja kirjoita ne potenssimerkinnän avulla. 
+                            Kirjoita potenssimerkinnän avulla ja laske:
                         </p>
                         <ol class="a">
-                            <li> $2\cdot 2\cdot 2\cdot 2\cdot 2$</li>
-                            <li> $3\cdot 3\cdot 3\cdot 3$</li>
-                            <li> $5\cdot 5$.</li>
+                            <li> $3\cdot 3\cdot 3\cdot 3 \cdot 3$</li>
+                            <li> $5\cdot 5$</li>
                         </ol>
-                        <p>
-                            Keksi ainakin kaksi erilaista tapaa, jolla a- ja b-kohtien tulot voidaan laskea ilman laskinta. Selitä omin sanoin, millaisia nämä tavat ovat.
-                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi1_v">
                                 VASTAUS
@@ -121,10 +118,7 @@ topnav: may1
                         <div id="potenssi1_v" class="collapse">
                            <ol class="a">
                                 <li> 
-                                    $2^5 = 32$
-                                </li>
-                                <li> 
-                                    $3^4 = 81$
+                                    $3^5 = 243$
                                 </li>
                                 <li> 
                                     $5^2 = 25$
@@ -152,9 +146,8 @@ topnav: may1
                             Kirjoita seuraavat potenssit tuloina (kertolaskumerkintää käyttäen) ja laske niiden arvo.
                         </p>
                         <ol class="a">
-                            <li> $4^5$</li>
-                            <li> $3^2$</li>
-                            <li> $(-2)^3$.</li>
+                            <li> $8^2$</li>
+                            <li> $(-5)^3$.</li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi2_v">
@@ -164,13 +157,10 @@ topnav: may1
                         <div id="potenssi2_v" class="collapse">
                            <ol class="a">
                                 <li> 
-                                    $4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 = 1024$
+                                    $8 \cdot 8 = 64$
                                 </li>
                                 <li> 
-                                    $3 \cdot 3 = 9$
-                                </li>
-                                <li> 
-                                    $(-2) \cdot (-2) \cdot (-2) = -8$
+                                    $(-5) \cdot (-5) \cdot (-5) = -125$
                                 </li>
                             </ol>
                         </div>
@@ -178,13 +168,21 @@ topnav: may1
                 </div>
             </div>
             <div class="teoria">
-            <p>
-                Jos kantaluku on negatiivinen, tarvitaan potenssimerkinnässä sulut. Esimerkiksi luvun $-1$ kolmas potenssi on 
-                $$(-1)^3 = (-1) \cdot (-1) \cdot (-1) = 1 \cdot (-1) = -1$$
-                ja neljäs potenssi on 
-                $$(-1)^4 = (-1) \cdot (-1) \cdot (-1) \cdot (-1) = 1 \cdot 1 = 1.$$
-            </p>
+                <p>
+                    Jos kantaluku on negatiivinen, tarvitaan potenssimerkinnässä sulut. Esimerkiksi luvun $-1$ kolmas potenssi on 
+                    \begin{align*}
+                    (-1)^3 &= (-1) \cdot (-1) \cdot (-1) \\
+                    &= 1 \cdot (-1) = -1
+                    \end{align*}
+                    ja neljäs potenssi on 
+                    \begin{align*}
+                    (-1)^4 &= (-1) \cdot (-1) \cdot (-1) \cdot (-1) \\
+                    &= 1 \cdot 1 = 1.
+                    \end{align*}
+                    Havaitaan, että tulos on negatiivinen täsmälleen siinä tapauksessa, että tulon tekijöitä on pariton määrä eli eksponentti on pariton.
+                </p>
             </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="b0cff9b0-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
@@ -196,10 +194,10 @@ topnav: may1
                     </header>
                     <div id="potenssi2b" class="collapse">
                         <p>
-                            Merkitse lauseke näkyviin ja laske sen arvo:
+                            Merkitse lauseke näkyviin potenssimerkinnän avulla ja laske sen arvo:
                         </p>
                         <ol class="a">
-                            <li> luvun $-6$ viides potenssi</li>
+                            <li> luvun $-2$ viides potenssi</li>
                             <li> luvun $-10$ kuudes potenssi.</li>
                         </ol>       
                         <h2>
@@ -210,7 +208,7 @@ topnav: may1
                         <div id="potenssi2b_v" class="collapse">
                            <ol class="a">
                                 <li> 
-                                    $(-6)^5 = -7776$
+                                    $(-2)^5 = -32$
                                 </li>
                                 <li> 
                                     $(-10)^6 = 1\,000\,000$
@@ -232,13 +230,26 @@ topnav: may1
                     </header>
                     <div id="potenssi2c" class="collapse">
                         <p> 
-                            Palautetaan mieleen, että luvun $c$ vastaluku on aina $-c$. Siis esimerkiksi luvun $3$ vastaluku on $-3$ ja luvun $-9$ vastaluku on $-(-9) = 9$.
+                            Luvun ja sen vastaluvun summa on aina nolla. 
+                            Esimerkiksi luvun $3$ vastaluku on $-3$, sillä
+                            $$
+                            3 + (-3) = 0.
+                            $$
+                            Luvun $-9$ vastaluku on $-(-9) = 9$, sillä
+                            $$
+                            -9 + 9 = 0.
+                            $$
                         </p>
                         <ol class="a">
-                            <li> Laske potenssin $7^4$ arvo.</li>
-                            <li> Mitä eroa on merkinnöillä $(-7)^4$ ja $-7^4$? Onko jompi kumpi niistä luvun $7^4$ vastaluku?</li>
-                            <li> Päättele lausekkeen $(-7)^4$ arvo a-kohdan tuloksen avulla. </li>
-                            <li> Päättele lausekkeen $-7^4$ arvo a-kohdan tuloksen avulla. </li>
+                            <li> 
+                                Laske potenssin $7^4$ arvo.
+                            </li>
+                            <li> 
+                                Mitä eroa on merkinnöillä $(-7)^4$ ja $-7^4$? Kumpi niistä on luvun $7^4$ vastaluku?
+                            </li>
+                            <li> 
+                                Päättele lausekkeiden $(-7)^4$ ja $-7^4$ arvot edellisten vastausten avulla. 
+                            </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi2c_v">
@@ -250,14 +261,16 @@ topnav: may1
                                 <li> 
                                     $7^4 = 2401$
                                 </li>
-                                <li> 
-                                    Luku $-7^4$ on luvun $7^4$ vastaluku.
-                                </li>
-                                <li> 
-                                    $(-7)^4 = 2401$
-                                </li>
                                 <li>
-                                    $-7^4 = -2401$
+                                    <p> 
+                                        Merkinnät eroavat toisistaan sulkujen osalta. Merkintä $(-7)^4$ tarkoittaa tuloa, jossa luku $-7$ esiintyy neljä kertaa. Koska tulon tekijöitä on parillinen määrä, tulos on positiivinen. 
+                                    </p>
+                                    <p>
+                                        Merkintä $-7^4$ tarkoittaa luvun $7^4$ vastalukua.
+                                    </p>
+                                </li>
+                                <li> 
+                                    $(-7)^4 = 2401$ ja $-7^4 = -2401$
                                 </li>
                             </ol>
                         </div>
@@ -269,7 +282,10 @@ topnav: may1
                 Jos miinusmerkki on potenssimerkinnän edessä ilman sulkuja, vaikuttaa se koko potenssilausekkeeseen:
                 $$-a^n = -(a^n).$$
                 Esimerkiksi merkintä $-3^6$ tarkoittaa potenssin $3^6 = 729$ vastalukua:
-                $$-3^6 = -(3^6) = -(3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3) = -729.$$
+                \begin{align*}
+                -3^6 &= -(3^6) \\
+                &= -(3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3) = -729.
+                \end{align*}
             </p>    
             </div>
             <div class="tehtavat">
@@ -283,15 +299,14 @@ topnav: may1
                     </header>
                     <div id="potenssi3" class="collapse">
                         <p>
-                            Kirjoita seuraavat tulot potenssimerkinnän avulla: 
+                            Kirjoita potenssimerkinnän avulla: 
                         </p>
                         <ol class="a">
-                            <li> $x\cdot x\cdot x\cdot x$</li>
                             <li> $(2x)\cdot (2x)\cdot (2x)$</li>
                             <li> $3\cdot 3\cdot 3\cdot 3\cdot 3\cdot a\cdot a\cdot a\cdot a\cdot a.$</li>
                         </ol>
                         <p>
-                            Keksi b- ja c-kohdissa kaksi erilaista tapaa, jolla voit kirjoittaa tulot potenssimerkintää käyttäen.
+                            Keksitkö kaksi erilaista tapaa, jolla voit kirjoittaa tulot potenssimerkintää käyttäen?
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3_v">
@@ -300,9 +315,6 @@ topnav: may1
                         </h2>
                         <div id="potenssi3_v" class="collapse">
                            <ol class="a">
-                                <li> 
-                                    $x^4$
-                                </li>
                                 <li> 
                                     $(2x)^3$ tai $2^3x^3$
                                 </li>
@@ -334,13 +346,16 @@ topnav: may1
                     </header>
                     <div id="potenssi3b" class="collapse">
                         <p>
-                            Kirjoita seuraavat potenssit tuloina, laske kaikki mahdolliset laskut ja ilmoita tuloksen kirjainosa potenssimerkinnän avulla samaan tapaan kuin edellisessä esimerkissä.
+                            Poista sulut seuraavista potenssilausekkeista:
                         </p>
                         <ol class="a">
-                            <li> $(6a)^4$</li>
-                            <li> $(2b)^6$</li>
-                            <li> $(7x)^3$</li>
+                            <li> $(6x)^3$</li>
+                            <li> $(2y)^6$</li>
+                            <li> $(ab)^4$</li>
                         </ol>
+                        <p>
+                            Ohje: voit kirjoittaa lausekkeen tulomuodossa ja järjestellä tulon tekijät uudelleen.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3b_v">
                                 VASTAUS
@@ -349,16 +364,49 @@ topnav: may1
                         <div id="potenssi3b_v" class="collapse">
                            <ol class="a">
                                 <li> 
-                                    $1296a^4$
+                                    $6^3x^3 = 216x^3$
                                 </li>
                                 <li> 
-                                    $64b^6$
+                                    $2^6y^6 = 64y^6$
                                 </li>
-                                <li> 
-                                    $343x^3$
+                                <li>
+                                    $a^4b^4$
                                 </li>
                             </ol>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="potenssi3ca-ex">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3ca">
+                                Tulon potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="potenssi3ca" class="collapse">
+                        <p> 
+                            Muodosta edellisen tehtävän avulla sääntö, jonka mukaan saadaan laskettua tulon  potenssi 
+                            $$
+                            (ab)^n
+                            $$
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi3ca_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="potenssi3ca_v" class="collapse">
+                            <p>
+                                Tulon potenssi on sama kuin potenssien tulo:
+                                $$
+                                (ab)^n = a^nb^n
+                                $$
+                            </p>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -374,24 +422,27 @@ topnav: may1
                     </header>
                     <div id="potenssi3d" class="collapse">
                         <p>
-                            Kirjoita seuraavat potenssit tuloina, laske kaikki mahdolliset laskut ja ilmoita tuloksen kirjainosa potenssimerkinnän avulla.
+                            Poista sulut seuraavista potenssilausekkeista:
                         </p>
                         <ol class="a">
-                            <li> $\left(\dfrac{a}{5}\right)^3$</li>
-                            <li> $\left(-\dfrac{4}{b}\right)^2$</li>
-                            <li> $\left(\dfrac{2a}{3}\right)^5$</li>
+                            <li> $\left(\dfrac{2x}{3}\right)^3$</li>
+                            <li> $\left(-\dfrac{4}{y}\right)^2$</li>
+                            <li> $\left(\dfrac{a}{b}\right)^4$</li>
                         </ol>
+                        <p>
+                            Ohje: kirjoita potenssilauseke ensin tulomuodossa.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3d_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="potenssi3d_v" class="collapse">
-                           <ol class="a">
-                            <li> $\dfrac{a^3}{125}$</li>
-                            <li> $\dfrac{16}{b^2}$</li>
-                            <li> $\dfrac{32a}{243}$</li>
-                        </ol>
+                            <ol class="a">
+                                <li> $\dfrac{8x}{27}$</li>
+                                <li> $\dfrac{16}{y^2}$</li>
+                                <li> $\dfrac{a^4}{b^4}$</li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
@@ -402,36 +453,32 @@ topnav: may1
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3c">
-                                Tulon ja osamäärän potenssi
+                                Osamäärän potenssi
                             </a>
                         </h1>
                     </header>
                     <div id="potenssi3c" class="collapse">
                         <p> 
-                            Kirjoita seuraavat lausekkeet ensin tulomuodossa ja sitten toisella tavalla potenssimerkintää käyttäen samaan tapaan kuin edellisissä tehtävissä:
+                            Muodosta edellisen tehtävän avulla sääntö, jonka mukaan saadaan laskettua osamäärän  potenssi 
+                            $$\left(\dfrac{a}{b}\right)^n$$
                         </p>
-                        <ol class="a">
-                            <li> $(ab)^4$</li>
-                            <li> $(ab)^n$ </li>
-                            <li> $\left(\dfrac{a}{b}\right)^4$</li>
-                            <li> $\left(\dfrac{a}{b}\right)^n$</li>
-                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi3c_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="potenssi3c_v" class="collapse">
-                           <ol class="a">
-                            <li> $a^4b^4$</li>
-                            <li> $a^nb^n$ </li>
-                            <li> $\dfrac{a^4}{b^4}$</li>
-                            <li> $\dfrac{a^n}{b^n}$</li>
-                        </ol>
+                            <p>
+                                Osamäärän potenssi on sama kuin potenssien osamäärä:
+                                $$
+                                \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}
+                                $$
+                            </p>
                         </div> 
                     </div>
                 </div>
             </div>
+
             <div class="teoria">
             <p>
                 Potenssilausekkeiden sieventämisessä pääsee aina alkuun, kun muistaa potenssin määritelmän eli sopimuksen siitä, mitä potenssi tarkoittaa. Niin myös seuraavissa tehtävissä.
@@ -450,15 +497,14 @@ topnav: may1
                     <div id="potenssi9" class="collapse">
 
                         <p>
-                            Ilmoita potenssit ensin tulomuodossa määritelmää käyttäen ja lausu lopputulos taas potenssina.
+                            Kirjoita potenssit ensin tulomuodossa ja lausu lopputulos taas potenssina:
                         </p> 
                         <ol class="a">
-                            <li> $\left(2^3\right)^2$</li>
-                            <li> $\left(3^4 \right)^3$</li>
-                            <li> $\left(4^2  \right)^5$</li>
+                            <li> $\left(7^3\right)^2$</li>
+                            <li> $(a^2)^4$</li>
                         </ol>
                         <p>
-                            Tutki tehtävän lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle potenssin potenssissa? 
+                            Tutki lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle potenssin potenssissa? 
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi9_v">
@@ -466,26 +512,20 @@ topnav: may1
                             </a>
                         </h2>
                         <div id="potenssi9_v" class="collapse">
-                           <ol class="a">
-                            <li> 
-                                \begin{align*}
-                                2^3 \cdot 2^3 &= (2 \cdot 2 \cdot 2) \cdot (2 \cdot 2 \cdot 2) \\
-                                &= 2^6
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                3^4 \cdot 3^4 \cdot 3^4 &= (3 \cdot 3 \cdot 3 \cdot 3) \cdot (3 \cdot 3 \cdot 3 \cdot 3) \cdot (3 \cdot 3 \cdot 3 \cdot 3) \\
-                                &= 3^{12}
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                4^2 \cdot 4^2 \cdot 4^2 \cdot 4^2 \cdot 4^2 &= (4 \cdot 4) \cdot (4 \cdot 4) \cdot (4 \cdot 4) \cdot (4 \cdot 4) \cdot (4 \cdot 4)  \\
-                                &= 4^{10}
-                                \end{align*}
-                            </li>
-                        </ol>
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    7^3 \cdot 7^3 &= (7 \cdot 7 \cdot 7) \cdot (7 \cdot 7 \cdot 7) \\
+                                    &= 7^6
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    a^2 \cdot a^2 \cdot a^2 \cdot a^2 &= aaaaaaaa \\
+                                    &= a^8
+                                    \end{align*}
+                                </li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
@@ -502,22 +542,22 @@ topnav: may1
                         </h1>
                     </header>
                     <div id="potenssi9b" class="collapse">
-                        <p> Kirjoita seuraavat lausekkeet potenssimerkintää käyttäen samaan tapaan kuin edellisessä tehtävässä:
+                        <p> 
+                            Muodosta edellisen tehtävän avulla sääntö, jonka mukaan saadaan laskettua potenssin potenssi 
+                            $$(a^m)^n$$
                         </p>
-                        <ol class="a">
-                            <li> $(a^5)^2$</li>
-                            <li> $(a^m)^n$.</li>
-                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi9b_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="potenssi9b_v" class="collapse">
-                           <ol class="a">
-                            <li> $a^{10}$</li>
-                            <li> $a^{mn}$ </li>
-                        </ol>
+                            <p>
+                                Potenssin potenssissa eksponentit kerrotaan keskenään:
+                                $$
+                                (a^m)^n = a^{mn}
+                                $$
+                            </p>
                         </div> 
                     </div>
                 </div>
@@ -544,15 +584,14 @@ topnav: may1
                     </header>
                     <div id="potenssi4" class="collapse">
                         <p>
-                            Kirjoita lauseke ensin tulomuodossa. Kirjoita lopputulos sen jälkeen potenssimerkintää käyttäen.
+                            Kirjoita ensin tulomuodossa ja sen jälkeen potenssimerkintää käyttäen:
                         </p>
                         <ol class="a">
                             <li> $2^3\cdot 2^4$</li>
-                            <li> $4^2\cdot 4^7$</li>
-                            <li> $(-3)^4\cdot (-3)^6$.</li>
+                            <li> $a^5a^2$</li>
                         </ol>
                         <p>
-                            Tutki tehtävän lähtötilannetta ja lopputulosta a-, b- ja c-kohdissa. Keksitkö säännön eksponentin muodostumiselle samankantaisten potenssien tulossa? 
+                            Tutki lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle samankantaisten potenssien tulossa? 
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi4_v">
@@ -560,26 +599,20 @@ topnav: may1
                             </a>
                         </h2>
                         <div id="potenssi4_v" class="collapse">
-                           <ol class="a">
-                            <li> 
-                                \begin{align*}
-                                2^3 \cdot 2^4 &= (2 \cdot 2 \cdot 2) \cdot (2 \cdot 2 \cdot 2 \cdot 2) \\
-                                &= 2^7
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                4^2\cdot 4^7 &= (4 \cdot 4) \cdot (4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4) \\
-                                &= 4^9
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                (-3)^4\cdot (-3)^6 &= (-3) \cdot (-3) \cdot (-3) \cdot (-3) \cdot (-3) \cdot (-3) \cdot (-3) \cdot (-3) \cdot (-3) \cdot (-3)\\
-                                &= (-3)^{10}
-                                \end{align*}
-                            </li>
-                        </ol>
+                            <ol class="a">
+                                <li> 
+                                    \begin{align*}
+                                    2^3 \cdot 2^4 &= (2 \cdot 2 \cdot 2) \cdot (2 \cdot 2 \cdot 2 \cdot 2) \\
+                                    &= 2^7
+                                    \end{align*}
+                                </li>
+                                <li> 
+                                    \begin{align*}
+                                    a^5\cdot a^2 &= aaaaa \cdot aa \\
+                                    &= a^7
+                                    \end{align*}
+                                </li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
@@ -596,15 +629,14 @@ topnav: may1
                     </header>
                     <div id="potenssi4c" class="collapse">
                         <p>
-                            Kirjoita osoittaja ja nimittäjä ensin tulomuodossa ja supista. Kirjoita lopputulos sen jälkeen potenssimerkintää käyttäen.
+                            Kirjoita osoittaja ja nimittäjä ensin tulomuodossa ja supista. Kirjoita lopputulos potenssimerkintää käyttäen.
                         </p>
                         <ol class="a">
-                            <li> $\dfrac{2^7}{2^4}$</li>
-                            <li> $\dfrac{5^6}{5^2}$</li>
-                            <li> $\dfrac{(-2)^8}{(-2)^7}.$</li>
+                            <li> $\dfrac{9^5}{9^3}$</li>
+                            <li> $\dfrac{a^6}{a^2}$</li>
                         </ol>
                         <p>
-                            Tutki tehtävän lähtötilannetta ja lopputulosta a-, b- ja c-kohdissa. Keksitkö säännön eksponentin muodostumiselle samankantaisten potenssien osamäärässä? 
+                            Tutki lähtötilannetta ja lopputulosta. Keksitkö säännön eksponentin muodostumiselle samankantaisten potenssien osamäärässä? 
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi4c_v">
@@ -612,11 +644,10 @@ topnav: may1
                             </a>
                         </h2>
                         <div id="potenssi4c_v" class="collapse">
-                           <ol class="a">
-                            <li> $2^3$</li>
-                            <li> $5^4$ </li>
-                            <li> $-2$</li>
-                        </ol>
+                            <ol class="a"> 
+                                <li> $\dfrac{9 \cdot 9 \cdot 9 \cdot 9 \cdot 9}{9 \cdot 9 \cdot 9} = 9 \cdot 9 = 9^2$ </li>
+                                <li> $\dfrac{aaaaaa}{aa} = aaaa = a^4$ </li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
@@ -632,13 +663,12 @@ topnav: may1
                         </h1>
                     </header>
                     <div id="potenssi4b" class="collapse">
-                        <p> Kirjoita seuraavat lausekkeet potenssimerkintää käyttäen samaan tapaan kuin edellisissä tehtävissä:
+                        <p> 
+                            Muodosta edellisten tehtävien avulla sääntö, jonka mukaan saadaan laskettua samankantaisten potenssien
                         </p>
                         <ol class="a">
-                            <li> $a^5a^3$</li>
-                            <li> $a^ma^n$ </li>
-                            <li> $\dfrac{a^5}{a^3}$</li>
-                            <li> $\dfrac{a^m}{a^n}$</li>
+                            <li> tulo $\ a^ma^n$ </li>
+                            <li> osamäärä $\ \dfrac{a^m}{a^n}$</li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi4b_v">
@@ -646,12 +676,16 @@ topnav: may1
                             </a>
                         </h2>
                         <div id="potenssi4b_v" class="collapse">
-                           <ol class="a">
-                            <li> $a^8$ </li>
-                            <li> $a^{m+n}$ </li>
-                            <li> $a^2$ </li>
-                            <li> $a^{m-n}$ </li>
-                        </ol>
+                            <ol class="a">
+                                <li> 
+                                    Samankantaisten potenssien tulossa eksponentit lasketaan yhteen:
+                                    $$a^ma^n = a^{m+n}$$ 
+                                </li>
+                                <li> 
+                                    Samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti:
+                                    $$\dfrac{a^m}{a^n} = a^{m-n}$$ 
+                                </li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
@@ -670,29 +704,29 @@ topnav: may1
         </header>
         <div id="eksponenttiNolla" class="collapse">
             <div class="teoria">
-            <p>
-                Edellisessä kappaleessa sovittiin, mitä tarkoitetaan potenssilla $a^n$, missä $n$ on positiivinen kokonaisluku. Sen jälkeen tutkittiin, millaisia laskulakeja potenssilausekkeet noudattavat. Huomattiin esimerkiksi, että samankantaisten potenssien osamäärälle pätee sääntö
-                $$\frac{a^m}{a^n} = a^{m-n}.$$
-                Jos tässä luku $m$ sattuu olemaan pienempi kuin luku $n$, joudutaan kuitenkin ongelmalliseen tilanteeseen. Esimerkiksi 
-                $$\frac{a^3}{a^9} = a^{3-9} = a^{-6}.$$
-                Huomataan, että tarvitaan sopimus myös siitä, mitä potenssilla tarkoitetaan tilanteessa, jossa eksponentti on negatiivinen kokonaisluku tai nolla.
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: POTENSSI</h3>
                 <p>
-                    Oletetaan, että $a \neq 0$ ja $n$ on positiivinen kokonaisluku. Potenssit $a^0$  ja $a^{-n}$ määritellään seuraavasti:
-                    \begin{align*}
-                    a^0 &= 1\\
-                    a^{-n} &= \dfrac{1}{a^n}
-                    \end{align*}
-                    Potenssin $a^0$ arvo on siis $1$ ja potenssi $a^{-n}$ on potenssin $a^n$ käänteisluku.
+                    Edellisessä kappaleessa sovittiin, mitä tarkoitetaan potenssilla $a^n$, missä $n$ on positiivinen kokonaisluku. Sen jälkeen tutkittiin, millaisia laskulakeja potenssilausekkeet noudattavat. Huomattiin esimerkiksi, että samankantaisten potenssien osamäärälle pätee sääntö
+                    $$\frac{a^m}{a^n} = a^{m-n}.$$
+                    Jos tässä luku $m$ sattuu olemaan pienempi kuin luku $n$, tuloksen eksponentti on negatiivinen. Esimerkiksi 
+                    $$\frac{a^3}{a^9} = a^{3-9} = a^{-6}.$$
+                    Tarvitaan sopimus myös siitä, mitä potenssilla tarkoitetaan tilanteessa, jossa eksponentti on negatiivinen kokonaisluku tai nolla.
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: POTENSSI</h3>
+                    <p>
+                        Oletetaan, että $a \neq 0$ ja $n$ on positiivinen kokonaisluku. Potenssit $a^0$  ja $a^{-n}$ määritellään seuraavasti:
+                        \begin{align*}
+                        a^0 &= 1\\
+                        a^{-n} &= \dfrac{1}{a^n}
+                        \end{align*}
+                        Potenssi $a^{-n}$ on siis potenssin $a^n$ käänteisluku.
+                    </p>
+                </div>
             </div>
-            </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="b0d00cde-7dfa-11e7-bb31-be2e44b06b34">
-
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi13">
@@ -746,12 +780,10 @@ topnav: may1
                         <ol class="a">
                             <li> $\dfrac{1}{10^2}$</li>
                             <li> $\dfrac{1}{a^3}$</li>
-                            <li> $\dfrac{1}{b^{15}}$</li>
                             <li> $\dfrac{1}{16}$</li>
-                            <li> $\dfrac{1}{8}$</li>
                         </ol>
                         <p>
-                            Keksi ainakin kaksi erilaista tapaa ilmaista d- ja e-kohtien lausekkeet potenssimuodossa.
+                            Keksitkö kaksi erilaista tapaa ilmaista c-kohdan lausekkeen potenssimuodossa?
                         </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi14_v">
@@ -762,9 +794,7 @@ topnav: may1
                            <ol class="a">
                                 <li> $\dfrac{1}{10^2} = 10^{-2}$</li>
                                 <li> $\dfrac{1}{a^3} = a^{-3}$</li>
-                                <li> $\dfrac{1}{b^{15}} = b^{-15}$</li>
                                 <li> $\dfrac{1}{16} = 16^{-1} = 4^{-2} = 2^{-4}$</li>
-                                <li> $\dfrac{1}{8} = 8^{-1} = 2^{-3}$</li>
                             </ol>
                         </div> 
                     </div>
@@ -788,15 +818,17 @@ topnav: may1
                         </h1>
                     </header>
                     <div id="potenssi14b" class="collapse">
-                        <p> Sievennä seuraavat potenssit määrittämällä suluissa olevien lukujen käänteisluvut:
+                        <p> Sievennä:
                         </p>
                         <ol class="a">
                             <li> $4^{-1}$</li>
                             <li> $(-15)^{-1}$</li>
                             <li> $\left(\dfrac{1}{3}\right)^{-1}$</li>
-                            <li> $\left(\dfrac{4}{9}\right)^{-1}$</li>
-                            <li> $\left(\dfrac{2}{5}\right)^{-1}$</li>
+                            <li> $\left(-\dfrac{4}{9}\right)^{-1}$</li>
                         </ol>
+                        <p>
+                            Kertaa tarvittaessa murtolukujen käänteislukuja koskeva teoreema 1 <a href="http://kisallioppiminen.fi/kurssit/may1/luvutLaskutoimitukset/">edellisestä luvusta</a>.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi14b_v">
                                 VASTAUS
@@ -807,12 +839,35 @@ topnav: may1
                                 <li> $4^{-1} = \dfrac{1}{4}$</li>
                                 <li> $(-15)^{-1} = -\dfrac{1}{15}$</li>
                                 <li> $\left(\dfrac{1}{3}\right)^{-1} = 3$</li>
-                                <li> $\left(\dfrac{4}{9}\right)^{-1} = \dfrac{9}{4}$</li>
-                                <li> $\left(\dfrac{2}{5}\right)^{-1} = \dfrac{5}{2}$</li>
+                                <li> $\left(-\dfrac{4}{9}\right)^{-1} = -\dfrac{9}{4}$</li>
                             </ol>
                         </div> 
                     </div>
                 </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Kun potenssi määriteltiin negatiivisten eksponenttien ja eksponentin nolla tapauksessa, tehtiin määritelmästä tarkoituksella sellainen, että aikaisemmin havaitut potenssien laskusäännöt toimivat edelleen. Nämä laskusäännöt on koottu seuraavaan teoreemaan. 
+                </p>
+
+                <div class="theorem" id="POTENSSIEN LASKUSÄÄNTÖJÄ">
+                    <h3>TEOREEMA</h3>
+                    <p>
+                        Seuraavat potenssien laskusäännöt pätevät kaikilla kokonaisluvuilla $m$ ja $n$ sekä kaikilla nollasta poikkeavilla reaaliluvuilla $a$ ja $b$:
+                    <ol>
+                        <li>tulon potenssi on potenssien tulo: $$(ab)^n = a^nb^n$$</li>
+                        <li>osamäärän potenssi on potenssien osamäärä: $$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$</li>
+                        <li>potenssin potenssissa eksponentit kerrotaan keskenään: $$(a^m)^n = a^{mn}$$</li>
+                        <li>samankantaisten potenssien tulossa eksponentit lasketaan yhteen: $$a^m\cdot a^n = a^{m+n}$$</li>
+                        <li>samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti: $$\dfrac{a^m}{a^n} = a^{m-n}.$$</li>
+                    </ol>
+                    </p>
+                </div>
+
+                <p>
+                    Potenssien laskusääntöjen hyvä hallitseminen on tärkeää, jotta jatkossa sievennykset sujuvat rutiinilla ja aivokapasiteettia vapautuu uusien, soveltavampien ongelmien ratkaisemiseen. Laskusääntöjen käyttöä harjoitellaan seuraavassa tehtävässä ja myös tehtäväsarjassa II, esimerkiksi pelin avulla tehtävässä 2.43. 
+                </p>
             </div>
 
             <div class="tehtavat">
@@ -820,141 +875,45 @@ topnav: may1
                     <header>
                         <h1>                            <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi15">
-                                Potenssin potenssi
+                                Potenssien laskusääntöjä
                             </a>
                         </h1>
                     </header>
                     <div id="potenssi15" class="collapse">
-
                         <p>
-                            Avaa sulut potenssin määritelmää käyttäen ja poista negatiiviset eksponentit siirtymällä käänteislukuihin. Lausu lopputulos taas potenssina.
+                            Sievennä potenssien laskusääntöjen avulla. Muokkaa vastaukset muotoon, jossa kaikki eksponentit ovat positiivisia.
                         </p> 
                         <ol class="a">
-                            <li> $\left(2^{-3}\right)^2$</li>
-                            <li> $\left(4^2  \right)^{-5}$</li>
-                            <li> $\left(3^{-4} \right)^{-3}$</li>
+                            <li> $(3a)^{-2}$ </li>
+                            <li> $\left(\dfrac{4b}{5}\right)^{-3}$</li>
+                            <li> $\left(c^{-6} \right)^{-7}$</li>
+                            <li> $x^{-10} \cdot 4x^8$ </li>
+                            <li> $\dfrac{15y^{-6}}{3y^{-7}}$ </li>
                         </ol>
-                        <p>
-                            Tutki tehtävän lähtötilannetta ja lopputulosta. Vaikuttaako potenssin potenssin laskusääntö toimivan myös negatiivisten eksponenttien tapauksessa?
-                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi15_v">
                                 VASTAUS
                             </a>
                         </h2>
                         <div id="potenssi15_v" class="collapse">
-                           <ol class="a">
-                            <li> 
-                                \begin{align*}
-                                \left(2^{-3}\right)^2 &= 2^{-3} \cdot 2^{-3} \\[2mm]
-                                &= \frac{1}{2^3} \cdot \frac{1}{2^3} \\[2mm]
-                                &= \frac{1}{2^3 \cdot 2^3} \\[2mm]
-                                &= \frac{1}{2^6} = 2^{-6}
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                \left(4^2  \right)^{-5} &= \frac{1}{\left(4^2\right)^5} \\[2mm]
-                                &= \frac{1}{4^{10}} = 4^{-10} 
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                \left(3^{-4} \right)^{-3} &= \left(\frac{1}{3^4}\right)^{-3} \\[2mm]
-                                &= \left(3^4\right)^3 = 3^{12}
-                                \end{align*}
-                            </li>
-                        </ol>
+                            <ol class="a">
+                                <li> $(3a)^{-2} = \dfrac{1}{9a^2}$ </li>
+                                <li> $\left(\dfrac{4b}{5}\right)^-3 = \dfrac{125}{64b^3}$</li>
+                                <li> $\left(c^{-6} \right)^{-7} = c^{42}$</li>
+                                <li> $x^{-10} \cdot 4x^8 = 4x^{-2} = \dfrac{4}{x^2}$ </li>
+                                <li> $\dfrac{15y^{-6}}{3y^{-7}} = 5y^{-6-(-7)} = 5y$ </li>
+                            </ol>
                         </div> 
                     </div>
                 </div>
             </div>
 
-            <div class="tehtavat">
-                <div class="tehtava" id="b0d01468-7dfa-11e7-bb31-be2e44b06b34">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi17">
-                                Samankantaisten potenssien tulo
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="potenssi17" class="collapse">
-                        <p>
-                            Poista negatiiviset eksponentit siirtymällä käänteislukuihin. Sievennä ja kirjoita lopputulos potenssimerkintää käyttäen.
-                        </p>
-                        <ol class="a">
-
-                            <li> $2^{-3}\cdot2^5$</li>
-                            <li> $4^2\cdot4^{-7}$</li>
-                            <li> $(-3)^{-4}\cdot (-3)^{-6}$.</li>
-                            <li> $9^{-8} \cdot 9^8$</li>
-                        </ol>
-                        <p>
-                            Tutki tehtävän lähtötilannetta ja lopputulosta a-, b-, c- ja d-kohdissa. Vaikuttaako samankantaisten potenssien tulon laskusääntö pätevän myös negatiivisten eksponenttien tapauksessa?
-                        </p>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#potenssi17_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="potenssi17_v" class="collapse">
-                           <ol class="a">
-                            <li> 
-                                \begin{align*}
-                                2^{-3}\cdot2^5 &= \frac{1}{2^3} \cdot 2^5 \\[2mm]
-                                &= \frac{2^5}{2^3} \\[2mm]
-                                &= 2^{2}
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                4^2\cdot4^{-7} &= 4^2 \cdot \frac{1}{4^7}  \\[2mm]
-                                &= \frac{4^2}{4^7} \\[2mm]
-                                &= \frac{1}{4^5} \\[2mm]
-                                &= 4^{-5}
-                                \end{align*}
-                            </li>
-                            <li> 
-                                \begin{align*}
-                                (-3)^{-4}\cdot (-3)^{-6} &= \frac{1}{(-3)^4} \cdot \frac{1}{(-3)^6} \\[2mm]
-                                &= \frac{1}{(-3)^4 \cdot (-3)^6} \\[2mm]
-                                &= \frac{1}{(-3)^{10}} \\[2mm]
-                                &= (-3)^{-10}
-                                \end{align*}
-                            </li>
-                        </ol>
-                        </div> 
-                    </div>
-                </div>
-            </div>
             <div class="teoria">
-            <p>
-                Kun potenssi määriteltiin negatiivisten eksponenttien ja eksponentin nolla tapauksessa, tehtiin määritelmästä tarkoituksella sellainen, että aikaisemmin havaitut potenssien laskusäännöt toimivat edelleen. Nämä laskusäännöt on koottu seuraavaan teoreemaan. Teoreemat (toiselta nimeltään lauseet) ovat matemaattisia tosiasioita, jotka voidaan perustella todeksi määritelmien pohjalta. Tällä kertaa perustelu kuitenkin sivuutetaan, koska se ei ole tämän kurssin kannalta oleellinen.
-            </p>
-
-            <div class="theorem" id="POTENSSIN LASKUSÄÄNTÖJÄ">
-                <h3>TEOREEMA</h3>
                 <p>
-                    Seuraavat potenssien laskusäännöt pätevät kaikilla kokonaisluvuilla $m$ ja $n$ sekä kaikilla nollasta poikkeavilla reaaliluvuilla $a$ ja $b$:
-                <ol>
-                    <li>tulon potenssi on potenssien tulo: $$(ab)^n = a^nb^n$$</li>
-                    <li>osamäärän potenssi on potenssien osamäärä: $$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$</li>
-                    <li>potenssin potenssissa eksponentit kerrotaan keskenään: $$(a^m)^n = a^{mn}$$</li>
-                    <li>samankantaisten potenssien tulossa eksponentit lasketaan yhteen: $$a^m\cdot a^n = a^{m+n}$$</li>
-                    <li>samankantaisten potenssien osamäärässä osoittajan eksponentista vähennetään nimittäjän eksponentti: $$\dfrac{a^m}{a^n} = a^{m-n}.$$</li>
-                </ol>
+                    Seuraavassa tehtävässä jatketaan negatiivisten eksponenttien ominaisuuksien tutkimista.
                 </p>
             </div>
 
-            <!--     <p>
-                    Palautetaan mieleen, että kahden murtoluvun osamäärä saadaan laskettua, kun kerrotaan jakajan käänteisluvulla:
-                    $$\dfrac{\left(\dfrac{3}{35}\right)}{\left(\dfrac{9}{7}\right)} = \frac{3}{35} \cdot \frac{7}{9} = \frac{3 \cdot 7}{35 \cdot 9} = \frac{1 \cdot 1}{5 \cdot 3} = \frac{1}{15}.$$
-                </p> -->
-            <p>
-                Seuraavassa tehtävässä jatketaan negatiivisten eksponenttien ominaisuuksien tutkimista.
-            </p>
-            </div>
             <div class="tehtavat">
                 <div class="tehtava" id="b0d01788-7dfa-11e7-bb31-be2e44b06b34">
                     <header>
@@ -966,13 +925,23 @@ topnav: may1
                     </header>
                     <div id="potenssi19" class="collapse">
                         <p>
-                            Tehtävänä on tutkia, miten potenssit $2^{-4}$ ja $\left(\dfrac{1}{2}\right)^4$ liittyvät toisiinsa.
+                            Tehtävänä on tutkia, miten potenssit 
+                            $$2^{-4} \quad \text{ ja } \quad \left(\dfrac{1}{2}\right)^4$$ 
+                            liittyvät toisiinsa.
                         </p>
                         <ol class="a">
-                            <li> Kirjoita näkyviin, mitä $2^{-4}$ tarkoittaa määritelmän mukaan.</li>
-                            <li> Kirjoita $\left(\dfrac{1}{2}\right)^4$ tulomuodossa ja sievennä mahdollisimman pitkälle.</li>
-                            <li> Vertaa a- ja b-kohdan tuloksia. Miten ne liittyvät toisiinsa?</li>
-                            <li> Millainen yleinen sääntö saattaisi liittää toisiinsa lausekkeet $a^{-n}$ ja $\left(\dfrac{1}{a}\right)^n$?</li>
+                            <li> 
+                                Kirjoita näkyviin, mitä $2^{-4}$ tarkoittaa määritelmän mukaan.
+                            </li>
+                            <li> 
+                                Kirjoita $\left(\frac{1}{2}\right)^4$ tulomuodossa ja sievennä mahdollisimman pitkälle.
+                            </li>
+                            <li> 
+                                Vertaa a- ja b-kohdan tuloksia. Muodosta sääntö, joka liittää toisiinsa lausekkeet
+                                $$
+                                a^{-n} \quad \text{ ja } \quad \left(\dfrac{1}{a}\right)^n
+                                $$
+                            </li>
                         </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#potenssi19_v">
@@ -982,29 +951,35 @@ topnav: may1
                         <div id="potenssi19_v" class="collapse">
                            <ol class="a">
                                 <li> $2^{-4} = \dfrac{1}{2^4}$</li>
-                                <li> $\left(\dfrac{1}{2}\right)^4 = \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{16}$</li>
+                                <li> 
+                                    $\left(\dfrac{1}{2}\right)^4 = \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{16}$
+                                </li>
+                                <li>
+                                    $a^{-n} = \left(\frac{1}{a}\right)^n$
+                                </li>
                             </ol>
                         </div> 
                     </div>
                 </div>
             </div>
+
             <div class="teoria">
             <p>
-                Edellisen tehtävän havaintojen pohjalta voidaan päätyä seuraavaan teoreemaan. Tällä kertaa myös teoreeman perustelu (eli todistus) on kirjoitettu näkyviin. Lue se huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
+                Edellisen tehtävän havainnot johtavat seuraavaan teoreemaan. Tällä kertaa myös teoreeman perustelu (eli todistus) on kirjoitettu näkyviin. Lue se huolellisesti ja mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
             </p>
 
             <div class="theorem" id="NEGATIIVINEN EKSPONENTTI">
                 <h3>TEOREEMA</h3>
                 <p>
                     Oletetaan, että $n$ on positiivinen kokonaisluku ja $a \neq 0$. Potenssi $a^{-n}$ on luvun $a$ käänteisluvun $n$:s potenssi eli
-                    $$a^{-n} = \left(\frac{1}{a}\right)^n.$$
+                    $$a^{-n} = \left(\frac{1}{a}\right)^n$$
                 </p>
                 <div class="proof">
                     <p>
                         Perustelu: Potenssin määritelmän mukaan
-                        $$a^{-n} = \frac{1}{a^n}.$$
+                        $$a^{-n} = \frac{1}{a^n}$$
                         Toisaalta potenssin määritelmän mukaan
-                        $$\left(\frac{1}{a}\right)^n = \underbrace{\left(\frac{1}{a}\right) \cdots \left(\frac{1}{a}\right)}_\text{$n$ kpl} = \frac{1}{a^n}.$$
+                        $$\left(\frac{1}{a}\right)^n = \underbrace{\left(\frac{1}{a}\right) \cdots \left(\frac{1}{a}\right)}_\text{$n$ kpl} = \frac{1}{a^n}$$
                         Siis 
                         $$a^{-n} = \left(\frac{1}{a}\right)^n.$$
                     </p>
@@ -1012,7 +987,7 @@ topnav: may1
             </div>
             </div>
             <p>
-                Seuraavissa tehtävissä harjoitellaan äsken perustellun teoreeman 2 soveltamista.
+                Seuraavissa tehtävissä harjoitellaan yllä olevan teoreeman soveltamista. Kannattaa tarvittaessa kerrata murtolukujen käänteislukuja koskeva teoreema 1 <a href="http://kisallioppiminen.fi/kurssit/may1/luvutLaskutoimitukset/">edellisestä luvusta</a>.
             </p>
 
             <div class="tehtavat">
@@ -1025,10 +1000,14 @@ topnav: may1
                         </h1>
                     </header>
                     <div id="potenssi20" class="collapse">
-                        <p> Tehtävänä on määrittää potenssi $\left(\dfrac{4}{5}\right)^{-3}$.
+                        <p> 
+                            Tehtävänä on määrittää potenssi 
+                            $$\left(\dfrac{4}{5}\right)^{-3}$$
                         </p>
                         <ol class="a">
-                            <li> Muodosta luvun $\dfrac{4}{5}$ käänteisluku. Muista, että luvun ja sen käänteisluvun tulo on aina $1$.</li>
+                            <li> 
+                                Muodosta kantaluvun $\dfrac{4}{5}$ käänteisluku. 
+                            </li>
                             <li> Laske a-kohdassa muodostamasi luvun kolmas potenssi.</li>
                             <li> Miten ratkaisun vaiheet liittyvät teoreemaan 2? Selitä omin sanoin.</li>
                         </ol>
@@ -1093,17 +1072,18 @@ topnav: may1
         </header>
         <div id="kymmenpotenssiluku" class="collapse">
             <div class="teoria">
-            <p> 
-                Kymmenpotenssimuotoa käytetään usein hyvin suurten tai pienten positiivisten lukujen merkisemiseen. Esimerkiksi Suomen väkiluku oli heinäkuussa 2016 noin $5{,}497$ miljoonaa eli $5{,}497 \cdot 10^6 = 5\,497\,000$. Yhden vesimolekyylin massa puolestaan on noin $2{,}9915 \cdot 10^{-23}$ grammaa. 
-            </p>
-
-            <div class="definition">
-                <h3>MÄÄRITELMÄ: KYMMENPOTENSSIMUOTO</h3>
-                <p>
-                    Positiivisen luvun <em>kymmenpotenssimuoto</em> tarkoittaa luvun esittämistä muodossa $a\cdot 10^n$, missä $n$ on kokonaisluku ja kerroin $a$ on vähintään yksi ja pienempi kuin kymmenen: $1 \leq a < 10$.
+                <p> 
+                    Kymmenpotenssimuotoa käytetään hyvin suurten tai pienten positiivisten lukujen merkisemiseen. Esimerkiksi Suomen väkiluku oli heinäkuussa 2016 noin $5{,}497$ miljoonaa eli $5{,}497 \cdot 10^6 = 5\,497\,000$. Yhden vesimolekyylin massa puolestaan on noin $2{,}9915 \cdot 10^{-23}$ grammaa. 
                 </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: KYMMENPOTENSSIMUOTO</h3>
+                    <p>
+                        Positiivisen luvun <em>kymmenpotenssimuoto</em> tarkoittaa luvun esittämistä muodossa $a\cdot 10^n$, missä $n$ on kokonaisluku ja kerroin $a$ on vähintään yksi ja pienempi kuin kymmenen: $1 \leq a < 10$.
+                    </p>
+                </div>
             </div>
-            </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="b0d01e68-7dfa-11e7-bb31-be2e44b06b34">
 
@@ -1214,19 +1194,23 @@ topnav: may1
                 </div>
             </div>
             <div class="teoria">
-            <p>
-                Edellisessä tehtävässä ilmaistiin erilaisia etäisyyksiä kymmenpotenssimuodossa. Kaikki niistä olivat jonkinlaisia likiarvoja. Mistä tietää, millä tarkkuudella nämä etäisyydet oli tehtävässä ilmoitettu? 
-            </p>
-            <p>
-                Ilmoitettujen mittaustulosten tarkkuutta voi arvioida siitä, kuinka monta <em>merkitsevää numeroa</em> niissä on. Desimaalimuodossa ilmoitettussa luvussa merkitseviä ovat kaikki muut numerot paitsi luvun vasemmalla puolella olevat nollat. Esimerkiksi luvussa
-                $$0{,}00000\textcolor{red}{508}$$
-                on kolme merkitsevää numeroa ja luvussa
-                $$\textcolor{red}{23{,}00046000}$$
-                on kymmenen merkitsevää numeroa. Kokonaislukuna ilmoitetussa luvussa merkitseviä ovat kaikki muut numerot paitsi luvun lopussa olevat nollat. Esimerkiksi luvussa
-                $$\textcolor{red}{31}0\,000$$
-                on kaksi merkitsevää numeroa.
-            </p>
+                <p>
+                    Edellisessä tehtävässä ilmaistiin erilaisia etäisyyksiä kymmenpotenssimuodossa. Kaikki niistä olivat jonkinlaisia likiarvoja. Mistä tietää, millä tarkkuudella nämä etäisyydet oli tehtävässä ilmoitettu? 
+                </p>
+                <p>
+                    Ilmoitettujen mittaustulosten tarkkuutta voi arvioida siitä, kuinka monta <em>merkitsevää numeroa</em> niissä on. Desimaalimuodossa ilmoitettussa luvussa merkitseviä ovat kaikki muut numerot paitsi luvun vasemmalla puolella olevat nollat. Esimerkiksi luvussa
+                    $$0{,}00000\textcolor{red}{508}$$
+                    on kolme merkitsevää numeroa ja luvussa
+                    $$\textcolor{red}{23{,}00046000}$$
+                    on kymmenen merkitsevää numeroa. 
+                </p>
+                <p>
+                    Kokonaislukuna ilmoitetussa luvussa merkitseviä ovat kaikki muut numerot paitsi luvun lopussa olevat nollat. Esimerkiksi luvussa
+                    $$\textcolor{red}{31}0\,000$$
+                    on kaksi merkitsevää numeroa.
+                </p>
             </div>
+
             <div class="tehtavat">
                 <div class="tehtava" id="b0d02106-7dfa-11e7-bb31-be2e44b06b34">
 
