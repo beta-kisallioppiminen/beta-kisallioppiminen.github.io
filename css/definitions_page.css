@@ -24,8 +24,11 @@ article section.panel>header,
 #tavoitteet,
 .objective,
 section > header,
-.panel > div > ol,
-.panel > div > ul{
+blockquote,
+.panel > div > div > h2,
+.panel > div > div > table,
+.panel > div > div > ol,
+.panel > div > div> ul{
     display: none;
 }
 

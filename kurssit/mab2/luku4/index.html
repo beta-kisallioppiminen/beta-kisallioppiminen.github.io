@@ -1316,6 +1316,52 @@ topnav: mab2
 
             <div class="teoria">
                 <p>
+                    Polynomien potenssit voidaan laskea muuttamalla ne ensin tulomuotoon. Esimerkiksi 
+                    \begin{align*}
+                    (x-5)^2 &= (x-5)(x-5) \\[1mm]
+                    &= x^2 - 5x - 5x + 25 \\[1mm]
+                    &= x^2 - 10x + 25.
+                    \end{align*}
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="cbf29beb-f668-46af-bcf0-7f81211c4da1">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#1aste16b">
+                                Polynomien potenssi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="1aste16b" class="collapse">
+                        <p> 
+                            Laske seuraavat potenssit. Aloita kirjoittamalla lauseke tulomuodossa.
+                        </p>
+                        <ol class="a">
+                            <li> $(x+3)^2$</li>
+                            <li> $(2x-1)^2$ </li>
+                            <li> $(7-x)^2$ </li>
+                        </ol>
+                        <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#1aste16b_v">
+                            Vastaus
+                        </a>
+                        </h2>
+                        <div id="1aste16b_v" class="collapse">
+                            <ol class="a">
+                                <li> $(x+3)^2 = x^2 + 6x + 9$</li>
+                                <li> $(2x-1)^2 = 4x^2 - 4x + 1$ </li>
+                                <li> $(7-x)^2 = 49 - 14x + x^2$ </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
                     Kaikki toisen asteen yhtälöt saa ratkaistua ratkaisukaavan avulla, kunhan ne aluksi muokkaa perusmuotoon $ax^2 + bx + c = 0$. Esimerkiksi yhtälön 
                     $$x(2x-3)-3x(1-x) = -1$$ 
                     tapauksessa ensin on laskettava kertolaskut:
@@ -1347,7 +1393,7 @@ topnav: mab2
                     </header>
                     <div id="2aste21" class="collapse">
                         <p> 
-                            Ratkaise seuraavat toisen asteen polynomiyhtälöt. Muuta yhtälöt ensin perusmuotoon $ax^2+bx+c = 0$ ja tunnista, mitkä luvut vastaavat kirjaimia $a$, $b$ ja $c$. Huomioi myös etumerkit.
+                            Ratkaise seuraavat toisen asteen yhtälöt. Muuta yhtälöt ensin perusmuotoon $ax^2+bx+c = 0$ ja tunnista, mitkä luvut vastaavat kirjaimia $a$, $b$ ja $c$. Huomioi myös etumerkit.
                         </p>
                         <ol class="a">
                             <li> $7(x^2 + 1) = 50x$ </li>
@@ -1961,43 +2007,120 @@ topnav: mab2
         <div id="MAB2luku4-tehtavasarja2" class="collapse">
             <!-- Tästä alkaa piilotus -->
 
-            <div class="tehtava" id="MAB2s2t401-ex">
+            <div class="tehtava" id="MAB2s2t403-ex">
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAB2s2t401">
-                            Toisen asteen yhtälö
+                        <a data-target="#MAB2s2t403">
+                            Toisen asteen polynomifunktio
                         </a>
                     </h1>
                 </header>
-                <div id="MAB2s2t401">
-                    <p> 
-                        Ratkaise seuraavat toisen asteen polynomiyhtälöt:
+                <div id="MAB2s2t403">
+                    <p>
+                        Moottoritielle suunnitellaan kaksikaistaista tunnelia, jonka poikkileikkaus vastaa funktion $f(x) = 6-0{,}25x^2$ kuvaajan ja $x$-akselin rajaamaa aluetta (pituuden yksikkönä metri).
                     </p>
                     <ol class="a">
-                        <li> $3x^2 - 7x + 4 = 0$ </li>
-                        <li> $x^2 + 2x - 9 = 3x - 7$</li>
-                        <li> $x^2 = 3x$</li>
+                        <li> Piirrä funktion $f$ kuvaaja laskimella tai tietokoneella. </li>
+                        <li> Suomessa kuorma-auton suurin sallittu korkeus on 4,4 m ja leveys 2,6 m. Mahtuisiko kaksi tällaista kuorma-autoa ajamaan vierekkäin suunnitellun tunnelin läpi? </li>
+                        <li> Millaisen rajoituksen asettaisit tunnelin kautta kulkevien ajoneuvojen korkeudelle, jos suurin sallittu leveys on 2,6 metriä?</li>
                     </ol>
                     <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t401_v">
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t403_v">
                             Vastaus
                         </a>
                     </h2>
-                    <div id="MAB2s2t401_v" class="collapse">
+                    <div id="MAB2s2t403_v" class="collapse">
                         <ol class="a">
-                            <li> $x = \dfrac{4}{3} \ $ tai $\ x = 1$</li>
-                            <li> $x = -1 \ $ tai $\ x = 2$ </li>
-                            <li> $x = 0 \ $ tai $\ x = 3$ </li>
+                            <li> 
+                                Kuva: 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva066.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                            </li>
+                            <li> Ei, sillä $f(2{,}6) = 4{,}31 < 4,{4}$. Tunnelin katto on seinän vieressä liian matalalla. </li>
+                            <li> Esimerkiksi enintään 4,0 m.</li>
                         </ol>
                     </div>
                 </div>
             </div>
 
-            <div class="tehtava" id="MAB2s2t302-ex">
+            <div class="tehtava" id="MAB2s2t409-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t409">
+                            Toisen asteen polynomifunktio
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t409">
+                    <p>
+                        Määritä funktion $f$ nollakohdat ja päättele, millä muuttujan $x$ arvoilla funktion $f$ arvot ovat positiivisia, jos
+                    </p>
+                    <ol class="a">
+                        <li> $f(x) = x^2-x-2$ </li>
+                        <li> $f(x) = x^2-8x+16$ </li>
+                        <li> $f(x) = (x+2)(3-x)$ </li>
+                    </ol>
+                    <p>
+                        Tarkista vastauksesi piirtämällä funktion $f$ kuvaaja.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t409_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t409_v" class="collapse">
+                        <ol class="a">
+                            <li> Nollakohdat $x_1 = -1$ ja $x_2 = 2$. Arvot positiivisia, jos ja vain jos $x < -1$ tai $x > 2$. </li>
+                            <li> Nollakohta $x = 4$. Arvot positiivisia, jos ja vain jos $x \neq 4$. </li>
+                            <li> Nollakohdat $x_1 = -2$ ja $x_2 = 3$. Arvot positiivisia, jos ja vain jos $-2 < x < 3$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t410-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t410">
+                            Neliöjuuri
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t410">
+                    <p>
+                        Päättele seuraavien neliöjuurten arvo käyttämättä laskimen neliöjuurinappulaa.
+                    </p>
+                    <ol class="a">
+                        <li> $\sqrt{81}$ </li>
+                        <li> $\sqrt{16}$ </li>
+                        <li> $\sqrt{64}$ </li>
+                        <li> $\sqrt{25}$ </li>
+                    </ol>
+                    <p>
+                        Voit tarkistaa tulokset laskimella.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t410_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t410_v" class="collapse">
+                        <ol class="a">
+                            <li> $\sqrt{81} = 9$, sillä $9 \geq 0$ ja $9^2 = 81$. </li>
+                            <li> $\sqrt{16} = 4$, sillä $4 \geq 0$ ja $4^2 = 16$. </li>
+                            <li> $\sqrt{64} = 8$, sillä $8 \geq 0$ ja $8^2 = 64$. </li>
+                            <li> $\sqrt{25} = 5$, sillä $5 \geq 0$ ja $5^2 = 25$. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t402-ex">
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAB2s2t402">
-                            Vaillinainen toisen asteen yhtälö
+                            Neliöjuuri yhtälön ratkaisuna
                         </a>
                     </h1>
                 </header>
@@ -2024,6 +2147,375 @@ topnav: mab2
                             <li> Yhtälö toteutuu, jos ja vain jos $x = \dfrac{2}{3}$ tai $x = -\dfrac{2}{3}$</li>
                             <li> Yhtälö toteutuu, jos ja vain jos $x = \sqrt{3}$ tai $x = -\sqrt{3}$</li>
                             <li> Ei ratkaisua, sillä yhtälön vasen puoli aina suurempi tai yhtä suuri kuin 27, sillä termi 3x^2 ei koskaan ole negatiivinen. Yhtälön vasen puoli ei siis koskaan saa arvoa nolla. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t411-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t411">
+                            Neliöjuuri yhtälön ratkaisuna
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t411">
+                    <p>
+                        Ratkaise seuraavat yhtälöt. Jos yhtälöllä ei ole yhtään ratkaisua, selitä omin sanoin, miksi näin on.
+                    </p>
+                    <ol class="a">
+                        <li> $2x^2-2 = 0$ </li>
+                        <li> $x^2+5 = 0$ </li>
+                        <li> $8-x^2 = 0$ </li>
+                        <li> $-4x^2 = 0$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t411_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t411_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 1\ $ tai $\ x = -1$ </li>
+                            <li> Yhtälöllä ei ole ratkaisua, sillä toinen potenssi ei koskaan ole negatiivinen. Mikään luku ei siis toteuta yhtälöä $x^2 = -5$. </li>
+                            <li> $x = \sqrt{8}\ $ tai $\ x = -\sqrt{8}$ </li>
+                            <li> $x = 0$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t405-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t405">
+                            Polynomien tulo
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t405">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $(3x+1)(3x-1)$ </li>
+                        <li> $(4x+5)^2$ </li>
+                        <li> $(6x-2)^2$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t405_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t405_v" class="collapse">
+                        <ol class="a">
+                            <li> $9x^2-1$ </li>
+                            <li> $16x^2+40x+25$ </li>
+                            <li> $36x^2-24x+4$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t412-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t412">
+                            Polynomien tulo
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t412">
+                    <p>
+                        Sievennä seuraavat lausekkeet:
+                    </p>
+                    <ol class="a">
+                        <li> $(x+2)(x^2-5x+4)$ </li>
+                        <li> $3x(x-6) - (x-2)(x-4)$ </li>
+                        <li> $\left(\dfrac{x}{2} + 1\right)\left(8x + \dfrac{1}{4}\right)$ </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t412_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t412_v" class="collapse">
+                        <ol class="a">
+                            <li> $x^3 - 3x^2 - 6x + 8$ </li>
+                            <li> $2x^2-12x-8$ </li>
+                            <li> $4x^2+ \dfrac{65}{8}x+\dfrac{1}{4}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t401-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t401">
+                            Toisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t401">
+                    <p> 
+                        Ratkaise seuraavat toisen asteen yhtälöt:
+                    </p>
+                    <ol class="a">
+                        <li> $3x^2 - 7x + 4 = 0$ </li>
+                        <li> $x^2 + 2x - 9 = 3x - 7$</li>
+                        <li> $x^2 = 3x$</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t401_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t401_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = \dfrac{4}{3} \ $ tai $\ x = 1$</li>
+                            <li> $x = -1 \ $ tai $\ x = 2$ </li>
+                            <li> $x = 0 \ $ tai $\ x = 3$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t413-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t413">
+                            Toisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t413">
+                    <p> 
+                        Ratkaise seuraavat yhtälöt:
+                    </p>
+                    <ol class="a">
+                        <li> $\dfrac{1}{3}x^2 + \dfrac{1}{2}x = 0$ </li>
+                        <li> $\dfrac{2}{3}x^2 - \dfrac{5}{2}x = -\dfrac{7}{12}$</li>
+                        <li> $x + 3 = \dfrac{10}{x}$</li>
+                    </ol>
+                    <p>
+                        Vinkki: Jos kertoimet ovat murtolukuja, yksi strategia on kertoa yhtälön molemmat puolet sellaisella luvulla, jotka supistavat nimittäjät pois.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t413_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t413_v" class="collapse">
+                        <ol class="a">
+                            <li> $x = 0 \ $ tai $\ x = -\dfrac{3}{2}$ </li>
+                            <li> $x = \dfrac{7}{2} \ $ tai $\ x = \dfrac{1}{4}$</li>
+                            <li> $x = 2 \ $ tai $\ x = -5$ </li>
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t408-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t408">
+                            Toisen asteen yhtälö
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t408">
+                    <p>
+                        Millä vakion $a$ arvolla
+                    </p>
+                    <ol class="a">
+                        <li> yhtälöllä $x^2 + ax + 3 = 0$ on tasan yksi ratkaisu? </li>
+                        <li> yhtälöllä $ax^2+2x+3 = 0$ on ainakin yksi ratkaisu? </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t408_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t408_v" class="collapse">
+                        <ol class="a">
+                            <li> $a = 2\sqrt{3}$ tai $a = -2\sqrt{3}$ </li>
+                            <li> $a \leq \frac{1}{3}$ </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t404-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t404">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t404">
+                    <p>
+                        Hedelmiä, joiden hinta on 2 €/kg, myydään päivittäin 80 kg. Kauppias arvelee, että kilohinnan nostaminen 50 sentillä johtaa aina menekin pienenemiseen 5 kilogrammalla.
+                    </p>
+                    <ol class="a">
+                        <li> Mikä on päivittäisen myynnin kokonaisarvo, kun hedelmien hinta on 2 €/kg? </li>
+                        <li> Jos kilohintaa nostetaan $0{,}5x$ euroa, kuinka paljon hedelmiä myydään? </li>
+                        <li> Muodosta lauseke toisen asteen polynomifunktiolle $f(x)$, joka ilmaisee myynnin kokonaisarvon tilanteessa, jossa kilohintaa on nostettu $0{,}5x$ euroa. </li>
+                        <li> Määritä funktion $f$ nollakohdat ja päättele niiden avulla, mikä on funktion $f$ huipun $x$-koordinaatti. </li>
+                        <li> Mikä kilohinnan pitää olla, jotta myynnin kokonaisarvo on mahdollisimman suuri? Mikä tämä kokonaisarvo on?</li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t404_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t404_v" class="collapse">
+                        <ol class="a">
+                            <li> 160 € </li>
+                            <li> $80-5x$ kilogrammaa </li>
+                            <li> $f(x) = (2+0{,}5x)(80-5x)$</li>
+                            <li> Nollakohdat $x_1 = -4$ ja $x_2 = 16$, huippu niiden puolivälissä eli $x = 6$ </li>
+                            <li> $2 + 0{,}5\cdot 6 = 5$ €/kg, myynnin kokonaisarvo $f(6) = 250$ euroa</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t406-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t406">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t406">
+                    <p>
+                        Uudelle asuinalueelle halutaan kaavoittaa tontteja, joiden pinta-ala on $2600 \text{ m}^2$. Mikä pitää valita tontin leveydeksi, jos halutaan, että tontin pituus on 25 m suurempi kuin sen leveys?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t406_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t406_v" class="collapse">
+                        <p>
+                            Leveydeksi pitää valita 40 m. Yhtälö on $x(x + 25) = 2600$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t407-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t407">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t407">
+                    <p>
+                        Onko mahdollista jakaa luku 20 kahden kokonaisluvun summaksi niin, että
+                    </p>
+                    <ol class="a">
+                        <li> yhteenlaskettavien tulo on 96 </li>
+                        <li> yhteenlaskettavien tulo on 86 </li>
+                    </ol>
+                    <p>
+                        Keksi esimerkki tällaisista kokonaisluvuista tai perustele, ettei sellaisia ole olemassa.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t407_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t407_v" class="collapse">
+                        <ol class="a">
+                            <li> 8 ja 12 </li>
+                            <li> Ei ole mahdollista, sillä yhtälön $x(20-x) = 86$ ratkaisut eivät ole kokonaislukuja. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t414-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t414">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t414">
+                    <p>
+                        Rakennuspiirustuksessa huoneen leveydeksi on merkitty $3{,}00 \text{ m}$ ja pituudeksi $5{,}00 \text{ m}$. Huonetta halutaan kuitenkin suurentaa niin, että sen pituus ja leveys kasvavat yhtä monta senttimetriä. Kuinka leveäksi huone voidaan tehdä, jos sen pinta-ala saa olla enintään $20 \text{ m}^2$? Anna vastaus senttimetrin tarkkuudella.
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t414_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t414_v" class="collapse">
+                        <p>
+                            Enintään $3{,}58$ metriä leveäksi. Yhtälö on $(3 + x)(5 + x) = 20$, missä $x$ on pituuden ja leveyden lisäys metreinä.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="MAB2s2t415-ex">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t415">
+                            Sovelluksia
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t415">
+                    <p>
+                        Joen rannalta halutaan aidata hevosille laidun. Aitamateriaalia on käytettävissä on 200 metriä.
+                    </p>
+                    <p>
+                        <img src="/kurssit/maa2/kuvat/EAk17.png" max-width: 100%; width: auto; height: auto;/>
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Muodosta funktio, joka ilmaisee laitumen pinta-alan, jos kummankin rantaan rajoittuvan sivun pituus on $x$. 
+                        </li>
+                        <li> 
+                            Millaiset laitumen mittojen pitäisi olla, jotta laitumen pinta-ala olisi $4200 \text{ m}^2$? 
+                        </li>
+                        <li> 
+                            Millaiset laitumen mitat ovat tilanteessa, jossa laitumen pinta-ala on mahdollisimman suuri? Mikä tämä pinta-ala on? <br>
+                            Vinkki: määritä a-kohdan funktion nollakohdat ja etsi niiden avulla symmetriaa hyödyntäen kohta, jossa funktio saa suurimman arvonsa.
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t415_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t415_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $f(x) = 200x - 2x^2$
+                            </li>
+                            <li> 
+                                Kaksi vaihtoehtoa: 
+                                <ul>
+                                    <li>
+                                        rantaan rajoittuvien sivujen pituus 70 m ja rannan suuntainen sivu 60 m
+                                    </li>
+                                    <li>
+                                        rantaan rajoittuvien sivujen pituus 30 m ja rannan suuntainen sivu 140 m.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> Rantaan rajoittuvat sivut ovat 50 m ja rannan suuntainen sivu on 100 m. Pinta-ala $5000 \text{ m}^2$. </li>
                         </ol>
                     </div>
                 </div>

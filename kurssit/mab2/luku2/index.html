@@ -1297,25 +1297,302 @@ topnav: mab2
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
                         <a data-target="#MAB2s2t201">
-                            Jotain
+                            Yhtälöpari
                         </a>
                     </h1>
                 </header>
                 <div id="MAB2s2t201">
                     <p>
-                        
+                        Tehtävänä on ratkaista graafisesti yhtälöpari
+                        $$
+                        \left\{\begin{aligned}
+                        2x + y & = 12 \\
+                        y & = x - 3.
+                        \end{aligned}\right.
+                        $$
                     </p>
+                    <ol class="a">
+                        <li>
+                            Piirrä yhtälöitä vastaavat suorat Geogebralla ja päättele yhtälön ratkaisu kuvan avulla.
+                        </li>
+                        <li>
+                            Tarkista sijoittamalla, onko ratkaisu tarkka vai likimääräinen.
+                        </li>
+                    </ol>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t201_v">
                             Vastaus
                         </a>
                     </h2>
                     <div id="MAB2s2t201_v" class="collapse">
-                    
+                        <ol class="a">
+                            <li>
+                                Ratkaisu on $x = 5$ ja $y = 2$. 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva063.png" max-width: 100%; width: auto; height: auto;/>
+                            </li>
+                            <li>
+                                Sijoitetaan ensimmäisen yhtälön vasemmalle puolelle ja lasketaan:
+                                $$
+                                2x + y = 2 \cdot 5 + 1 = 10 + 2 = 12.
+                                $$
+                                Tuloksena yhtälön oikea puoli, joten yhtälö toteutuu.
+                                <br>
+                                Sijoitetaan toisen yhtälön oikealle puolelle ja lasketaan:
+                                $$
+                                x - 3 = 5 - 3 = 2.
+                                $$
+                                Tuloksena yhtälön oikea puoli, joten yhtälö toteutuu. Luvut $x = 5$ ja $y = 2$ toteuttavat molemmat yhtälöt, joten ratkaisu on tarkka.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
+            <div class="tehtava" id="217d3c18-9a6a-11e8-9eb6-529269fb1459">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t202">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t202">
+                    <p>
+                        Ratkaise yhtälöpari graafisesti ja tarkista sijoittamalla, onko ratkaisu tarkka vai likimääräinen.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            11x + 39y & = 152 \\
+                            -20x + 11y & = 135
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                        <li>
+                            $$
+                            \left\{\begin{aligned}
+                            4x + 3y & = -2 \\
+                            5x + 2y & = 1
+                            \end{aligned}\right.
+                            $$
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t202_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t202_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Ratkaisu on $x = -4$ ja $y = 5$ kuvasta luettuna. 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva063.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                                Sijoittamalla huomataan, että ratkaisu on likimääräinen:
+                                $$
+                                \left\{\begin{aligned}
+                                11 \cdot (-4) + 39 \cdot 5 & = 151 \approx 152 \\
+                                -20 \cdot (-4) + 11 \cdot 5 & = 135
+                                \end{aligned}\right.
+                                $$
+                                Siis yhtälöparin ratkaisu on $x \approx -4$ ja $y \approx 5$.
+                            </li>
+                            <li>
+                                Ratkaisu on $x = 1$ ja $y = -2$ kuvasta luettuna. 
+                                <br>
+                                <img src="/kurssit/mab2/kuvat/MAB2kuva065.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                                Sijoittamalla huomataan, että ratkaisu on tarkka.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="217d3c18-9a6a-11e8-9eb6-529269fb1459">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t204">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t204">
+                    <p>
+                        Taina ja Riina osallistuvat pyöräilyhaasteeseen, jossa parin pitää pyöräillä yhteensä 250 km. Riina lupaa pyöräillä 70 km enemmän kuin Taina. Kuinka pitkä matka kummankin pitää pyöräillä, jotta vaadittu matka täyttyy mutta ei ylity?
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Merkitse Tainan pyöräilymatkaa kirjaimella $x$ ja Riinan pyöräilymatkaa kirjaimella $y$. Millaisen yhtälön saat matkojen kokonaismäärästä?
+                        </li>
+                        <li>
+                            Millaisen yhtälön saat Riinan lupauksesta?
+                        </li>
+                        <li>
+                            Ratkaise muodostamasi yhtälöpari. Kuinka pitkät matkat Taina ja Riina pyöräilevät?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t204_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t204_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $x + y = 250$
+                            </li>
+                            <li>
+                                $y = x + 70$
+                            </li>
+                            <li>
+                                Yhtälöparin ratkaisu on $x = 90$ ja $y = 160$. Siis Taina pyöräilee 90 km ja Riina 160 km.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="217d3c18-9a6a-11e8-9eb6-529269fb1459">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t203">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t203">
+                    <p>
+                        Iltarastien tulosluettelosta nähtiin, että osallistujia oli ollut yhteensä 162. Järjestäjät laskivat, että karttojen myynti oli tuottanut rahaa 944 euroa. Aikuisten karttamaksu oli 7 € ja lasten 2 €. Tehtävänä on selvittää, kuinka monta lasta iltarasteille osallistui.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Merkitse lasten määrää kirjaimella $x$ ja aikuisten määrää kirjaimella $y$. Millaisen yhtälön saat osallistujien kokonaismäärästä?
+                        </li>
+                        <li>
+                            Millaisen yhtälön saat tapahtuman kokonaistuotosta?
+                        </li>
+                        <li>
+                            Ratkaise muodostamasi yhtälöpari. Kuinka monta lasta iltarasteille osallistui?
+                        </li>
+                    </ol>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t203_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t203_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $x + y = 162$
+                            </li>
+                            <li>
+                                $2x + 7y = 944$
+                            </li>
+                            <li>
+                                Yhtälöparin ratkaisu on $x = 38$ ja $y = 124$. Iltarasteille osallistui siis 38 lasta.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="217d3c18-9a6a-11e8-9eb6-529269fb1459">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t205">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t205">
+                    <p>
+                        Salibandyseura on tilaamassa mailoja. Käytettävissä on 500 euroa. Halvempi maila maksaa 26 € ja kalliimpi 30 €. Tarkoituksena on hankkia 18 mailaa. Kuinka monta kappaletta halvempaa ja kuinka monta kappaletta kalliimpaa mallia pitää tilata?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t205_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t205_v" class="collapse">
+                        <p>
+                            Halvempia mailoja 10 kpl ja kalliimpia 8 kpl. <br>
+                            Yhtälöpari on 
+                            $$
+                            \left\{\begin{aligned}
+                            x + y & = 18 \\
+                            26x + 30y & = 500.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="217d3c18-9a6a-11e8-9eb6-529269fb1459">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t207">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t207">
+                    <p>
+                        Radiojuontaja kertoo, että hänen isoisänsä on neljä kertaa niin vanha kuin hänen serkkunsa. Lisäksi juontaja paljastaa, että serkun ja isoisän yhteenlaskettu ikä on 80 vuotta. Kysymys on, minkä ikäinen serkku on. Nopeimmin oikean vastauksen keksinyt voittaa liput festareille. Vastata saa vain kerran. Mitä vastaisit?
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t207_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t207_v" class="collapse">
+                        <p>
+                            Serkku on 16-vuotias. <br>
+                            Yhtälöpari on 
+                            $$
+                            \left\{\begin{aligned}
+                            x + y & = 80 \\
+                            y & = 4x.
+                            \end{aligned}\right.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="217d3c18-9a6a-11e8-9eb6-529269fb1459">
+                <header>
+                    <h1>                            <div class="checkbox-group"></div>
+                        <a data-target="#MAB2s2t206">
+                            Yhtälöpari
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAB2s2t206">
+                    <p>
+                        Leikkaavatko seuraavien funktioiden kuvaajat toisensa? Jos leikkaavat, mitkä ovat leikkauspisteen koordinaatit?
+                        \begin{align*}
+                        f(x) &= 2x-7 \\[1mm]
+                        g(x) &= 5x - 58
+                        \end{align*}
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAB2s2t206_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAB2s2t206_v" class="collapse">
+                        <p>
+                            Kuvaajat leikkaavat pisteessä $(17,27)$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="tehtava" id="217d3d8a-9a6a-11e8-9eb6-529269fb1459">
                 <header>
                     <h1>                            <div class="checkbox-group"></div>
@@ -1325,18 +1602,19 @@ topnav: mab2
                     </h1>
                 </header>
                 <div id="MAB2s3t205">
+                    <p>
+                        Ratkaise yhtälöpari
+                    </p>
                     <ol class="a">
                         <li>
-                            Ratkaise yhtälöpari
                             $$
                             \left\{\begin{aligned}
                             x + 2y & = -4 \\
-                            2x - y & = -3.
+                            2x - y & = -3
                             \end{aligned}\right.
                             $$
                         </li>
                         <li>
-                            Ratkaise yhtälöpari
                             $$
                             \left\{\begin{aligned}
                             2x + y & = 4 \\
@@ -1356,13 +1634,10 @@ topnav: mab2
                     <div id="MAB2s3t205_v" class="collapse">
                         <ol class="a">
                             <li>
-                                Ratkaisu on $x = -2$ ja $y = -1$.
+                                $x = -2$ ja $y = -1$
                             </li>
                             <li>
-                                Ratkaisu on 
-                                $$
-                                x = \dfrac{7}{5} \  \text{ ja } \  y = \dfrac{6}{5}
-                                $$
+                                $x = \dfrac{7}{5} \  \text{ ja } \  y = \dfrac{6}{5}$
                             </li>
                         </ol>
                     </div>
@@ -1378,18 +1653,19 @@ topnav: mab2
                     </h1>
                 </header>
                 <div id="MAB2s3t207">
+                    <p>
+                        Ratkaise yhtälöpari
+                    </p>
                     <ol class="a">
                         <li>
-                            Ratkaise yhtälöpari
                             $$
                             \left\{\begin{aligned}
                             x - 2y & = 0 \\
-                            x - 3y & = 1.
+                            x - 3y & = 1
                             \end{aligned}\right.
                             $$
                         </li>
                         <li>
-                            Ratkaise yhtälöpari
                             $$
                             \left\{\begin{aligned}
                             2x - y & = 1 \\
@@ -1409,10 +1685,10 @@ topnav: mab2
                     <div id="MAB2s3t207_v" class="collapse">
                         <ol class="a">
                             <li>
-                                Ratkaisu on $x = -2$ ja $y = -1$.
+                                $x = -2$ ja $y = -1$
                             </li>
                             <li>
-                                Ratkaisu on $x = 3$ ja $y = 5$.
+                                $x = 3$ ja $y = 5$
                             </li>
                         </ol>
                     </div>
@@ -1457,9 +1733,7 @@ topnav: mab2
                         <ol class="a">
                             <li>
                                 Ratkaisu on 
-                                $$
-                                x = \dfrac{16}{5} \  \text{ ja } \  y = \dfrac{11}{5}
-                                $$
+                                $x = \dfrac{16}{5} \  \text{ ja } \  y = \dfrac{11}{5}$.
                             </li>
                             <li> 
                                 Leikkauspisteen koordinaatit ovat $x = 3$ ja $y = -\dfrac{2}{5}$. 
@@ -1468,8 +1742,6 @@ topnav: mab2
                     </div>
                 </div>
             </div>
-
-            
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAB2luku2-tehtavasarja2">
