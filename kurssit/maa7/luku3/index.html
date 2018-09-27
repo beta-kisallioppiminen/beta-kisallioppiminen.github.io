@@ -34,7 +34,8 @@ topnav: maa7
                 <ul>
                     <li> muodostaa yhdistetyn funktion </li>
                     <li> tunnistaa yhdistetystä funktiosta ulko- ja sisäfunktion </li>
-                    <li> derivoida yhdistetyn funktion. </li>
+                    <li> derivoida yhdistetyn funktion </li>
+                    <li> tutkia funktion kulkua soveltamalla yhdistetyn funktion derivointisääntöä ja MAA6-kurssissa oppimiasi asioita. </li>
                 </ul> 
                 </p>
             </div>
@@ -1001,6 +1002,506 @@ topnav: maa7
         </div>
     </section>
     
+    <section class="panel">
+        <header class="otsikko">
+            <h1>      
+                <a data-toggle="collapse" class="collapsed" data-target="#yhdistetty3">
+                    Funktion kulku
+                </a>
+            </h1>
+        </header>
+        <div id="yhdistetty3" class="collapse">
+            <div class="teoria">
+                <p>
+                    Tässä luvussa perehdytään erilaisiin tapoihin tutkia trigonometristen funktioiden kulkua. Päättelyssä voidaan tilanteesta riippuen hyödyntää sinin ja kosinin ominaisuuksia, yksikköympyrää tai derivaattaa. 
+                </p>
+
+                <p>
+                    Jos funktion lausekkeessa esiintyy vain yksittäinen sini tai kosini, voidaan funktion suurin ja pienin arvo selvittää sinin tai kosinin ominaisuuksien avulla. Tätä harjoitellaan seuraavassa tehtävässä.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="bad7806e-f333-494b-a820-17d770325ed6">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t315">
+                                Suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t315" class="collapse">
+                        <p>
+                            Tutkitaan funktiota 
+                            $$
+                            h(x) = \cos (3x) + 2.
+                            $$
+                            Tehtävänä on selvittää sen suurin ja pienin arvo sekä jakso.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Palauta mieleesi tavallisen kosinifunktion $f(x) = \cos x$ suurin ja pienin arvo.
+                                Mikä on tavallisen kosinifunktion jakso?
+                                <br>
+                                Vinkki: teoreema 14. 
+                            </li>
+                            <li>
+                                Tarkastellaan yhdistettyä funktiota $g(x) = \cos(3x)$. Mikä on sen suurin arvo? Entä pienin? Mikä on sen jakso?
+                                <br>
+                                Vinkki: tehtävä 2.15 ja teoreema 22.
+                            </li>
+                            <li>
+                                Mikä on funktion $h(x) = \cos(3x) + 2$ suurin arvo? Entä pienin? Mikä on sen jakso?
+                                <br>
+                                Vinkki: tehtävä 2.16.
+                            </li>
+                            <li>
+                                Piirrä funktioiden $f$, $g$ ja $h$ kuvaajat Geogebralla ja tarkista, että päättelysi ei ole ristiriidassa kuvaajien kanssa.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t315_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t315_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Tavallisen kosinifunktion $f(x) = \cos x$ suurin arvo on $1$ ja pienin arvo on $-1$. Sen jakso on $2\pi$.
+                                </li>
+                                <li>
+                                    Funktion $g(x) =  \cos(3x)$ suurin arvo on $1$ ja pienin arvo on $-1$. Sisäfunktion kerroin 3 vaikuttaa vain jakson pituuteen, ei suurimpaan eikä pienimpään arvoon. Funktion $g$ jakso on 
+                                    $$
+                                    \frac{2\pi}{3}.
+                                    $$
+                                </li>
+                                <li>
+                                    Funktion $h(x) = \cos(3x) + 2$ suurin arvo on 
+                                    $$1 + 2 = 3$$ 
+                                    ja pienin arvo on 
+                                    $$-1 + 2 = 1.$$ 
+                                    Vakio $2$ vaikuttaa kuvaajan sijaintiin koordinaatistossa, mutta ei sen muotoon. Funktion $h$ jakso on siten sama kuin funktion $g$ jakso eli 
+                                    $$
+                                    \frac{2\pi}{3}.
+                                    $$
+                                </li>
+                                <li>
+                                    Tavallisen kosinifunktion kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva139.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Funktioiden $g(x) =  \cos(3x)$ ja $h(x) = \cos(3x) + 2$ kuvaajat:
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva138.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Yksikköympyrän avulla sinin ja kosinin arvoja voidaan tarkastella vielä yksityiskohtaisemminkin. Seuraavat tehtävät havainnollistavat asiaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="1d75e008-01d1-4ffe-a7ee-98b786a6fbbb">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316">
+                                Funktion arvojoukko
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t316" class="collapse">
+                        <p>
+                            Tutkitaan funktiota 
+                            $$
+                            g(x) = \sin \left(\dfrac{x}{6}\right) - 1,
+                            $$
+                            missä $\pi < x < 7\pi$. Tehtävänä on selvittää funktion arvojoukko.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Merkitään 
+                                $$
+                                z = \dfrac{x}{6},
+                                $$
+                                jolloin voidaan kirjoittaa 
+                                $$g(z) = \sin(z) - 1.$$ 
+                                Tehtävässä sanotaan, että $$\pi < x < 7\pi.$$ Päättele, millä välillä $z$ on.
+                            </li>
+                            <li>
+                                Selvitä yksikköympyrän avulla, mitä arvoja tavallinen sinifunktio $$f(z) = \sin z$$ saa, kun muuttuja $z$ on a-kohdassa päättelemälläsi välillä.
+                            </li>
+                            <li>
+                                Päättele b-kohdan avulla, mitä arvoja funktio $$g(z) = \sin(z) - 1$$ saa, kun muuttuja $z$ on a-kohdassa päättelemälläsi välillä.
+                            </li>
+                            <li>
+                                Mitä arvoja funktio $$g(x) = \sin \left(\dfrac{x}{6}\right) - 1$$ saa, kun $\pi < x < 7\pi$? <br>
+                                Vinkki: vertaa c-kohtaan.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t316_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t316_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Jos $\pi < x < 7\pi$, niin 
+                                    $$\dfrac{\pi}{6} < \dfrac{x}{6} < \dfrac{7\pi}{6}$$
+                                    eli
+                                    $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6}.$$
+                                </li>
+                                <li>
+                                    Kun
+                                    $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6},$$
+                                    niin tavallinen sinifunktio $f(z) = \sin z$ saa arvot väliltä
+                                    $$\left] -\frac{1}{2}, 1\right[.$$ 
+                                    Tämä voidaan päätellä alla olevasta yksikköympyrästä ja siitä, että 
+                                    $$
+                                    \sin\left(\frac{7\pi}{6}\right) = -\dfrac{1}{2}.
+                                    $$
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva133.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Kun
+                                    $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6},$$
+                                    niin funktio $g(z) = \sin (z) - 1$ saa arvot väliltä
+                                    $$\left] -\frac{3}{2}, 0\right[.$$ 
+                                </li>
+                                <li>
+                                    Kun $\pi < x < 7\pi$, niin funktio 
+                                    \begin{align*}
+                                    g(x) &= \sin \left(\dfrac{x}{6}\right) - 1 
+                                    \end{align*}
+                                    saa arvot väliltä
+                                    $$\left] -\frac{3}{2}, 0\right[.$$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="tehtavat">
+                <div class="tehtava" id="bbe0c552-89e7-4700-8f43-e4bb0328e451">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t317">
+                                Funktion kulku
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t317" class="collapse">
+                        <p>
+                            Tutkitaan edelleen funktiota 
+                            $$
+                            g(x) = \sin \left(\dfrac{x}{6}\right) - 1,
+                            $$
+                            missä $\pi < x < 7\pi$. Tehtävänä on selvittää, missä funktio on kasvava ja missä vähenevä.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Merkitään 
+                                $$
+                                z = \dfrac{x}{6},
+                                $$
+                                jolloin voidaan kirjoittaa 
+                                $$
+                                g(z) = \sin(z) - 1.
+                                $$
+                                Miten tämän funktion kuvaaja eroaa tavallisen sinifunktion 
+                                $$f(z) = \sin z$$ kuvaajasta? Selitä omin sanoin. Voit piirtää kummankin funktion kuvaajat, jos haluat.
+                            </li>
+                            <li>
+                                Tehtävässä 3.16 pääteltiin, että kun $\pi < x < 7\pi$, niin 
+                                $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6}.$$
+                                Päättele yksikköympyrän avulla, missä tavallinen sinifunktio 
+                                $$f(z) = \sin z$$ 
+                                on kasvava ja missä vähenevä, kun 
+                                $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6}.$$
+                            </li>
+                            <li>
+                                Päättele a- ja b-kohtien avulla, missä funktio 
+                                $$
+                                g(z) = \sin(z) - 1.
+                                $$ on kasvava ja missä vähenevä, kun 
+                                $$\dfrac{\pi}{6} < z < \dfrac{7\pi}{6}.$$
+                            </li>
+                            <li>
+                                Millä välillä muuttuja $x$ on, kun funktio $g$ on kasvava? Entä millä välillä muuttuja $x$ on, kun funktio $g$ on vähenevä?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t317_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t317_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Funktion $g$ kuvaaja on koordinaatistossa yhden yksikön verra funktion $f$ kuvaajan alapuolella. Muuten kuvaajat ovat samanlaiset. <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva134.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li>
+                                    Sinifunktio $f(z) = \sin z$ on kasvava, kun 
+                                    $$
+                                    \dfrac{\pi}{6} < z \leq \dfrac{\pi}{2}.
+                                    $$
+                                    Alla olevasta yksikköympyrästä havaitaan, että kun kulma kasvaa tällä välillä, myös sinin arvot kasvavat.
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva133.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    <br>
+                                    Sinifunktio 
+                                    $f(z) = \sin z$ on vähenevä, kun 
+                                    $$
+                                    \dfrac{\pi}{2} \leq z < \dfrac{7\pi}{6}.
+                                    $$
+                                    Yllä olevasta yksikköympyrästä havaitaan, että kun kulma kasvaa tällä välillä, niin sinin arvot pienenevät.
+                                </li>
+                                <li>
+                                    Funktio 
+                                    $$
+                                    g(z) = \sin(z) - 1.
+                                    $$
+                                    on kasvava, kun 
+                                    $$
+                                    \dfrac{\pi}{6} < z \leq \dfrac{\pi}{2}
+                                    $$
+                                    ja vähenevä, kun
+                                    $$
+                                    \dfrac{\pi}{2} \leq z < \dfrac{7\pi}{6}.
+                                    $$
+                                </li>
+                                <li>
+                                    Funktio $g$ on kasvava, kun
+                                    $$
+                                    \frac{\pi}{6} < \frac{x}{6} \leq \frac{\pi}{2}
+                                    $$
+                                    eli
+                                    $$
+                                    \pi < x \leq 3\pi.
+                                    $$
+                                    Funktio $g$ on vähenevä, kun 
+                                    $$
+                                    \frac{\pi}{2} \leq \dfrac{x}{6} < \frac{7\pi}{6}
+                                    $$
+                                    eli
+                                    $$
+                                    3\pi \leq x < 7\pi.
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos funktio lausekkeessa esiintyy useampi erilainen sini tai kosini, funktion kulun tutkimiseen tarvitaan yleensä derivaattaa. Tarkastellaan esimerkiksi funktiota
+                    $$
+                    f(x) = \sin x + \cos^2 x.
+                    $$
+                    Aloitetaan määrittämällä tämän funktion jakso. Tarkastellaan aluksi jokaista yhteenlaskettavaa erikseen. Tiedetään, että sinifunktion 
+                    $$
+                    x \mapsto \sin x
+                    $$
+                    jakso on $2\pi$. Yksikköympyrästä voidaan havaita, että kosinilla pätee yhtälö
+                    $$
+                    \cos (x + \pi) = -\cos x.
+                    $$  
+                    Toiseen potenssiin korotus hävittää miinusmerkin, joten toiset potenssit ovat samat:
+                    $$
+                    \cos^2 (x + \pi) = \cos^2 x.
+                    $$
+                    Tästä voidaan päätellä, että funktion 
+                    $$
+                    x \mapsto \cos^2 x
+                    $$
+                    jakso on $\pi$. Funktioiden kuvaajat tukevat tätä päättelyä:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva135.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Sinifunktion jakso on siis pitempi ja sisältää tasan kaksi funktion $x \mapsto \cos^2 x$ jaksoa. Siten summafunktio $f$ ehtii sinin jakson aikana saada kaikki mahdolliset arvonsa. Tästä voidaan päätellä, että funktion $f$ jakso on $2\pi$. Kuva tukee johtopäätöstä:
+                    <br>
+                    <img src="/kurssit/maa7/kuvat/MAA7kuva136.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    <br>
+                    Funktion arvot toistuvat samanlaisina aina jakson välein. Tämän vuoksi riittää tarkastella suljettua väliä, jonka pituus on $2\pi$. Koska funktio on jatkuva, se saa suurimman ja pienimmän arvonsa tällaisen välin päätepisteissä tai derivaatan nollakohdissa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="11c81f92-f9b9-4840-bf24-e3a38d9645b4">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t318">
+                                Suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t318" class="collapse">
+                        <p>
+                            Jatketaan funktion
+                            $$
+                            f(x) = \sin x + \cos^2 x
+                            $$
+                            tarkastelua. Tehtävänä on määrittää sen suurin ja pienin arvo.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Valitse jokin suljettu väli, jonka pituus on funktion $f$ jakso $2\pi$.
+                            </li>
+                            <li>
+                                Määritä derivaattafunktio $f'(x)$.
+                            </li>
+                            <li>
+                                Selvitä, mitä nollakohtia derivaattafunktiolla on a-kohdassa valitsemallasi välillä.
+                            </li>
+                            <li>
+                                Laske funktion arvo valitsemasi välin päätepisteissä ja välille osuvissa derivaatan nollakohdissa. Mikä on funktion suurin arvo? Entä pienin?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t318_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t318_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Väli voi olla esimerkiksi $[0, 2\pi]$.
+                                </li>
+                                <li>
+                                    $f'(x) = \cos x - 2\cos x \sin x$
+                                </li>
+                                <li>
+                                    Välillä $[0, 2\pi]$ derivaattafunktiolla on nollakohdat 
+                                    $$\dfrac{\pi}{6}, \ \dfrac{\pi}{2}, \ \dfrac{5\pi}{6} \ \text{ ja } \ \dfrac{3\pi}{2}.$$ 
+                                    Ne löydetään ratkaisemalla yhtälö
+                                    $$
+                                    \cos x\, (1 - 2\sin x) = 0.
+                                    $$
+                                </li>
+                                <li>
+                                    Lasketaan arvot:
+                                    \begin{align*}
+                                    f\left(0\right) &=  1 \\[1mm]
+                                    f\left(\frac{\pi}{6}\right) &= \frac{5}{4} \\[1mm]
+                                    f\left(\frac{\pi}{2}\right) &=  1 \\[1mm]
+                                    f\left(\frac{5\pi}{6}\right) &=  \frac{5}{4} \\[1mm]
+                                    f\left(\frac{3\pi}{2}\right) &=  -1 \\[1mm]
+                                    f\left(2\pi\right) &=  1 
+                                    \end{align*}
+                                    Funktion $f$ pienin arvo on $-1$ ja suurin arvo on 
+                                    $\dfrac{5}{4}$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="af52b83a-bc07-49c2-ad0f-56437340d7e1">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t319">
+                                Suurin ja pienin arvo
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA7t319" class="collapse">
+                        <p>
+                            Tarkastellaan funktiota
+                            $$
+                            f(x) = \cos 2x - 4 \cos x.
+                            $$
+                            Tehtävänä on määrittää sen suurin ja pienin arvo.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Mikä on tavallisen kosinifunktion jakso? Entä mikä on funktion $x \mapsto \cos 2x$ jakso? Päättele näiden tietojen avulla, mikä on funktion $f$ jakso. 
+                            </li>
+                            <li>
+                                Valitse jokin suljettu väli, jonka pituus on sama kuin funktion $f$ jakso.
+                            </li>
+                            <li>
+                                Määritä derivaattafunktio $f'(x)$. Selvitä, mitä nollakohtia derivaattafunktiolla on b-kohdassa valitsemallasi välillä.
+                                <br>
+                                Vinkki: nollakohtien ratkaisemisessa auttaa teoreema 17.
+                            </li>
+                            <li>
+                                Mikä on funktion suurin arvo? Entä pienin?
+                            </li>
+                            <li>
+                                Tarkista päättelysi piirtämällä funktion $f$ kuvaaja esimerkiksi Geogebralla.
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA7t319_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="MAA7t319_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kosinifunktion jakso on $2\pi$. Funktion $x \mapsto \cos 2x$ jakso on 
+                                    $$
+                                    \dfrac{2\pi}{2} = \pi.
+                                    $$
+                                    Tämä sisältyy tasan kaksi kertaa kosinifunktion jaksoon, joten funktion $f$ jakso on sama kuin kosinifunktiolla eli $2\pi$.
+                                </li>
+                                <li>
+                                    Väli voi olla esimerkiksi $[0, 2\pi]$.
+                                </li>
+                                <li>
+                                    Derivaattafunktio on 
+                                    $$f'(x) = -2\sin 2x + 4\sin x.$$
+                                    Kaksinkertaisen kulman sinin kaavan avulla (teoreema 17) se saadaan muotoon
+                                    $$
+                                    f'(x) = -4\sin x \cos x + 4\sin x.
+                                    $$
+                                    Välillä $[0, 2\pi]$ derivaattafunktiolla on nollakohdat $0$, $\pi$ ja $2\pi$.
+                                    Ne löydetään ratkaisemalla yhtälö
+                                    $$
+                                    -4\sin x (\cos x - 1) = 0.
+                                    $$
+                                </li>
+                                <li>
+                                    Lasketaan arvot derivaatan nollakohdissa ja tarkasteluvälin päätepisteissä:
+                                    \begin{align*}
+                                    f\left(0\right) &=  -3 \\[1mm]
+                                    f\left(\pi\right) &= 5 \\[1mm]
+                                    f\left(2\pi\right) &=  -3 
+                                    \end{align*}
+                                    Funktion $f$ pienin arvo on $-3$ ja suurin arvo on 
+                                    $5$.
+                                </li>
+                                <li>
+                                    Funktion $f$ kuvaaja:
+                                    <br>
+                                    <img src="/kurssit/maa7/kuvat/MAA7kuva137.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-section">
+                <a data-toggle="collapse" class="collapsed" data-target="#yhdistetty3">
+                    Sulje kappale
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section class="panel">
         <header class="otsikko">
@@ -1989,684 +2490,6 @@ topnav: maa7
                 </div>
             </div>
 
-            <div class="tehtava" id="9abd4110-221b-4f03-9819-cc7e923e90ab">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t309">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t309">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t309_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t309_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="dd1ed575-38ea-4462-b50b-e62c8f80497e">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t310">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t310">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t310_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t310_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="e9e5a80d-be80-4f06-8a05-6068af828ff9">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t311">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t311">
-                    
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t311_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t311_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="e3a8ca9e-e9fd-490c-8611-33e1770b1642">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t312">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t312">
-                    
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t312_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t312_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="356a9415-8106-4771-b48c-45e00b5b75c8">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t313">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t313">
-                    
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t313_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t313_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="f1375ce5-293b-4074-ae10-0644d9b5ab64">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t314">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t314">
-                    
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t314_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t314_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="2bc69e7e-1211-4b1a-a69b-e4568b1345f6">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t315">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t315">
-                    
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t315_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t315_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="2444e682-b748-4b86-8955-a96136185aa2">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t316">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t316">
-                    
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t316_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t316_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="5a1cfd34-831c-42ff-b01a-7a0c1c0c6650">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t317">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t317">
-                    <p>
-
-                    </p>
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t317_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t317_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="07bb77c2-7189-49fd-aa67-65f962a83fc3">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t318">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t318">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t318_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t318_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="dc3c6121-643b-4df2-a0d1-12e059983ef6">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t319">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t319">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t319_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t319_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="fa4476a4-45d6-47c5-b0f7-117d4fb2b8a2">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t320">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t320">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t320_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t320_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="ae971e8e-8bfa-4762-b286-cdfc4df143d8">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t321">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t321">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t321_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t321_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="f2e0af69-d3c4-4de1-97a3-4c174894e782">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t322">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t322">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t322_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t322_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="a21c84e1-91e4-4710-9327-55215c29e896">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t323">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t323">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t323_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t323_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="0903193f-5280-404e-80cf-93ae784e21f2">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t324">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t324">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t324_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t324_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="dd34cb2d-276e-48a9-ad43-2a7f17094bd6">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t325">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t325">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t325_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t325_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="b9ea5f0a-6580-4046-b1a2-f3f086ff9eff">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t326">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t326">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t326_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t326_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="5acb88a4-429c-45f9-9709-85c13a723a6f">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t327">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t327">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t327_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t327_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="6a9b5535-54a2-454f-b88c-e8529b6a24ab">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t328">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t328">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t328_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t328_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="5ffbd928-dbe1-4a67-b1f7-01490df6e51b">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t329">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t329">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t329_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t329_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="cbb28cf6-e7c6-4925-a8ab-cc15346e8917">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s2t330">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s2t330">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s2t330_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s2t330_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="f482c10d-1910-433e-b851-9d46ec733b92">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t301">
-
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t301">
-                    
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t301_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t301_v" class="collapse">
-                       
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="tehtava" id="7b7a969b-80cb-49e8-98c1-e8ac6242015c">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t302">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t302">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t302_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t302_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="e1591193-cb6f-463c-ac2f-730dd91265e8">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t303">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t303">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t303_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t303_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="5986f4af-4235-4267-a950-c65aac813625">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t304">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t304">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t304_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t304_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="92ddebdd-6186-4a5e-a1c5-781846971db4">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t305">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t305">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t305_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t305_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="b30499f7-5373-430c-a356-6a4ca5e089ad">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t306">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t306">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t306_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t306_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="7137b501-1dc4-477d-a2cd-f9d70cb6183e">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t307">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t307">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t307_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t307_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="a0175c5d-7735-44e8-a992-f27f6f1be8bc">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t308">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t308">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t308_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t308_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtava" id="caf9e0f9-957a-4dfc-82f6-d371fde02c00">
-                <header>
-                    <h1>                            <div class="checkbox-group"></div>
-                        <a data-target="#MAA7s3t309">
-                            
-                        </a>
-                    </h1>
-                </header>
-                <div id="MAA7s3t309">
-                   
-
-                    <h2>
-                        <a data-toggle="collapse" class="collapsed" data-target="#MAA7s3t309_v">
-                            Vastaus
-                        </a>
-                    </h2>
-                    <div id="MAA7s3t309_v" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-           
 
             <div class="close-section">
                 <a data-toggle="collapse" class="collapsed" data-target="#MAA7luku3-tehtavasarja3">
