@@ -1,0 +1,608 @@
+---
+title: MAA9 - Integraalilaskenta
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: maa9
+---
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+
+<input type="hidden" id="chapterNumber" value="1"/>
+<input type="hidden" id="theoremStart" value="1"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Integraali</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun1-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun1-tavoitteet" class="collapse">
+
+            <div class="objective">
+
+                <p>
+                    Tämän luvun tavoitteena on, että ... Osaat
+                </p>
+                <ul>
+                    <li> </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA9luku1kpl1">
+                    Funktion kuvaajan rajaama pinta-ala
+                </a>
+            </h1>
+        </header>
+        <div id="MAA9luku1kpl1" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Kursseissa MAA6-MAA8 on opiskeltu derivaatan käsitteeseen liittyvää matematiikkaa. Tiedetään, että funktion derivaatan arvo on kyseiseen kohtaan piirretyn tangentin kulmakerroin:
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva002.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Tällä kurssilla tutustutaan funktion integraalin käsitteeseen. Se kuvaa funktion kuvaajan ja $x$-akselin väliin jäävää pinta-alaa:
+                    <br>
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva001.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Yllä olevasta kuvasta voidaan päätellä ruutuja laskemalla, että funktion $f$ intergaali yli välin $[1,3]$ on suurempi kuin 5,5 mutta kuitenkin pienempi kuin 6. Käyttämällä pienempiä ruutuja saadaan parempi arvio:
+                    <br>
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva003.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Värillisiä pikkuruutuja on yhteensä reilut 23 kappaletta. Yhden pienen ruudun pinta-ala on neljäsosa isosta ruudusta eli 0,25. Integraalille saadaan näin likiarvo
+                    $$
+                    \int_1^3 f(x) \textrm{d}x \approx 23 \cdot 0{,}25 \approx 5{,}8.
+                    $$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava first-exercise" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t101">
+                                Graafinen integrointi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t101" class="collapse">
+                        <p>
+                            Päättele alla olevan kuvan avulla, mikä on funktion $f$  
+                        </p>
+                        <ol class="a">
+                            <li> integraali yli välin $[2,4]$ eli $\displaystyle \int_2^4 f(x) \textrm{d}x$ </li>
+                            <li> integraali yli välin $[-1,2]$ eli $\displaystyle \int_{-1}^2 f(x) \textrm{d}x$.  </li>
+                        </ol>
+                        <img src="/kurssit/maa9/kuvat/MAA9kuva004.png" max-width: 100%; width: auto; height: auto;/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t101_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t101_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $\displaystyle \int_2^4 f(x) \textrm{d}x = 8$ 
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva006.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    $\displaystyle \int_{-1}^2 f(x) \textrm{d}x = 4{,}5$ 
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva007.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Jos funktion kuvaaja kulkee $x$-akselin alapuolella, integraalin arvo on negatiivinen. Esimerkiksi alla olevasta kuvasta voidaan päätellä, että 
+                    $$
+                    \int_1^4 f(x) \textrm{d}x = -\left(3 + \dfrac{3}{2}\right) = -4{,}5.
+                    $$
+                </p>
+                <img src="/kurssit/maa9/kuvat/MAA9kuva010.png" max-width: 100%; width: auto; height: auto;/>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t102">
+                                Graafinen integrointi
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t102" class="collapse">
+                        <p>
+                              Päättele alla olevan kuvan avulla likiarvot seuraaville integraaleille yhden merkitsevän numeron tarkkuudella. 
+                        </p>
+                        <ol class="a">
+                            <li> $\displaystyle \int_{1}^5 g(x) \textrm{d}x$  </li>
+                            <li> $\displaystyle \int_{5}^6 g(x) \textrm{d}x$  </li>
+                        </ol>
+                        <img src="/kurssit/maa9/kuvat/MAA9kuva005.png" max-width: 100%; width: auto; height: auto;/>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t102_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t102_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    $\displaystyle \int_{1}^5 f(x) \textrm{d}x \approx 5$.
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva009.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                                <li> 
+                                    $\displaystyle \int_{5}^6 g(x) \textrm{d}x \approx -1$ 
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva008.png" max-width: 100%; width: auto; height: auto;/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA9luku1kpl2">
+                    Kertymä
+                </a>
+            </h1>
+        </header>
+        <div id="MAA9luku1kpl2" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Alla oleva kuvaaja kuvaa sähkönkulutusta Suomessa melko tyypillisenä arkipäivänä. Kuvaajasta voidaan lukea sähkönkulutuksen hetkellisiä arvoja. Esimerkiksi klo 7 aamulla hetkellinen sähkönkulutus on ollut noin 10 GWh tunnissa ja klo 16 hetkellinen kulutus on ollut noin 9,5 GWh tunnissa. 
+                    <br>  
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva011.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Tietyllä aikavälillä kulutetun sähköenergian määrä saadaan graafisen integroinnin avulla. Esimerkiksi alla olevasta kuvasta saadaan laskettua arvio klo 5-9 kulutetun sähköenergian määrälle:
+                    <br>  
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva012.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Pylväiden korkeudeksi on valittu hetkellinen kulutus aina puolen tunnin kohdalla. Sinisten pylväiden yhteenlasketuksi pinta-alaksi saadaan
+                    <br>  
+                    <img src="/kurssit/maa9/kuvat/MAA9kaava001.png" max-width: 100%; width: auto; height: auto;/>
+                    <!-- $$
+                    9{,}1 \tfrac{\text{GWh} }{\text{h} } \cdot 1 \text{ h} + 9{,}8 \tfrac{\text{GWh} }{\text{h} } \cdot 1 \text{ h} + 10{,}1 \tfrac{\text{GWh} }{\text{h} } \cdot 1 \text{ h} + 10{,}2 \tfrac{\text{GWh} }{\text{h} } \cdot 1 \text{ h} = 39{,}2 \text{ GWh}.
+                    $$  -->
+                    Tämä kertoo, mikä kokonaiskulutus olisi, jos kulutus pysyisi samana aina tunnin kerrallaan. Kun sinisten pylväiden pinta-alaa verrataan kuvaajan alle jäävään pinta-alaan, havaitaan, että nämä ovat suunnilleen yhtä suuret. Tarkempaan arvioon päästäisiin käyttämällä kapeampia pylväitä, jolloin pylväiden pinta-ala olisi vielä lähempänä kuvaajan alle jäävää pinta-alaa.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t103">
+                                Kertymä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t103" class="collapse">
+                        <p>
+                            Alla olevasta kuvaajasta voidaan lukea paikallisjunan hetkellinen nopeus. Vaaka-akselilla on lähtöhetkestä kulunut aika. 
+                        </p>
+                        <img src="/kurssit/maa9/kuvat/MAA9kuva013.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li> 
+                                Mikä on junan huippunopeus?
+                            </li>
+                            <li> 
+                                Kuinka pitkän ajan juna kulkee vakionopeudella?
+                            </li>
+                            <li> 
+                                Kuinka pitkän matkan juna kulkee vakionopeudella? 
+                                <br>
+                                Vinkki: Ole tarkkana, että käytät laskuissa samaa ajan yksikköä sekä nopeuden että ajan ilmaisemiseen. Kuinka suuri osa tunnista on yksi minuutti?
+                            </li>
+                            <li> 
+                                Kuinka pitkän matkan juna kulkee matkan ensimmäisen minuutin aikana? 
+                            </li>
+                            <li> 
+                                Kuinka kaukana lähtöpaikasta ensimmäinen väliasema on? 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t103_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t103_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Junan huippunopeus on 60 km/h.
+                                </li>
+                                <li> 
+                                    Juna kulkee vakionopeudella 2,5 minuuttia.
+                                </li>
+                                <li> 
+                                    Juna kulkee vakionopeudella matkan
+                                    $$
+                                    60 \dfrac{\text{km} }{\text{h} } \cdot \dfrac{2{,}5}{60} \text{ h} = 2{,}5 \text{ km.}
+                                    $$
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva014.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Huomaa, että yksi minuutti on 1/60 tuntia. Sinisen suorakulmion leveys on 2,5 minuuttia eli 2,5/60 tuntia.
+                                </li>
+                                <li> 
+                                    Juna kulkee ensimmäisen minuutin aikana noin 330 metriä. 
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva015.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br> 
+                                    Kuvaajan ja vaaka-akselin väliin jää 
+                                    $$
+                                    \dfrac{1}{2} \cdot 2 + \dfrac{1}{2} \cdot 3 + 2 = 4
+                                    $$
+                                    ruutua. Yhden ruudun korkeus on 10 km/h ja leveys 0,5 min eli 0,5/60 h. Juna kulkee siis matkan
+                                    $$
+                                    4 \cdot 10 \dfrac{\text{km} }{\text{h} } \cdot \dfrac{0{,}5}{60} \text{ h} = \dfrac{1}{3} \text{  km}.
+                                    $$
+                                </li>
+                                <li> 
+                                    Ensimmäinen asema on 4 km päässä lähtöpaikasta.
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva016.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Nopeuden kuvaajasta nähdään, että juna pysähtyy, kun lähdöstä on kulunut 5 minuuttia. Kuvaajan alle jää yhteensä 48 kokonaista ruutua, mikä vastaa
+                                    $$
+                                    48 \cdot 10 \dfrac{\text{km} }{\text{h} } \cdot \dfrac{0{,}5}{60} \text{ h} = 4 \text{  km}.
+                                    $$  
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t104">
+                                Kertymä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t104" class="collapse">
+                        <p>
+                            Tavaratalon asiakasvirta aukioloajan funktiona noudattaa likimain alla olevaa kuvaajaa. 
+                        </p>
+                        <img src="/kurssit/maa9/kuvat/MAA9kuva017.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                                Tavaratalo aukeaa klo 9.00. Kuinka monta asiakasta on tullut tavarataloon puoleen päivään mennessä? 
+                                <br>
+                                Vinkki: voit arvioida asiakasmäärän kertymää pylväiden avulla samaan tapaan kuin sähkönkulusta käsittelevässä esimerkissä tehtiin.
+                            </li>
+                            <li> 
+                                Tavaratalo sulkee ovensa klo 19.00. Kuinka monta asiakasta käy tavaratalossa sen aukioloaikana?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t104_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t104_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Asiakasmäärän kertymä klo 9-12 on noin 150 asiakasta.
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva018.png" max-width: 100%; width: auto; height: auto;/>
+                                    Pylväiden korkeudeksi on valittu hetkellinen asiakasvirta aina puolen tunnin kohdalla. Pylväiden yhteenlasketuksi pinta-alaksi saadaan silmämääräisesti arvioiden
+                                    <br>  
+                                    <img src="/kurssit/maa9/kuvat/MAA9kaava002.png" max-width: 100%; width: auto; height: auto;/>
+                                    <!-- $$
+                                    19 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} + 51 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} + 75 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} = 145 \text{ asiakasta}.
+                                    $$  -->
+                                </li>
+                                <li> 
+                                    Tavaratalossa käy sen aukioloaikana noin 670 asiakasta.
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva019.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Kohdan (a) vastauksesta voidaan päätellä, että klo 9-12 ja klo 16-19 tavaratalossa käy 145 + 145 = 290 asiakasta. Klo 12-14 tavaratalossa käy
+                                    <br>  
+                                    <img src="/kurssit/maa9/kuvat/MAA9kaava003.png" max-width: 100%; width: auto; height: auto;/>
+                                    <!-- $$
+                                    91 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} +  99 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h}  = 190 \text{ asiakasta.}
+                                    $$ -->
+                                    Kuvaajan symmetrisyydestä voidaan päätellä, että saman verran käy myös klo 14-16.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#MAA9luku1kpl3">
+                    Integraalifunktio
+                </a>
+            </h1>
+        </header>
+        <div id="MAA9luku1kpl3" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    Edellä on tutkittu funktion kuvaajan ja $x$-akselin väliin jäävää pinta-alaa. Esimerkiksi vakiofunktion $f(x) = 1{,}5$ integraali yli välin $[0, 2]$ on alla olevan kuvan mukaan
+                    $$
+                    \int_0^2 f(x) \textrm{d}x = 3.
+                    $$
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva020.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Miten integraalin arvo muuttuu, jos integroimisvälin toista päätepistettä muutetaan? Onko mahdollista löytää funktio $F(b)$, joka ilmaisisi suoraan funktion $f(x) = 1{,}5$ ja $x$-akselin rajoittaman pinta-alan välillä $[0,b]$?
+                    <br>
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva021.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Seuraavassa tehtävässä etsitään tällainen funktio, jolla pätee
+                    $$
+                    F(b) = \int_0^b f(x) \textrm{d}x.
+                    $$
+                </p>
+            </div>
+            
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t105">
+                                Integraalifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t105" class="collapse">
+                        <p>
+                            Jatketaan vakiofunktion $f(x) = 1{,}5$ kuvaajan ja $x$-akselin välisen pinta-alan tutkimista. Tässä <a href="https://ggbm.at/f5ydmvdr">Geogebra-havainnollistuksessa</a> voit liukusäätimen avulla muuttaa integroimisvälin ylärajaa $b$. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kun muutat integroimisvälin ylärajaa liukusäätimellä, näkyviin piirtyy toinenkin kuvaaja. Miten sen pisteet liittyvät funktion $f$ kuvaajan ja $x$-akselin väliseen pinta-alaan?
+                            </li>
+                            <li> 
+                                Näkyviin ilmestynyt kuvaaja on funktion $f(x) = 1{,}5$ erään integraalifunktion $F(x)$ kuvaaja. Muodosta lauseke funktiolle $F(x)$.
+                            </li>
+                            <li>
+                                Derivoi funktio $F(x)$. Miten tulos liittyy alkuperäiseen funktioon $f$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t105_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t105_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Näkyviin piirtyvän kuvaajan pisteen $x$-koordinaatti on integroimisvälin yläraja. Pisteen $y$-koordinaatti ilmaisee pinta-alan eli integraalin arvon.
+                                </li>
+                                <li> 
+                                    Integraalifunktio on $F(x) = 1{,}5x$.
+                                </li>
+                                <li>
+                                    Integraalifunktion derivaatta on $F'(x) = 1{,}5$. Integraalifunktion derivaatta on siis sama kuin alkuperäinen funktio $f(x) = 1{,}5$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisestä tehtävästä voidaan havaita, että kun integroimisväliä kasvatetaan, kasvaa vakiofunktion integraalin arvo tasaisesti. Ensimmäisen asteen polynomifunktion kohdalla tilanne on toinen. Kun integroimisväliä kasvatetaan, kuvaajan alle jäävä pinta-ala kasvaa nopeammin ja nopeammin:
+                    <br>
+                    <img src="/kurssit/maa9/kuvat/MAA9kuva023.png" max-width: 100%; width: auto; height: auto;/>
+                    <br>
+                    Seuraavassa tehtävässä tutkitaan, millaiselle funktiolle $G$ pätee
+                    $$
+                    G(b) = \int_0^b 0{,}5x \textrm{ d}x.
+                    $$
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t106">
+                                Integraalifunktio
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t106" class="collapse">
+                        <p>
+                            Tutkitaan funktion $g(x) = 0{,}5x$ kuvaajan ja $x$-akselin välistä pinta-alaa. Tässä <a href="https://ggbm.at/msrwyers">Geogebra-havainnollistuksessa</a> voit liukusäätimen avulla muuttaa integroimisvälin ylärajaa $b$. 
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Kun muutat integroimisvälin ylärajaa liukusäätimellä, näkyviin piirtyy toinenkin kuvaaja. Miten sen pisteet liittyvät funktion $g$ kuvaajan ja $x$-akselin väliseen pinta-alaan?
+                            </li>
+                            <li> 
+                                <p>
+                                Näkyviin ilmestynyt kuvaaja on funktion $g(x) = 0{,}5x$ erään integraalifunktion $G(x)$ kuvaaja. Muodosta lauseke funktiolle $G(x)$. 
+                                </p>
+                                <p>
+                                Vinkki:
+                                Voit päätellä kuvaajan muodosta, minkä tyyppinen funktio $G$ on. Sen jälkeen voit tutkia, millaisia arvoja se saa kohdissa $x = 0$, $x = 1$, $x = 2$ ja niin edelleen. Tällä tavalla voit päätellä, millaisia kertoimia ja vakioita funktion $G$ lausekkeessa esiintyy.
+                                </p>
+                            </li>
+                            <li>
+                                Derivoi funktio $G(x)$. Miten tulos liittyy alkuperäiseen funktioon $g$?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t106_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t106_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Näkyviin piirtyvän kuvaajan pisteen $x$-koordinaatti on integroimisvälin yläraja. Pisteen $y$-koordinaatti ilmaisee pinta-alan eli integraalin arvon.
+                                </li>
+                                <li> 
+                                    Integraalifunktio on $G(x) = 0{,}25x^2$.
+                                </li>
+                                <li>
+                                    Integraalifunktion derivaatta on $G'(x) = 0{,}5x$. Integraalifunktion derivaatta on siis sama kuin alkuperäinen funktio $g(x) = 0{,}5x$.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Tässä luvussa olemme tutustuneet integraalin käsitteeseen pääasiassa graafisesti tutkimalla funktion kuvaajan ja $x$-akselin väliin jäävää pinta-alaa. Seuraavassa luvussa määrittelemme integraalifunktion käsitteen derivaatan avulla. Kolmannessa luvussa perehdymme tarkemmin siihen, miten integraalin avulla voidaan laskea erilaisia pinta-aloja ja tilavuuksia.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku1-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="eec41641-37c2-4ac4-8c56-2fb1cdff7e29">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s2t101">
+                            
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s2t101">
+                    <p>
+                        
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s2t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s2t101_v" class="collapse">
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku1-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku1-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t101">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t101">
+                    <p>
+                    
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t101_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t101_v" class="collapse">
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L1itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L1itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href=" ">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
+            </p>
+        </div>
+    </section>
+
+
+</article>
