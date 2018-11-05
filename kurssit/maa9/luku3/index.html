@@ -162,7 +162,18 @@ topnav: maa9
                 </header>
                 <div id="MAA9s3t301">
                     <p>
-                    
+                        Laske integraalit
+                    </p>
+                    <ol class="a">
+                        <li>
+                            ${\displaystyle \int_{-1}^1 \dfrac{1}{3+x} \mathrm{d}x}$
+                        </li>
+                        <li>
+                            ${\displaystyle \int_{-1}^1 e^{2\left|x\right|} \mathrm{d}x}$
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2018/3]
                     </p>
                     <h2>
                         <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t301_v">
@@ -170,14 +181,371 @@ topnav: maa9
                         </a>
                     </h2>
                     <div id="MAA9s3t301_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $\ln 2$
+                            </li>
+                            <li>
+                                $e^2 - 1$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t302">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t302">
+                    <p>
+                        Weibullin $(\lambda,k)$-jakauman avulla voidaan kuvata mm. maantiepölyn hiukkasten kokoa. Tutkitaan tapausta $\lambda = 1$, jolloin jakauman tiheysfunktio määritellään kaavalla
+                        $$
+                        w(t,k) = kt^{k-1}e^{-t^k}
+                        $$
+                        kun $t \geq 0$ ja $k > 0$. Weibullin kertymäfunktio määritellään kaavalla 
+                        $$
+                        W(x,k) = \int_0^x w(t,k) \mathrm{d}t.
+                        $$
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Määritä ${\displaystyle \lim_{t \rightarrow 0+} w(t,k)}$ vakion $k$ eri arvoilla.
+                        </li>
+                        <li>
+                            Määritä kertymäfunktion $W(x,k)$ lauseke, kun $x \geq 0$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä S2018/9]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t302_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t302_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Jos $k = 1$, 
+                                \begin{align*}
+                                \lim_{t \rightarrow 0+} w(t,k) &= \lim_{t \rightarrow 0+} e^{-t} = 1
+                                \end{align*}
+                                Jos $0 < k < 1$,
+                                \begin{align*}
+                                \lim_{t \rightarrow 0+} w(t,k) &= \lim_{t \rightarrow 0+} kt^{k-1}e^{-t^k} = \infty
+                                \end{align*}
+                                Jos $k > 1$,
+                                \begin{align*}
+                                \lim_{t \rightarrow 0+} w(t,k) &= \lim_{t \rightarrow 0+} kt^{k-1}e^{-t^k} = 0
+                                \end{align*}
+                            </li>
+                            <li>
+                                $W(x,k) = 1 - e^{-x^k}$, kun $x \geq 0$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t303">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t303">
+                    <p>
+                        Olkoon $f(x)$ funktio, joka on määritelty välillä $0 \leq x \leq 12$. Alla on esitetty funktion 
+                        $$
+                        F(x) = \int_0^x f(t)\,\mathrm{d}t
+                        $$
+                        kuvaaja välillä $0 \leq x \leq 12$. Arvioi kuvaajan perusteella
+                    </p>
+                    <ol class="a">
+                        <li>
+                            määrättyä integraalia ${\displaystyle \int_1^4 f(t)\,\mathrm{d}t$
+                        </li>
+                        <li>
+                            millä väleillä funktion $f(x)$ on vakio
+                        </li>
+                        <li>
+                            millä väleillä funktio $f(x)$ on aidosti vähenevä.
+                        </li>
+                    </ol>
+                    <p>
+                        <img src="/kurssit/maa9/kuvat/MAA9YO001.png" max-width: 100%; width: auto; height: auto;/>
+                        [Pitkä S2017/13]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t303_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t303_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                ${\displaystyle \int_1^4 f(t)\,\mathrm{d}t = F(4) - F(1) = 1 - (-1) = 2$
+                            </li>
+                            <li>
+                                Jos integraalifunktio on vakio, funktio $f(x)$ on nollafunktio (sen ja $x$-akselin väliin ei kerry pinta-alaa). Jos integraalifunktio on nouseva suora, funktio $f(x)$ on positiivinen vakiofunktio (sen ja $x$-akselin välinen pinta-ala kasvaa tasaisesti). Näin voidaan päätellä, että funktio $f(x)$ on vakio väleillä $[2,3]$ ja $[3; 4{,}5]$ ja $[10,12]$.
+                            </li>
+                            <li>
+                                Integraalifunktion kuvaajalta voidaan lukea funktion $f(x)$ ja $x$-akselin väliin jäävä pinta-ala kohdasta $0$ eteenpäin. Sen avulla voidaan luonnostella funktion $f(x)$ kuvaajaa:
+                                <br>
+                                <img src="/kurssit/maa9/kuvat/MAA9kuva025.png" max-width: 100%; width: auto; height: auto;/>
+                                <br>
+                                Kuvaajasta nähdään, että funktion $f(x)$ on aidosti vähenevä suunnilleen välillä $[6{,}2; 8{,}8]$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t304">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t304">
+                    <p>
+                        Tarkastellaan funktiota $f(x) = \left| x - 1 \right| + 1$.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Funktion lauseke voidaan sieventää välillä $0 \leq x \leq 1$ niin, ettei siinä esiinny itseisarvoa. Mikä on tämä sievennetty lauseke?
+                        </li>
+                        <li>
+                            Funktion $f$ kuvaaja pyörähtää $x$-akselin ympäri välillä $0 \leq x \leq 2$. Laske näin muodostuvan pyörähdyskappaleen tilavuus.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä K2017/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t304_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t304_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                $f(x) = 2-x$
+                            </li>
+                            <li>
+                                Tilavuus on $\dfrac{14\pi}{3}$.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t305">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t305">
+                    <p>
+                        Tarkastellaan funktiota 
+                        $$f(x) = \int_0^x \left| \sin t \right| \,\mathrm{d}t,$$
+                        kun $0 \leq x \leq 2\pi$.
+                    </p>
+                    <ol class="a">
+                        <li>
+                            Perustele geometrisesti kaava $f(2\pi) = 2f(\pi)$.
+                        </li>
+                        <li>
+                            Laske $f(x)$, kun $0 \leq x \leq 2\pi$.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä K2016/12]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t305_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t305_v" class="collapse">
+                        <ol class="a">
+                            <li>
+                                Sinifunktion kuvaajan symmetrisyyden vuoksi 
+                                $$
+                                \int_\pi^\2pi \sin t \,\mathrm{d}t = -\int_0^\pi \sin t \,\mathrm{d}t.
+                                $$
+                                Tästä seuraa, että 
+                                $$
+                                \int_\pi^\2pi \left|\sin t \right|\,\mathrm{d}t = \int_0^\pi \left|\sin t \right| \,\mathrm{d}t.
+                                $$
+                                Tällöin 
+                                \begin{align*}
+                                f(2\pi) &= \int_0^{2\pi} \left| \sin t \right| \,\mathrm{d}t \\
+                                &= \int_0^{\pi} \left| \sin t \right| \,\mathrm{d}t + \int_{\pi}^{2\pi} \left| \sin t \right| \,\mathrm{d}t \\
+                                &= 2 \cdot \int_0^{\pi} \left| \sin t \right| \,\mathrm{d}t \\
+                                &= 2f(\pi)
+                                \end{align*}
+                            </li>
+                            <li>
+                                Tarkastellaan erikseen tapaukset $0 \leq x \leq \pi$ ja $\pi \leq x \leq 2\pi$. Saadaan
+                                $$
+                                f(x) = \begin{cases}
+                                1 - \cos x, &\ 0 \leq x \leq \pi;\\
+                                3 + \cos x, &\ \pi \leq x \leq 2\pi.
+                                $$
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t306">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t306">
+                    <p>
+                        Olkoon $a > 0$. Funktion $f(x) = a\sqrt{x}$ kuvaaja $y = f(x)$ pyörähtää $x$-akselin ympäri välillä $[0,1]$, jolloin syntyvän pyörähdyskappaleen tilavuus on $2\pi$. Määritä tämän pyörähdyskappaleen vaipan pinta-ala kaavalla
+                        $$
+                        A = 2\pi \int_0^1\left|f(x)\right|\sqrt{1 + f'(x)^2}\mathrm{d}x.
+                        $$
+                        [Pitkä K2015/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t306_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t306_v" class="collapse">
+                        <p>
+                            Kysytty vaipan ala on 
+                            $$
+                            \dfrac{8\pi}{3}\left(2\sqrt{2} - 1\right) \approx 15{,}3.
+                            $$
+                            Vakiolle saadaan arvo $a = 2$ eli $f(x) = 2\sqrt{x}$.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t307">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t307">
+                    <p>
+                        Käyrä $y = \sin x$, missä $-\pi \leq x \leq \pi$, pyörähtää $x$-akselin ympäri. Laske näin syntyvän tiimalasia muistuttavan kappaleen tilavuuden tarkka arvo.
+                    </p>
+                    <p>
+                        [Pitkä S2014/5]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t307_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t307_v" class="collapse">
+                        <p>
+                            Kysytty tilavuus on 
+                            $$
+                            2\pi \int_0^\pi \sin^2 x\, \mathrm{d}x = \pi^2 \approx 9{,}87.
+                            $$
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t308">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t308">
+                    <ol class="a">
+                        <li>
+                            Käyrät 
+                            $$
+                            y = 6x^2 + 3x^4 + \dfrac{1}{x}
+                            $$
+                            ja $y = 3x^4$ sekä suorat $x = 1$ ja $x = 2$ rajaavat tasoalueen. Laske sen pinta-alan likiarvon kahden desimaalin tarkkuudella.
+                        </li>
+                    </ol>
+                    <p>
+                        [Pitkä K2014/3a &amp; ]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t308_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t308_v" class="collapse">
+                        <ol class="a">
+                            <li>
+
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tehtava" id="af67d54e-b279-45c7-ba3a-47e1015bbf30">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#MAA9s3t309">
+
+                        </a>
+                    </h1>
+                </header>
+                <div id="MAA9s3t309">
+                    <p>
+                        Juustoa myydään suoran ympyrälieriön muotoisessa pakkauksessa. Lieriön korkeus on $h$ ja sen pohjan säde on $r$. Juusto leikataan ensin pystysuorassa suunnassa kahteen yhtä suureen osaan. Toisesta puolikkaasta leikataan vinosti kuvion osoittama pienempi pala, jonka korkeus on $h$. Laske tämän juustopalan tilavuus integroimalla.
+                    </p>
+                    <p>
+                        [Pitkä K2014/10]
+                    </p>
+                    <h2>
+                        <a data-toggle="collapse" class="collapsed" data-target="#MAA9s3t309_v">
+                            Vastaus
+                        </a>
+                    </h2>
+                    <div id="MAA9s3t309_v" class="collapse">
                         <p>
 
                         </p>
                     </div>
                 </div>
             </div>
-
-            
 
         </div>
     </section>
