@@ -72,7 +72,7 @@ topnav: maa9
                     <br>
                     <img src="/kurssit/maa9/kuvat/MAA9kuva003.png" max-width: 100%; width: auto; height: auto;/>
                     <br>
-                    Värillisiä pikkuruutuja on yhteensä reilut 23 kappaletta. Yhden pienen ruudun pinta-ala on neljäsosa isosta ruudusta eli 0,25. Integraalille saadaan näin likiarvo
+                    Värillisiä pikkuruutuja on yhteensä noin 23 kappaletta. Yhden pienen ruudun pinta-ala on neljäsosa isosta ruudusta eli 0,25. Integraalille saadaan näin likiarvo
                     $$
                     \int_1^3 f(x) \textrm{d}x \approx 23 \cdot 0{,}25 \approx 5{,}8.
                     $$
@@ -141,13 +141,16 @@ topnav: maa9
                     </header>
                     <div id="MAA9t102" class="collapse">
                         <p>
-                              Päättele alla olevan kuvan avulla likiarvot seuraaville integraaleille yhden merkitsevän numeron tarkkuudella. 
+                              Päättele alla olevan kuvan avulla seuraavien integraalien arvo:
                         </p>
                         <ol class="a">
+                            <li> $\displaystyle \int_{0}^6 g(x) \textrm{d}x$  </li>
                             <li> $\displaystyle \int_{1}^5 g(x) \textrm{d}x$  </li>
-                            <li> $\displaystyle \int_{5}^6 g(x) \textrm{d}x$  </li>
                         </ol>
                         <img src="/kurssit/maa9/kuvat/MAA9kuva005.png" max-width: 100%; width: auto; height: auto;/>
+                        <p>
+                            Vinkki: jaa alue sopiviksi kolmioiksi ja laske niiden pinta-alat.
+                        </p>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#t102_v">
                                 VASTAUS
@@ -156,14 +159,24 @@ topnav: maa9
                         <div id="t102_v" class="collapse">
                             <ol class="a">
                                 <li> 
-                                    $\displaystyle \int_{1}^5 f(x) \textrm{d}x \approx 5$.
+                                    $\displaystyle \int_{0}^6 f(x) \textrm{d}x = 2{,}25$.
                                     <br>
                                     <img src="/kurssit/maa9/kuvat/MAA9kuva009.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Huomaa, että yhtä suuret pinta-alat $A_3$ ja $A_4$ kumoavat toisensa, koska toinen on $x$-akselin yläpuolella ja toinen alapuolella. Integraalin arvo on siten
+                                    $$
+                                    A_2 - A_1 = \dfrac{2 \cdot 3}{2} - \dfrac{1 \cdot 1{,}5}{2} = 3 - 0{,}75 = 2{,}25.
+                                    $$
                                 </li>
                                 <li> 
                                     $\displaystyle \int_{5}^6 g(x) \textrm{d}x \approx -1$ 
                                     <br>
                                     <img src="/kurssit/maa9/kuvat/MAA9kuva008.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Integraalin arvo on 
+                                    $$
+                                    A_2 + A_3 - A_5 = \dfrac{2 \cdot 3}{2} + \dfrac{1{,}5\cdot 3}{2} - \dfrac{0{,}5 \cdot 1}{2} = 3 + 2{,}25 - 0{,}25 = 5
+                                    $$
                                 </li>
                             </ol>
                         </div>
@@ -202,6 +215,66 @@ topnav: maa9
                     $$  -->
                     Tämä kertoo, mikä kokonaiskulutus olisi, jos kulutus pysyisi samana aina tunnin kerrallaan. Kun sinisten pylväiden pinta-alaa verrataan kuvaajan alle jäävään pinta-alaan, havaitaan, että nämä ovat suunnilleen yhtä suuret. Tarkempaan arvioon päästäisiin käyttämällä kapeampia pylväitä, jolloin pylväiden pinta-ala olisi vielä lähempänä kuvaajan alle jäävää pinta-alaa.
                 </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
+                    <header>
+                        <h1>                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t104">
+                                Kertymä
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="MAA9t104" class="collapse">
+                        <p>
+                            Tavaratalon asiakasvirta aukioloajan funktiona noudattaa likimain alla olevaa kuvaajaa. 
+                        </p>
+                        <img src="/kurssit/maa9/kuvat/MAA9kuva017.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                                Tavaratalo aukeaa klo 9.00. Kuinka monta asiakasta on tullut tavarataloon puoleen päivään mennessä? 
+                                <br>
+                                Vinkki: voit arvioida asiakasmäärän kertymää pylväiden avulla samaan tapaan kuin sähkönkulusta käsittelevässä esimerkissä tehtiin.
+                            </li>
+                            <li> 
+                                Tavaratalo sulkee ovensa klo 19.00. Kuinka monta asiakasta käy tavaratalossa sen aukioloaikana?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#t104_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="t104_v" class="collapse">
+                            <ol class="a">
+                                <li> 
+                                    Asiakasmäärän kertymä klo 9-12 on noin 150 asiakasta.
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva018.png" max-width: 100%; width: auto; height: auto;/>
+                                    Pylväiden korkeudeksi on valittu hetkellinen asiakasvirta aina puolen tunnin kohdalla. Pylväiden yhteenlasketuksi pinta-alaksi saadaan silmämääräisesti arvioiden
+                                    <br>  
+                                    <img src="/kurssit/maa9/kuvat/MAA9kaava002.png" max-width: 100%; width: auto; height: auto;/>
+                                    <!-- $$
+                                    19 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} + 51 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} + 75 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} = 145 \text{ asiakasta}.
+                                    $$  -->
+                                </li>
+                                <li> 
+                                    Tavaratalossa käy sen aukioloaikana noin 670 asiakasta.
+                                    <br>
+                                    <img src="/kurssit/maa9/kuvat/MAA9kuva019.png" max-width: 100%; width: auto; height: auto;/>
+                                    <br>
+                                    Kohdan (a) vastauksesta voidaan päätellä, että klo 9-12 ja klo 16-19 tavaratalossa käy 145 + 145 = 290 asiakasta. Klo 12-14 tavaratalossa käy
+                                    <br>  
+                                    <img src="/kurssit/maa9/kuvat/MAA9kaava003.png" max-width: 100%; width: auto; height: auto;/>
+                                    <!-- $$
+                                    91 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} +  99 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h}  = 190 \text{ asiakasta.}
+                                    $$ -->
+                                    Kuvaajan symmetrisyydestä voidaan päätellä, että saman verran käy myös klo 14-16.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="tehtavat">
@@ -282,66 +355,6 @@ topnav: maa9
                                     $$
                                     48 \cdot 10 \dfrac{\text{km} }{\text{h} } \cdot \dfrac{0{,}5}{60} \text{ h} = 4 \text{  km}.
                                     $$  
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tehtavat">
-                <div class="tehtava" id="9a168960-7ec6-11e7-bb31-be2e44b06b34">
-                    <header>
-                        <h1>                            <div class="checkbox-group"></div>
-                            <a data-toggle="collapse" class="collapsed" data-target="#MAA9t104">
-                                Kertymä
-                            </a>
-                        </h1>
-                    </header>
-                    <div id="MAA9t104" class="collapse">
-                        <p>
-                            Tavaratalon asiakasvirta aukioloajan funktiona noudattaa likimain alla olevaa kuvaajaa. 
-                        </p>
-                        <img src="/kurssit/maa9/kuvat/MAA9kuva017.png" max-width: 100%; width: auto; height: auto;/>
-                        <ol class="a">
-                            <li>
-                                Tavaratalo aukeaa klo 9.00. Kuinka monta asiakasta on tullut tavarataloon puoleen päivään mennessä? 
-                                <br>
-                                Vinkki: voit arvioida asiakasmäärän kertymää pylväiden avulla samaan tapaan kuin sähkönkulusta käsittelevässä esimerkissä tehtiin.
-                            </li>
-                            <li> 
-                                Tavaratalo sulkee ovensa klo 19.00. Kuinka monta asiakasta käy tavaratalossa sen aukioloaikana?
-                            </li>
-                        </ol>
-                        <h2>
-                            <a data-toggle="collapse" class="collapsed" data-target="#t104_v">
-                                VASTAUS
-                            </a>
-                        </h2>
-                        <div id="t104_v" class="collapse">
-                            <ol class="a">
-                                <li> 
-                                    Asiakasmäärän kertymä klo 9-12 on noin 150 asiakasta.
-                                    <img src="/kurssit/maa9/kuvat/MAA9kuva018.png" max-width: 100%; width: auto; height: auto;/>
-                                    Pylväiden korkeudeksi on valittu hetkellinen asiakasvirta aina puolen tunnin kohdalla. Pylväiden yhteenlasketuksi pinta-alaksi saadaan silmämääräisesti arvioiden
-                                    <br>  
-                                    <img src="/kurssit/maa9/kuvat/MAA9kaava002.png" max-width: 100%; width: auto; height: auto;/>
-                                    <!-- $$
-                                    19 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} + 51 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} + 75 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} = 145 \text{ asiakasta}.
-                                    $$  -->
-                                </li>
-                                <li> 
-                                    Tavaratalossa käy sen aukioloaikana noin 670 asiakasta.
-                                    <br>
-                                    <img src="/kurssit/maa9/kuvat/MAA9kuva019.png" max-width: 100%; width: auto; height: auto;/>
-                                    <br>
-                                    Kohdan (a) vastauksesta voidaan päätellä, että klo 9-12 ja klo 16-19 tavaratalossa käy 145 + 145 = 290 asiakasta. Klo 12-14 tavaratalossa käy
-                                    <br>  
-                                    <img src="/kurssit/maa9/kuvat/MAA9kaava003.png" max-width: 100%; width: auto; height: auto;/>
-                                    <!-- $$
-                                    91 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h} +  99 \tfrac{\text{as.} }{\text{h} } \cdot 1 \text{ h}  = 190 \text{ asiakasta.}
-                                    $$ -->
-                                    Kuvaajan symmetrisyydestä voidaan päätellä, että saman verran käy myös klo 14-16.
                                 </li>
                             </ol>
                         </div>
