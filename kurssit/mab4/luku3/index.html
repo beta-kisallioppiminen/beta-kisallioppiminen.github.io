@@ -1,0 +1,621 @@
+---
+title: MAB4 - Matemaattisia malleja
+layout: material
+sitemap: true
+main-class: has-atop
+topnav: mab4
+---
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        padding: 5px;
+    }
+</style>
+
+{% include bottomnav.html %}
+
+<input type="hidden" id="chapterNumber" value="3"/>
+
+<article>
+    <section>
+        <header>
+            <h1>Matemaattinen mallintaminen</h1>
+        </header>
+    </section>
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luvun3-tavoitteet">
+                    Luvun tavoitteet
+                </a>
+            </h1>
+        </header>
+        <div id="luvun3-tavoitteet" class="collapse">
+
+            <div class="objective">
+                <p>
+                    Tämän luvun tavoitteena on, että ... Osaat
+                </p>
+                <ul>
+                    <li> </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl31">
+                    Mallin tulkinta
+                </a>
+            </h1>
+        </header>
+        <div id="kpl31" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    
+                </p>
+
+                <div class="definition">
+                    <h3>MÄÄRITELMÄ: SUORAKULMION PINTA-ALA</h3>
+                    <p>
+                        Suorakulmion <em>pinta-ala</em> on samasta kärjestä alkavien sivujen pituuksien tulo; alla olevan kuvion merkinnöillä siis $ab$.
+                        <br>
+                        <img src="/kurssit/maa3/kuvat/suoraK04.png" style="max-width: 100%; width: auto; height: auto;"/>
+                    </p>
+                </div>
+            </div>
+
+            <div class="tehtavat">
+
+                <div class="tehtava first-exercise" id="044c3a11-29a5-4f93-a11a-68843ced59ab">
+
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01">
+                                Suorakulmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01" class="collapse">
+                        <p>
+                            Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
+                        <ol class="a">
+                            <li> 
+                                Piirrä mallikuva suurimmasta ja pienimmästä jalkapallokentästä. Merkitse kuvioihin tunnetut mitat. 
+                            </li>
+                            <li> Laske suurimman ja pienimmän jalkapallokentän pinta-alojen erotus. </li>
+                            <li> Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä? </li>
+                        </ol>
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01_v" class="collapse">
+                            <ol class="a">
+                                <li> Mallikuvat:
+                                    <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva015.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Pinta-alojen erotus on $1\,850 \text{ m}^2$. Suurimman kentän pinta-ala on $8\,250 \text{ m}^2$ ja pienimmän $6\,400 \text{ m}^2$.
+                                </li>
+                                <li> Noin 29 %. </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Suorakulmion pinta-alan avulla saadaan pääteltyä, miten kolmion pinta-ala lasketaan. Seuraavissa tehtävissä tutkitaan kahta erilaista tapausta.
+                </p>
+            </div>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="56b70eed-20da-4ce2-9ee2-3f58241167bb">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b">
+                                Kolmion pinta-ala
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="kolmio01b" class="collapse">
+                        <p>
+                            <img src="/kurssit/maa3/kuvat/suoraK17.png" style="max-width: 100%; width: auto; height: auto;"/>
+                        </p>
+                        <ol class="a">
+                            <li> Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. </li>
+                            <li> Muodosta suorakulmion pinta-alan lauseke. </li>
+                            <li> Päättele kolmion pinta-ala.</li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="kolmio01b_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Kuva: <br>
+                                    <img src="/kurssit/mab3/kuvat/MAB3kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                </li>
+                                <li> 
+                                    Suorakulmion pinta-ala on $ah$.
+                                </li>
+                                <li> 
+                                    Kolmion pinta-ala on puolet suorakulmion pinta-alasta eli 
+                                    $$
+                                    \dfrac{ah}{2}
+                                    $$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#kpl32">
+                    Mallin sovittaminen mittaustuloksiin
+                </a>
+            </h1>
+        </header>
+        <div id="kpl32" class="collapse">
+
+            <div class="teoria">
+                <p>
+                    
+                </p>
+          <div class="tehtavat">      
+                <div class="tehtava" id="57f3c161-4780-4d2f-8898-0a51492e23d5">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="3d93e159-264c-454d-b09d-23de907b5993">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#3d93e159-264c-454d-b09d-23de907b5993_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="3d93e159-264c-454d-b09d-23de907b5993_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="3cd5e28f-646a-426c-aca9-85309a3a6c46">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#3cd5e28f-646a-426c-aca9-85309a3a6c46_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="3cd5e28f-646a-426c-aca9-85309a3a6c46_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="25fe4839-2b2b-4358-ac17-f71a84f20668">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#25fe4839-2b2b-4358-ac17-f71a84f20668_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="25fe4839-2b2b-4358-ac17-f71a84f20668_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="692b3cc4-5992-487b-80e8-29fff1d4fc26">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#692b3cc4-5992-487b-80e8-29fff1d4fc26_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="692b3cc4-5992-487b-80e8-29fff1d4fc26_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja2">
+                    TEHTÄVÄSARJA II
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku3-tehtavasarja2" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+         <div class="tehtava" id="f2ebda69-84f5-4416-bab4-0781e29c5347">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#f2ebda69-84f5-4416-bab4-0781e29c5347_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="f2ebda69-84f5-4416-bab4-0781e29c5347_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="2060f977-ede5-4bd8-b591-7eb6a2aff94d">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#2060f977-ede5-4bd8-b591-7eb6a2aff94d_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="2060f977-ede5-4bd8-b591-7eb6a2aff94d_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="1c965d15-306d-43dd-9f01-282d5f38164d">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#1c965d15-306d-43dd-9f01-282d5f38164d_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="1c965d15-306d-43dd-9f01-282d5f38164d_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="7766b1d3-3bde-4e51-9aeb-8a039096b07a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#7766b1d3-3bde-4e51-9aeb-8a039096b07a_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="7766b1d3-3bde-4e51-9aeb-8a039096b07a_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="50d4e281-79aa-43ff-a6c6-905649b22004">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#50d4e281-79aa-43ff-a6c6-905649b22004_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="50d4e281-79aa-43ff-a6c6-905649b22004_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="3ac573e3-9981-4cab-9cde-aa2067c3031f">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#3ac573e3-9981-4cab-9cde-aa2067c3031f_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="3ac573e3-9981-4cab-9cde-aa2067c3031f_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="1585b972-88be-4674-84bb-d6098a53b70a">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#1585b972-88be-4674-84bb-d6098a53b70a_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="1585b972-88be-4674-84bb-d6098a53b70a_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="7dc21e5d-1e22-4320-bf9d-c5966a7cba22">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#7dc21e5d-1e22-4320-bf9d-c5966a7cba22_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="7dc21e5d-1e22-4320-bf9d-c5966a7cba22_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="bb412111-a9e7-4add-a790-cd57363b1114">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#bb412111-a9e7-4add-a790-cd57363b1114_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="bb412111-a9e7-4add-a790-cd57363b1114_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+        <div class="tehtava" id="c13df322-c0a5-4810-a0b3-ac7171c4b282">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#c13df322-c0a5-4810-a0b3-ac7171c4b282_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="c13df322-c0a5-4810-a0b3-ac7171c4b282_target">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+
+ 
+            
+            
+        </div>
+    </section>
+
+    <section class="panel">
+        <header class="otsikko">
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#luku3-tehtavasarja3">
+                    TEHTÄVÄSARJA III
+                </a>
+            </h1>
+        </header>
+
+        <div id="luku3-tehtavasarja3" class="collapse">
+            <!-- Tästä alkaa piilotus -->
+
+            <div class="tehtava" id="e7f11c81-58d3-4274-b418-ac0673c79c08">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#e7f11c81-58d3-4274-b418-ac0673c79c08_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="e7f11c81-58d3-4274-b418-ac0673c79c08_target">
+                    <p>
+                        
+                    </p>
+                </div>  
+            </div>
+            <div class="tehtava" id="224a8d01-49b0-412c-8a5b-a54a2fd02f04">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#224a8d01-49b0-412c-8a5b-a54a2fd02f04_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="224a8d01-49b0-412c-8a5b-a54a2fd02f04_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="419d7d96-59e8-44d8-81b2-ce001f3e1d9b">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#419d7d96-59e8-44d8-81b2-ce001f3e1d9b_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="419d7d96-59e8-44d8-81b2-ce001f3e1d9b_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="8fd343cf-f93b-4d64-853e-fe147ae4e714">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#8fd343cf-f93b-4d64-853e-fe147ae4e714_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="8fd343cf-f93b-4d64-853e-fe147ae4e714_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="32992c2c-b85f-4732-a877-f64cc1f1a9f2">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#32992c2c-b85f-4732-a877-f64cc1f1a9f2_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="32992c2c-b85f-4732-a877-f64cc1f1a9f2_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="aa36f049-0d2c-4f82-a49c-65675c0ad0b8">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#aa36f049-0d2c-4f82-a49c-65675c0ad0b8_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="aa36f049-0d2c-4f82-a49c-65675c0ad0b8_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="3fea1ea5-8e04-416f-9b88-5af203bac91e">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#3fea1ea5-8e04-416f-9b88-5af203bac91e_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="3fea1ea5-8e04-416f-9b88-5af203bac91e_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="ee8109b6-505c-4c60-9e06-c001ca7090d5">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#ee8109b6-505c-4c60-9e06-c001ca7090d5_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="ee8109b6-505c-4c60-9e06-c001ca7090d5_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="a74ddd60-cd4f-463d-b0a3-9c95a9692e61">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#a74ddd60-cd4f-463d-b0a3-9c95a9692e61_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="a74ddd60-cd4f-463d-b0a3-9c95a9692e61_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="tehtava" id="ba93346b-82de-40b9-880e-e56861e1feb5">
+                <header>
+                    <h1>
+                        <div class="checkbox-group"></div>
+                        <a data-target="#ba93346b-82de-40b9-880e-e56861e1feb5_target">
+                            Otsikko
+                        </a>
+                    </h1>
+                </header>
+                <div id="ba93346b-82de-40b9-880e-e56861e1feb5_target">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <header>
+            <h1>
+                <a data-toggle="collapse" class="collapsed" data-target="#L3itsearviointi">
+                    Itsearviointitehtävät
+                </a>
+            </h1>
+        </header>
+        <div id="L3itsearviointi" class="collapse">
+            <p>
+                Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä <a href="">itsearviointitesti</a> opetus.tv:n polku-palvelussa. Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
+            </p>
+        </div>
+    </section>
+
+</article>

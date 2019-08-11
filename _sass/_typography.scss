@@ -137,11 +137,20 @@ main > header h1 {
 	text-shadow: #696969 1px 1px 1px;
 
 	&:hover {
-		background-color: #00747a;
+		background-color: #47A1C1;
 	}
 
 	&:first-line {
 		font-size: 1.5em;
+	}
+}
+
+.call_to_action .mab a,
+.call_to_action .mab a:visited,
+.call_to_action .mab input {
+	
+	&:hover {
+		background-color: #C1479F;
 	}
 }
 
