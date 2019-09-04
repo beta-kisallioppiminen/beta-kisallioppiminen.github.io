@@ -17,7 +17,7 @@ topnav: mab4
 </style>
 
 {% include bottomnav.html %}
-
+<input type="hidden" id="theoremStart" value="10"/>
 <input type="hidden" id="chapterNumber" value="3"/>
 
 <article>
@@ -61,17 +61,21 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    
+                    Luvuissa 1 ja 2 on tutustuttu kahteen erilaiseen matemaattiseen malliin: lineaariseen malliin ja eksponentiaaliseen malliin. Yleisesti ottaen matemaattinen malli tarkoittaa sääntöä, jota tarkasteltavaan ilmiöön liittyvät havainnot noudattavat. Malli on usein yksinkertaistus tilanteesta eikä vastaa täysin todellisuutta. Mallin avulla ilmiötä voidaan kuitenkin ymmärtää ja ennustaa, ja mallin yksinkertaisuus on myös etu, koska se helpottaa mallin käyttöä. 
                 </p>
 
-                <div class="definition">
-                    <h3>MÄÄRITELMÄ: SUORAKULMION PINTA-ALA</h3>
-                    <p>
-                        Suorakulmion <em>pinta-ala</em> on samasta kärjestä alkavien sivujen pituuksien tulo; alla olevan kuvion merkinnöillä siis $ab$.
-                        <br>
-                        <img src="/kurssit/maa3/kuvat/suoraK04.png" style="max-width: 100%; width: auto; height: auto;"/>
-                    </p>
-                </div>
+                <p>
+                    Matemaattiseen mallintamiseen liitty oleellisena osana mallin hyvyyden ja sovellusalueen arviointi: Miten hyviä ennusteita malli tuottaa? Millä muuttujan arvoilla mallia voidaan soveltaa? Sovellusalueen ulkopuolella malli voi antaa järjettömiä tuloksia, vaikka muuten se kuvaisi ilmiötä hyvin.
+                </p>
+
+                <p>
+                    Matemaattisen mallinnuksen merkitys on nykyisessä yhteiskunnassa koko ajan kasvamassa. Matemaattisia malleja hyödynnetään lähes jokaisella alalla: tekniikassa, luonnontieteissä, lääketieteessä, psykologiassa, taloudessa, politiikassa, ympäristönsuojelussa, erilaisissa medioissa ja niin edelleen.
+                </p>
+
+                <p>
+                    Tässä luvussa jatketaan mallien tulkitsemisen harjoittelua sekä opetellaan yksinkertaisissa tilanteissa sovittamaan havaintoaineistoon mahdollisimman sopiva malli.
+                </p>
+                
             </div>
 
             <div class="tehtavat">
@@ -82,21 +86,26 @@ topnav: mab4
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#kolmio01">
-                                Suorakulmion pinta-ala
+                                Mallin tulkinta
                             </a>
                         </h1>
                     </header>
                     <div id="kolmio01" class="collapse">
                         <p>
-                            Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
-                        <ol class="a">
-                            <li> 
-                                Piirrä mallikuva suurimmasta ja pienimmästä jalkapallokentästä. Merkitse kuvioihin tunnetut mitat. 
-                            </li>
-                            <li> Laske suurimman ja pienimmän jalkapallokentän pinta-alojen erotus. </li>
-                            <li> Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä? </li>
-                        </ol>
+                            Alla on kuvattu arktisen alueen jääpeitteen laajuuden keskiarvo (miljoonina neliökilometreinä) vuoden aikana. Keskiarvot on laskettu vuosilta 1979-1990 (oranssi käyrä) ja 2011-2018 (sininen käyrä). Lähde: <a href="http://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/">NSIDC</a>.
                         </p>
+                        <img src="/kurssit/mab4/kuvat/arctic-sea-ice-extent.png" max-width: 100%; width: auto; height: auto;/>
+                        <ol class="a">
+                            <li>
+                                Milloin jääpeite on laajimmillaan? Kuinka paljon keskimääräisen jääpeitteen laajuuden maksimiarvo on pienentynyt vuosista 1979-1990 vuosiin 2011-2018?
+                            </li> 
+                            <li>
+                                Milloin jääpeite on pienimmillään? Kuinka paljon keskimääräisen jääpeitteen laajuuden minimiarvo on pienentynyt vuosista 1979-1990 vuosiin 2011-2018?
+                            </li>
+                            <li>
+                                Kuinka pitkän ajan vuosien 2011-2018 jääpeitteen laajuus oli alle vuosien 1979-1990 minimilaajuuden?
+                            </li>
+                        </ol>
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#kolmio01_v">
                                 VASTAUS
@@ -104,14 +113,16 @@ topnav: mab4
                         </h2>
                         <div id="kolmio01_v" class="collapse">
                             <ol class="a">
-                                <li> Mallikuvat:
-                                    <br>
-                                    <img src="/kurssit/mab3/kuvat/MAB3kuva015.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                <li>
+                                    Vuosina 1979-1990 jääpeite oli keskimäärin laajimmillaan maaliskuun alkupuolella ja sen laajuus oli noin 16 miljoonaa neliökilometriä. Vuosina 2011-2018 jääpeite oli keskimäärin laajimmillaan maaliskuun puolivälissä ja sen laajuus oli vajaa 15 miljoonaa neliökilometriä. Laajuuden maksimiarvo on siis pienentynyt reilun miljoona neliökilometriä.
+                                </li> 
+                                <li>
+                                    Jääpeite on keskimäärin pienimmillään syyskuun puolivälissä.
+                                    Vuosina 1979-1990 laajuus oli pienimmillään noin 7 miljoonaa neliökilometriä ja vuosina 2011-2018 vajaa 5 miljoonaa neliökilometriä. Laajuuden minimiarvo on siis pienentynyt yli 2 miljoonaa neliökilometriä.
                                 </li>
-                                <li> 
-                                    Pinta-alojen erotus on $1\,850 \text{ m}^2$. Suurimman kentän pinta-ala on $8\,250 \text{ m}^2$ ja pienimmän $6\,400 \text{ m}^2$.
+                                <li>
+                                    Vuosien 2011-2018 jääpeitteen laajuus oli alle vuosien 1979-1990 minimilaajuuden reilut 2,5 kuukautta (elokuun alusta yli lokakuun puolivälin).
                                 </li>
-                                <li> Noin 29 %. </li>
                             </ol>
                         </div>
                     </div>
@@ -120,9 +131,13 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    Suorakulmion pinta-alan avulla saadaan pääteltyä, miten kolmion pinta-ala lasketaan. Seuraavissa tehtävissä tutkitaan kahta erilaista tapausta.
+                    Edellisessä tehtävässä jääpeitteen laajuuden muuttumista mallinnettiin tutkimalla kahden eri ajanjakson keskiarvoja, jolloin pitkän aikavälin kehitys saatiin näkyviin vuosittaisesta vaihtelusta huolimatta.
+                </p>
+                <p>
+                    Seuraavassa tehtävässä mallinnetaan sillan rakenteita koordinaatiston ja toisen asteen polynomifunktioiden avulla. Toisen asteen polynomifunktioihin tutustuttiin kurssilla <a href="/kurssit/mab2/luku4/">MAB2</a>.
                 </p>
             </div>
+
 
             <div class="tehtavat">
                 <div class="tehtava" id="56b70eed-20da-4ce2-9ee2-3f58241167bb">
@@ -130,19 +145,41 @@ topnav: mab4
                         <h1>
                             <div class="checkbox-group"></div>
                             <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b">
-                                Kolmion pinta-ala
+                                Mallin tulkinta
                             </a>
                         </h1>
                     </header>
                     <div id="kolmio01b" class="collapse">
                         <p>
-                            <img src="/kurssit/maa3/kuvat/suoraK17.png" style="max-width: 100%; width: auto; height: auto;"/>
+                            Kaarisilta Sydney Harbour Bridge valmistui vuonna 1932. Alla olevassa kuvassa siltaa on mallinnettu 2. asteen polynomifunktioilla 
+                            \begin{align*}
+                            f(x) &= -0{,}16x^2 + 1{,}12x - 0{,}72 \\
+                            g(x) &= -0{,}10x^2 + 0{,}71x + 0{,}18
+                            \end{align*}
+                            Koordinaatistossa 1 yksikkö vastaa luonnossa 100 metriä. 
                         </p>
-                        <ol class="a">
-                            <li> Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. </li>
-                            <li> Muodosta suorakulmion pinta-alan lauseke. </li>
-                            <li> Päättele kolmion pinta-ala.</li>
-                        </ol>
+                       <img src="/kurssit/mab4/kuvat/MAB4kuva076.png" max-width: 100%; width: auto; height: auto;/> 
+                       <p>
+                            Päättele kuvasta tai laske funktioiden avulla vastaukset seuraaviin kysymyksiin:
+                       </p>
+                       <ol class="a">
+                            <li>
+                                Kuinka korkealla on siltarakennelman korkein kohta?
+                            </li>
+                            <li>
+                                Mikä on sillan alituskorkeus? Toisin sanottuna kuinka suuri laiva mahtuu sillan ali?
+                            </li>
+                            <li>
+                                Kuinka korkealla on sillan yläosa siinä kohdassa, jossa sillan alempi kaari leikkaa sillan vaakasuoran osan?
+                            </li>
+                            <li>
+                                Kuinka leveä on sillan alempi kaari merenpinnan tasolla?
+                            </li>
+                            <li>
+                                Millä muuttujan arvoilla funktiota $g(x) = -0{,}10x^2 + 0{,}71x + 0{,}18$ voidaan kuvan mukaan käyttää sillan ylemmän kaaren mallina?
+                            </li>
+                       </ol>
+                       
                         <h2>
                             <a data-toggle="collapse" class="collapsed" data-target="#kolmio01b_v">
                                 VASTAUS
@@ -151,17 +188,100 @@ topnav: mab4
                         <div id="kolmio01b_v" class="collapse">
                             <ol class="a">
                                 <li>
-                                    Kuva: <br>
-                                    <img src="/kurssit/mab3/kuvat/MAB3kuva001.png" style="max-width: 100%; width: auto; height: auto;"/>
+                                    Kuvan mukaan korkein kohta on 138 metrin korkeudessa.
                                 </li>
-                                <li> 
-                                    Suorakulmion pinta-ala on $ah$.
+                                <li>
+                                    Kuvan mukaan sillan alituskorkeus on 49 metriä.
                                 </li>
-                                <li> 
-                                    Kolmion pinta-ala on puolet suorakulmion pinta-alasta eli 
+                                <li>
+                                    Kohdassa $x = 1{,}36$ ylempää kaarta mallintava funktio saa arvon 
                                     $$
-                                    \dfrac{ah}{2}
+                                    g(x) = -0{,}10\cdot 1{,}36^2 + 0{,}71 \cdot 1{,}36 + 0{,}18 \approx 0{,}96
                                     $$
+                                    eli ylempi kaari on noin 96 metrin kokeudessa.
+                                </li>
+                                <li>
+                                    Sillan alemman kaaren leveys merenpinnan tasolla on kuvan mukaan noin 
+                                    $$
+                                    6{,}07 - 0{,}72 = 5{,}35
+                                    $$
+                                    eli noin 535 metriä.
+                                </li>
+                                <li>
+                                    Funktio sopii malliksi, kun $0{,}72 \leq x \leq 6{,}1$.
+                                </li>
+                           </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teoria">
+                <p>
+                    Edellisissä tehtävissä mallin tulkintaa tehtiin jonkinlaisen graafisen esityksen pohjalta. Seuraavassa tehtävässä mallina on yksittäinen funktio.
+                </p>
+            </div>
+
+            <div class="tehtavat">  
+                <div class="tehtava" id="57f3c161-4780-4d2f-8898-0a51492e23d5">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target">
+                                Mallin tulkinta
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target" class="collapse">
+                        <p>
+                            Erääseen hätäkeskukseen tulee keskimäärin 30 puhelua tunnissa. Todennäköisyyttä, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia, voidaan tällaisessa tilanteessa mallintaa funktiolla
+                            $$
+                            f(x) = e^{-0{,}5x}
+                            $$
+                            missä kantaluku $e = 2{,}7182818\ldots$ on niin sanottu <a href="https://fi.wikipedia.org/wiki/Neperin_luku">Neperin luku</a>. Laskimiin ja tietokoneisiin Neperin luvun arvo on yleensä ohjelmoitu valmiiksi ja se löytyy nappulasta $e$.
+                        </p>
+                        <ol class="a">
+                            <li>
+                                Millä todennäköisyydellä kahden peräkkäisen puhelun välissä kuluu yli minuutti? Anna vastaus myös prosentteina.
+                            </li>
+                            <li>
+                                Millä todennäköisyydellä kahden peräkkäisen puhelun välissä kuluu yli 5 minuuttia? Anna vastaus myös prosentteina.
+                            </li>
+                            <li>
+                                Miten tämä malli liittyy <a href="/kurssit/mab4/luku2/">luvun 2</a> asioihin? Selitä omin sanoin.
+                            </li>
+                            <li>
+                                Millaisilla muuttujan $x$ arvoilla mallia voidaan soveltaa?
+                            </li>
+                            <li>
+                                Piirrä funktion $f$ kuvaaja esimerkiksi geogebralla. Määritä sen avulla sellainen muuttujan arvo $a$, että 50 % todennäköisyydellä kahden puhelun välissä kuluu yli $a$ minuuttia. 
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Todennäköisyys, että peräkkäisten puhelujen välissä kuluu yli minuutti, on $f(1) = e^{-0{,}5 \cdot 1} = e^{-0{,}5} \approx 0{,}607$ eli noin 60,7 %.
+                                </li>
+                                <li>
+                                    Todennäköisyys, että peräkkäisten puhelujen välissä kuluu yli 5 minuuttia, on $f(5) = e^{-0{,}5 \cdot 5} = e^{-2{,}5} \approx 0{,}082$ eli noin 8,2 %.
+                                </li>
+                                <li>
+                                    Kysymyksessä on eksponentiaalisen vähenemisen malli. Todennäköisyys, että kahden peräkkäisen puhelun välissä kuluu yli $x$ minuuttia pienenee eksponentiaalisesti, kun $x$ kasvaa.
+                                </li>
+                                <li>
+                                    Koska $x$ kuvaa puheluiden välistä aikaa minuutteina, sen täytyy olla positiivinen (tai nolla). Mallia voidaan siis soveltaa, kun $x \geq 0$. 
+                                </li>
+                                <li>
+                                    Kuva:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva077.png" max-width: 100%; width: auto; height: auto;/> 
+                                    <br>
+                                    Jos $a = 1{,}39$ minuuttia eli $1$ min ja $0{,}39 \cdot 60 \approx 23$ sekuntia, niin 50 % todennäköisyydellä kahden puhelun välissä kuluu yli $a$ minuuttia. 
                                 </li>
                             </ol>
                         </div>
@@ -185,85 +305,229 @@ topnav: mab4
 
             <div class="teoria">
                 <p>
-                    
+                   Käytännön tilanteissa matemaattinen mallintaminen alkaa usein jonkinlaisesta mittaamisesta tai havaintoarvojen keräämisestä. Havaintoarvoja vastaavat pisteet voidaan sijoittaa koordinaatistoon. Laskentaohjelmilla voidaan tutkia, millaiselle suoralle tai käyrälle havaintopisteet asettuvat parhaiten. Näin voidaan löytää tarkasteltavalle ilmiölle matemaattinen malli. 
                 </p>
-          <div class="tehtavat">      
-                <div class="tehtava" id="57f3c161-4780-4d2f-8898-0a51492e23d5">
-                <header>
-                    <h1>
-                        <div class="checkbox-group"></div>
-                        <a data-target="#57f3c161-4780-4d2f-8898-0a51492e23d5_target">
-                            Otsikko
-                        </a>
-                    </h1>
-                </header>
-                <div id="57f3c161-4780-4d2f-8898-0a51492e23d5_target">
-                    <p>
-                        
-                    </p>
+            </div>
+
+            <div class="tehtavat">      
+                <div class="tehtava" id="3d93e159-264c-454d-b09d-23de907b5993">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3d93e159-264c-454d-b09d-23de907b5993_target">
+                                Mallin sovittaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="3d93e159-264c-454d-b09d-23de907b5993_target" class="collapse">
+                        <p>
+                            Asunnonvälittäjä keräsi tietokannasta erään postinumeroalueen kaikkien vuokrattavana olevien 1-3 huoneen asuntojen vuokrahinnat sekä pinta-alat. Hän naputteli tiedot taulukkolaskentaohjelmaan ja sovitti ohjelman avulla havaintopisteisiin suoran:
+                        </p>
+                        <img src="/kurssit/mab4/kuvat/MAB4kuva080.png" max-width: 100%; width: auto; height: auto;/> 
+                        <ol class="a">
+                            <li>
+                                Mikä olisi tämän mallin mukaan alueen hintatason mukainen vuokra 45 neliömetrin asunnolle?
+                            </li>
+                            <li>
+                                Arvioi kuvan perusteella, mikä on tämän mallin sovellusalue.
+                            </li>
+                            <li>
+                                Toinen asunnonvälittäjä keräsi aineistoon myös kaikki vähintään 4 huoneen vuokra-asuntojen tiedot. Hän sovitti taulukkolaskentaohjelman avulla havaintopisteisiin 2. asteen polynomin:
+                                <br>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva081.png" max-width: 90%; width: auto; height: auto;/> 
+                                <br>
+                                ja 4. asteen polynomin:
+                                <br>
+                                <img src="/kurssit/mab4/kuvat/MAB4kuva082.png" max-width: 90%; width: auto; height: auto;/> 
+                                <br>
+                                Kumpi mielestäsi mallintaa paremmin asuntojen vuokria?
+                            </li>
+                            <li>
+                                Mikä olisi valitsemasi mallin mukainen vuokra 65 neliömetrin asunnolle?
+                            </li>
+                        </ol>
+
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3d93e159-264c-454d-b09d-23de907b5993_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="3d93e159-264c-454d-b09d-23de907b5993_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Noin 950 euroa kuukaudessa.
+                                </li>
+                                <li>
+                                    Malli soveltuu melko hyvin noin 20-60 neliömetrin asunnoille. Suurimpien yli 70 neliömetrin asuntojen vuokrat eivät asetu kovin lähelle suoraa, joten voi olla, että suurempien asuntojen vuokria kuvaisi paremmin jokin toinen malli. Toisaalta nämä kaksi havaintopistettä voivat olla jollakin tavalla poikkeuksellisia.
+                                </li>
+                                <li>
+                                    Toisen asteen polynomi mallintaa vuokria luultavasti paremmin sekä kaikkein pienimmissä että kaikkein suurimmissa asunnoissa. Neljännen asteen polynomilla arvot (eli asuntojen vuokrat) pienenevät sekä pienten että suurimpien asuntojen kohdalla liian nopeasti.
+                                </li>
+                                <li>
+                                    Jos hintaa mallinnetaan 2. asteen polynomilla, vuokra 65 neliömetrin asunnolle on noin 1150 euroa.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tehtava" id="3d93e159-264c-454d-b09d-23de907b5993">
-                <header>
-                    <h1>
-                        <div class="checkbox-group"></div>
-                        <a data-target="#3d93e159-264c-454d-b09d-23de907b5993_target">
-                            Otsikko
-                        </a>
-                    </h1>
-                </header>
-                <div id="3d93e159-264c-454d-b09d-23de907b5993_target">
-                    <p>
-                        
-                    </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="3cd5e28f-646a-426c-aca9-85309a3a6c46">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3cd5e28f-646a-426c-aca9-85309a3a6c46_target">
+                                Mallin sovittaminen
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="3cd5e28f-646a-426c-aca9-85309a3a6c46_target" class="collapse">
+                        <p>
+                            Pesäpallon heittoa tutkittiin kuvaamalla pallon lentorataa high speed -kameralla. Kuvista mitattiin pallon sijainti vaaka- ja pystysuunnassa 0,1 sekunnin välein, jolloin saatiin seuraavat tulokset (metreinä):
+                        </p>
+                        <div align="center">
+                            <table style="width = 75%">
+                                <tr>
+                                    <th> Vaakasijainti: </th>
+                                    <th> Pystysijainti: </th>
+                                </tr>
+                                <tr>
+                                    <td> 0 </td>
+                                    <td> 1,79 </td>
+                                </tr>
+                                <tr>
+                                    <td> 3,1 </td>
+                                    <td> 2,32 </td>
+                                </tr>
+                                <tr>
+                                    <td> 6,2 </td>
+                                    <td> 2,67 </td>
+                                </tr>
+                                <tr>
+                                    <td> 9,2 </td>
+                                    <td> 2,86 </td>
+                                </tr>
+                                <tr>
+                                    <td> 12,2 </td>
+                                    <td> 3,02 </td>
+                                </tr>
+                                <tr>
+                                    <td> 15,3 </td>
+                                    <td> 3,16 </td>
+                                </tr>
+                                <tr>
+                                    <td> 18,3 </td>
+                                    <td> 3,03 </td>
+                                </tr>
+                                <tr>
+                                    <td> 21,4 </td>
+                                    <td> 2,96 </td>
+                                </tr>
+                                <tr>
+                                    <td> 24,4 </td>
+                                    <td> 2,70 </td>
+                                </tr>
+                                <tr>
+                                    <td> 27,5 </td>
+                                    <td> 2,36 </td>
+                                </tr>
+                                <tr>
+                                    <td> 30,5 </td>
+                                    <td> 1,97 </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol class="a">
+                            <li>
+                                Havainnollista mittaustuloksia piirtämällä pallon vaaka- ja pystysijaintia kuvaavat pisteet $(x,y)$-koordinaatistoon. Voit käyttää taulukkolaskentaohjelmaa tai esimerkiksi Geogebraa.
+                            </li>
+                            <li>
+                                Sovita mittauspisteisiin oman harkintasi mukaan 1. tai 2. asteen polynomifunktio (suora tai paraabeli). 
+                            </li>
+                            <li>
+                                Mikä oli heiton pituus?
+                            </li>
+                        </ol>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#3cd5e28f-646a-426c-aca9-85309a3a6c46_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="3cd5e28f-646a-426c-aca9-85309a3a6c46_target_v" class="collapse">
+                            <ol class="a">
+                                <li>
+                                    Pisteet koordinaatistossa Geogebralla:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva084.png" max-width: 90%; width: auto; height: auto;/> 
+                                </li>
+                                <li>
+                                    Toisen asteen polynomifunktion sovittaminen Geogebralla:
+                                    <br>
+                                    <img src="/kurssit/mab4/kuvat/MAB4kuva083.png" max-width: 90%; width: auto; height: auto;/> 
+                                </li>
+                                <li>
+                                    Heiton pituus oli noin 40 metriä.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tehtava" id="3cd5e28f-646a-426c-aca9-85309a3a6c46">
-                <header>
-                    <h1>
-                        <div class="checkbox-group"></div>
-                        <a data-target="#3cd5e28f-646a-426c-aca9-85309a3a6c46_target">
-                            Otsikko
-                        </a>
-                    </h1>
-                </header>
-                <div id="3cd5e28f-646a-426c-aca9-85309a3a6c46_target">
-                    <p>
-                        
-                    </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="25fe4839-2b2b-4358-ac17-f71a84f20668">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#25fe4839-2b2b-4358-ac17-f71a84f20668_target">
+                                Otsikko
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="25fe4839-2b2b-4358-ac17-f71a84f20668_target" class="collapse">
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#25fe4839-2b2b-4358-ac17-f71a84f20668_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="25fe4839-2b2b-4358-ac17-f71a84f20668_target_v" class="collapse">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tehtava" id="25fe4839-2b2b-4358-ac17-f71a84f20668">
-                <header>
-                    <h1>
-                        <div class="checkbox-group"></div>
-                        <a data-target="#25fe4839-2b2b-4358-ac17-f71a84f20668_target">
-                            Otsikko
-                        </a>
-                    </h1>
-                </header>
-                <div id="25fe4839-2b2b-4358-ac17-f71a84f20668_target">
-                    <p>
-                        
-                    </p>
+
+            <div class="tehtavat">
+                <div class="tehtava" id="692b3cc4-5992-487b-80e8-29fff1d4fc26">
+                    <header>
+                        <h1>
+                            <div class="checkbox-group"></div>
+                            <a data-toggle="collapse" class="collapsed" data-target="#692b3cc4-5992-487b-80e8-29fff1d4fc26_target">
+                                Otsikko
+                            </a>
+                        </h1>
+                    </header>
+                    <div id="692b3cc4-5992-487b-80e8-29fff1d4fc26_target" class="collapse">
+                        <p>
+                            
+                        </p>
+                        <h2>
+                            <a data-toggle="collapse" class="collapsed" data-target="#692b3cc4-5992-487b-80e8-29fff1d4fc26_target_v">
+                                VASTAUS
+                            </a>
+                        </h2>
+                        <div id="692b3cc4-5992-487b-80e8-29fff1d4fc26_target_v" class="collapse">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tehtava" id="692b3cc4-5992-487b-80e8-29fff1d4fc26">
-                <header>
-                    <h1>
-                        <div class="checkbox-group"></div>
-                        <a data-target="#692b3cc4-5992-487b-80e8-29fff1d4fc26_target">
-                            Otsikko
-                        </a>
-                    </h1>
-                </header>
-                <div id="692b3cc4-5992-487b-80e8-29fff1d4fc26_target">
-                    <p>
-                        
-                    </p>
-                </div>
-            </div>
-          </div>
+
+
         </div>
     </section>
 
